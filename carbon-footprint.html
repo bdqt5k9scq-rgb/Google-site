@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>碳足迹计算器 — SDG Website</title>
+  <meta name="description" content="计算您的个人碳足迹，了解日常活动对环境的影响，获取减少碳排放的实用建议。">
+  <link rel="icon" type="image/svg+xml" href="vite.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <svg viewBox="0 0 40 40" class="logo-icon">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.9"/>
+          <circle cx="20" cy="20" r="13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="20" cy="20" r="6" fill="currentColor" opacity="0.85"/>
+          <line x1="20" y1="3" x2="20" y2="37" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+          <line x1="3" y1="20" x2="37" y2="20" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <span class="brand-text">SDG 可持续发展</span>
+      </a>
+      <div class="navbar-links">
+        <a href="index.html" class="nav-link">首页</a>
+        <a href="about.html" class="nav-link">关于我们</a>
+        <a href="sdgs.html" class="nav-link">SDG目标</a>
+        <a href="carbon-footprint.html" class="nav-link active">碳足迹计算</a>
+        <a href="act-now.html" class="nav-link">行动倡议</a>
+      </div>
+      <button class="menu-toggle"><span class="bar"></span><span class="bar"></span></button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html" class="mobile-link">首页</a>
+      <a href="about.html" class="mobile-link">关于我们</a>
+      <a href="sdgs.html" class="mobile-link">SDG目标</a>
+      <a href="carbon-footprint.html" class="mobile-link">碳足迹计算</a>
+      <a href="act-now.html" class="mobile-link">行动倡议</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-header" style="--terracotta: #5c8d6d;">
+      <div class="container container-narrow">
+        <p class="eyebrow" style="color: var(--sage)">环境足迹</p>
+        <h1>碳足迹计算器</h1>
+        <p>了解您的日常活动对环境的影响，计算您的个人碳排放量</p>
+      </div>
+    </section>
+
+    <!-- Definitions -->
+    <section class="definitions-section">
+      <div class="container">
+        <h2 class="section-title">什么是碳足迹？</h2>
+        <div class="definition-grid">
+          <div class="definition-card">
+            <h3>碳足迹定义</h3>
+            <p><strong>碳足迹（Carbon Footprint）</strong>是指个人、组织、活动或产品在其整个生命周期中直接和间接产生的温室气体排放总量，通常以二氧化碳当量（CO₂e）表示。</p>
+            <p>碳足迹的概念源于<strong>生态足迹</strong>理论，由加拿大环境学家William Rees和Mathis Wackernagel于1992年提出。它帮助我们量化人类活动对气候变化的影响。</p>
+          </div>
+          <div class="definition-card" style="border-left-color:#3f7e44">
+            <h3>为什么重要？</h3>
+            <p>气候变化是21世纪人类面临的最大挑战之一。全球平均温度已经比工业革命前上升了约1.1°C。</p>
+            <p><strong>与SDG的关联：</strong></p>
+            <p>• SDG 13（气候行动）：采取紧急行动应对气候变化<br>• SDG 7（清洁能源）：确保可持续的现代能源<br>• SDG 12（负责任消费）：确保可持续消费模式</p>
+          </div>
+          <div class="definition-card" style="border-left-color:#00a651">
+            <h3>碳排放现状</h3>
+            <p>根据联合国环境规划署（UNEP）2023年报告：</p>
+            <p>• 全球人均年碳足迹约为 <strong>4.7吨 CO₂e</strong><br>• 发达国家人均可达 <strong>15-20吨</strong><br>• 全球每年排放约 <strong>360亿吨</strong> 二氧化碳</p>
+          </div>
+          <div class="definition-card" style="border-left-color:#fcc30b">
+            <h3>减排目标</h3>
+            <p>《巴黎协定》目标：将全球气温上升控制在 <strong>2°C以内</strong>，努力控制在 <strong>1.5°C以内</strong>。</p>
+            <p>为实现这一目标，全球需在2030年前将碳排放减少 <strong>43%</strong>，2050年前实现 <strong>净零排放</strong>。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section class="calculator-section">
+      <div class="container container-narrow">
+        <div class="calculator-form" id="calculatorForm">
+          <h2>填写您的日常活动信息</h2>
+          <div class="form-section">
+            <h3>交通出行</h3>
+            <div class="form-group"><label for="carDistance">每周驾车里程（公里）</label><input type="number" id="carDistance" placeholder="0" min="0"></div>
+            <div class="form-group"><label for="publicTransport">每周公共交通次数</label><input type="number" id="publicTransport" placeholder="0" min="0"></div>
+            <div class="form-group"><label for="flights">每年长途飞行次数</label><input type="number" id="flights" placeholder="0" min="0"></div>
+          </div>
+          <div class="form-section">
+            <h3>能源使用</h3>
+            <div class="form-group"><label for="electricity">每月用电量（千瓦时）</label><input type="number" id="electricity" placeholder="0" min="0"></div>
+            <div class="form-group"><label for="gas">每月用气量（立方米）</label><input type="number" id="gas" placeholder="0" min="0"></div>
+            <div class="form-group"><label for="heating">每月供暖能耗（单位）</label><input type="number" id="heating" placeholder="0" min="0"></div>
+          </div>
+          <div class="form-section">
+            <h3>饮食习惯</h3>
+            <div class="form-group"><label for="meatDays">每周吃肉天数</label><input type="number" id="meatDays" placeholder="0" min="0" max="7"></div>
+            <div class="form-group"><label for="localFood">每周本地食品消费比例（%）</label><input type="number" id="localFood" placeholder="0" min="0" max="100"></div>
+          </div>
+          <div class="form-section">
+            <h3>废物处理</h3>
+            <div class="form-group checkbox-group"><label><input type="checkbox" id="recycling"><span>进行垃圾分类回收</span></label></div>
+            <div class="form-group checkbox-group"><label><input type="checkbox" id="composting"><span>进行厨余堆肥</span></label></div>
+          </div>
+          <button class="btn btn-primary btn-calculate" id="calculateBtn">计算碳足迹</button>
+        </div>
+
+        <div class="result-section" id="resultSection">
+          <div class="result-card">
+            <h2>您的碳足迹计算结果</h2>
+            <div class="result-value" id="resultValue">0 <span class="unit">kg CO₂/年</span></div>
+            <div class="result-level" id="resultLevel">良好</div>
+            <p class="result-message" id="resultMessage"></p>
+          </div>
+          <div class="tips-section"><h3>🌱 环保建议</h3><ul id="tipsList"></ul></div>
+          <button class="btn btn-secondary" id="resetBtn">重新计算</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section"><h3>联合国可持续发展目标</h3><p>为实现更美好、更可持续的未来<br>而共同努力</p></div>
+        <div class="footer-section"><h4>快速链接</h4><ul><li><a href="index.html">首页</a></li><li><a href="about.html">关于我们</a></li><li><a href="sdgs.html">SDG目标</a></li><li><a href="carbon-footprint.html">碳足迹计算</a></li><li><a href="act-now.html">行动倡议</a></li></ul></div>
+        <div class="footer-section"><h4>联系我们</h4><p>邮箱: contact@sdg-website.org</p><p>电话: +86 123 4567 8900</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 SDG Website. 保留所有权利。</p><p>本网站致力于宣传联合国可持续发展目标</p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/carbon.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    document.addEventListener('DOMContentLoaded', function() {
+      gsap.fromTo('.page-header h1', { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out' });
+      gsap.fromTo('.page-header p', { y: 32, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, delay: 0.15, ease: 'power3.out' });
+      gsap.fromTo('.form-section', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.08, ease: 'power3.out', scrollTrigger: { trigger: '#calculatorForm', start: 'top 90%' } });
+    });
+  </script>
+</body>
+</html>

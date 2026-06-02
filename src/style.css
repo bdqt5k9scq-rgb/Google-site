@@ -1,0 +1,341 @@
+/* ============================================================
+   Earth Editorial Design System
+   可持续发展目标 — SDG Website
+   Aesthetic: warm, literary, organic — like a fine publication
+   ============================================================ */
+
+/* ---- CSS Custom Properties ---- */
+:root {
+  /* Core palette */
+  --color-ink: #1c1c24;
+  --color-paper: #fdfaf6;
+  --color-cream: #fefcf9;
+  --color-sand: #e8dfd5;
+  --color-sand-light: #f3ede7;
+  --color-earth: #8b7355;
+  --color-terracotta: #c48b5c;
+  --color-clay: #d4a574;
+  --color-sage: #5c8d6d;
+  --color-sage-light: #e8f0e9;
+  --color-ocean: #2c5282;
+  --color-ocean-light: #e8edf5;
+  --color-charcoal: #2d2d35;
+  --color-rust: #b8573e;
+  --color-olive: #6b7c53;
+
+  /* Semantic tokens */
+  --color-text: var(--color-ink);
+  --color-text-muted: #6b6560;
+  --color-text-light: #8c8782;
+  --color-bg: var(--color-paper);
+  --color-surface: #ffffff;
+  --color-border: #e6e0d8;
+  --color-border-light: #f0ebe4;
+  --color-accent: var(--color-terracotta);
+  --color-accent-hover: #b0784a;
+
+  /* Typography */
+  --font-display: 'Georgia', 'STSong', 'Songti SC', 'Noto Serif SC', '华文宋体', serif;
+  --font-body: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', 'Microsoft JhengHei', sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+
+  /* Shadows — warmer and softer than default AI shadows */
+  --shadow-sm: 0 1px 2px rgba(28, 28, 36, 0.04);
+  --shadow-md: 0 4px 12px rgba(28, 28, 36, 0.06), 0 1px 3px rgba(28, 28, 36, 0.04);
+  --shadow-lg: 0 12px 32px rgba(28, 28, 36, 0.08), 0 2px 8px rgba(28, 28, 36, 0.04);
+  --shadow-xl: 0 24px 48px rgba(28, 28, 36, 0.1), 0 4px 16px rgba(28, 28, 36, 0.05);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ---- Reset ---- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.2rem, 4vw, 3.2rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+h4 { font-size: 1.1rem; }
+
+p {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+
+/* ---- Layout utilities ---- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container-narrow {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.01em;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  transition: background 0.3s var(--ease-out);
+}
+
+.btn-primary {
+  background-color: var(--color-terracotta);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(196, 139, 92, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(196, 139, 92, 0.35);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-ink);
+  border: 1.5px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+  background-color: rgba(196, 139, 92, 0.04);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-muted);
+  padding: 8px 16px;
+}
+
+.btn-ghost:hover {
+  color: var(--color-ink);
+  background-color: rgba(28, 28, 36, 0.04);
+}
+
+/* ---- Card base ---- */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s var(--ease-out), transform 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-sand);
+}
+
+/* ---- Section title ---- */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  color: var(--color-ink);
+  letter-spacing: -0.015em;
+  position: relative;
+  padding-bottom: var(--space-lg);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  background: var(--color-terracotta);
+  border-radius: 2px;
+}
+
+/* Section subtitle */
+.section-subtitle {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: -16px auto 40px;
+  line-height: 1.7;
+}
+
+/* ---- Decorative divider ---- */
+.decorative-line {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-sand) 20%,
+    var(--color-terracotta) 50%,
+    var(--color-sand) 80%,
+    transparent 100%
+  );
+  margin: var(--space-3xl) 0;
+}
+
+/* ---- Organic background shapes ---- */
+.bg-texture-dots {
+  background-image: radial-gradient(circle, var(--color-sand) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-warm-gradient {
+  background: linear-gradient(
+    160deg,
+    var(--color-paper) 0%,
+    var(--color-sand-light) 30%,
+    var(--color-cream) 60%,
+    var(--color-paper) 100%
+  );
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(
+    160deg,
+    #1c1c24 0%,
+    #252530 30%,
+    #1a1a22 60%,
+    #1c1c24 100%
+  );
+}
+
+/* ---- Tag / Badge ---- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  font-family: var(--font-body);
+}
+
+/* ---- Text utilities ---- */
+.text-center { text-align: center; }
+.text-muted { color: var(--color-text-muted); }
+.text-ink { color: var(--color-ink); }
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+.mt-2xl { margin-top: var(--space-2xl); }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mb-xl { margin-bottom: var(--space-xl); }
+.mb-2xl { margin-bottom: var(--space-2xl); }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  :root {
+    --space-3xl: 40px;
+    --space-4xl: 56px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* ---- Accessibility ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---- Selection ---- */
+::selection {
+  background-color: rgba(196, 139, 92, 0.2);
+  color: var(--color-ink);
+}
