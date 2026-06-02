@@ -1457,6 +1457,31 @@ p { color: var(--text-muted); line-height: 1.75; }
 }
 
 /* ============================================================
+   WHY SDGs SECTION (Home page)
+   ============================================================ */
+.why-sdgs-section { padding: 72px 0; background: var(--cream); border-top: 1px solid var(--border-light); }
+
+.why-sdgs-content { display: flex; flex-direction: column; gap: 20px; }
+
+.why-sdgs-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  transition: all 0.3s var(--ease-out);
+}
+.why-sdgs-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+.why-sdgs-card p {
+  color: var(--text-muted);
+  line-height: 1.85;
+  font-size: 1.02rem;
+  margin: 0;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
