@@ -4,8 +4,9 @@
   "description": "UN SDGs Website",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "build": "vue-tsc && vite build && npm run copy-static",
+    "preview": "vite preview",
+    "copy-static": "node -e \"var fs=require('fs');var p=require('path');var files=['index.html','about.html','sdgs.html','carbon-footprint.html','act-now.html','reference-list.html'];files.forEach(function(f){var src=p.join(__dirname,f);var dst=p.join(__dirname,'dist',f);if(fs.existsSync(src)){fs.copyFileSync(src,dst);console.log('Copied: '+f);}else{console.log('Missing: '+f);}});['css','js'].forEach(function(d){var src=p.join(__dirname,d);var dst=p.join(__dirname,'dist',d);if(fs.existsSync(src)){fs.cpSync(src,dst,{recursive:true});console.log('Copied dir: '+d);}else{console.log('Missing dir: '+d);}});\""
   },
   "dependencies": {
     "gsap": "^3.12.0",
