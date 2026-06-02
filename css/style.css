@@ -1482,6 +1482,84 @@ p { color: var(--text-muted); line-height: 1.75; }
 }
 
 /* ============================================================
+   ABOUT PAGE — Expanded Team Cards
+   ============================================================ */
+.team-card-v2 {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.35s var(--ease-out);
+}
+.team-card-v2:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+  transform: translateY(-4px);
+}
+
+.team-card-v2 .card-accent-bar {
+  height: 4px;
+  background: linear-gradient(90deg, var(--terracotta), var(--sage));
+  transition: opacity 0.3s ease;
+}
+
+.team-card-v2 .card-body { padding: 32px 24px 28px; }
+
+.team-card-v2 .avatar-icon {
+  width: 72px; height: 72px;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.team-card-v2 .member-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.team-card-v2 .member-role {
+  display: inline-block;
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  background: rgba(196,139,92,0.08);
+  padding: 3px 12px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.team-card-v2 .member-divider {
+  width: 40px; height: 1px;
+  background: var(--border-light);
+  margin: 0 auto 18px;
+}
+
+.team-card-v2 .member-field {
+  text-align: left;
+  margin-bottom: 12px;
+}
+.team-card-v2 .member-field:last-child { margin-bottom: 0; }
+
+.team-card-v2 .field-label {
+  display: block;
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.team-card-v2 .field-value {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
