@@ -1560,6 +1560,77 @@ p { color: var(--text-muted); line-height: 1.75; }
 }
 
 /* ============================================================
+   SDG MEMBER RESEARCH REPORTS
+   ============================================================ */
+.sdg-research-section { padding: 72px 0; background: #fff; border-top: 1px solid var(--border-light); }
+
+.sdg-report-card {
+  background: var(--cream);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  margin-bottom: 24px;
+  transition: all 0.3s var(--ease-out);
+}
+.sdg-report-card:last-child { margin-bottom: 0; }
+.sdg-report-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.sdg-report-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sdg-report-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 700; font-size: 1.2rem;
+  font-family: var(--font-display);
+  flex-shrink: 0;
+}
+
+.sdg-report-info h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  margin-bottom: 2px;
+  font-size: 1.1rem;
+}
+.sdg-report-sdg {
+  font-size: 0.85rem; font-weight: 500;
+}
+
+.sdg-report-body h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin: 20px 0 10px;
+  padding-left: 12px;
+  border-left: 3px solid var(--terracotta);
+}
+.sdg-report-body h4:first-child { margin-top: 0; }
+
+.sdg-report-body p {
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+.sdg-report-body p:last-child { margin-bottom: 0; }
+
+.sdg-report-body .citation {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
