@@ -1416,6 +1416,47 @@ p { color: var(--text-muted); line-height: 1.75; }
 .bg-sdg-17 { background-color: #192841; }
 
 /* ============================================================
+   REFERENCE LIST PAGE
+   ============================================================ */
+.reference-list-section { padding: 64px 0; background: var(--paper); }
+
+.reference-category { margin-bottom: 40px; }
+.reference-category:last-child { margin-bottom: 0; }
+
+.reference-category h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--ink);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.reference-entry {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-left: 4px solid var(--terracotta);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  margin-bottom: 10px;
+}
+
+.reference-entry p {
+  color: var(--text);
+  line-height: 1.8;
+  margin: 0;
+  font-size: 0.95rem;
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+.reference-entry em {
+  color: var(--terracotta);
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
