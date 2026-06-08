@@ -7,23 +7,23 @@ import { GSAP_EASE } from '@/lib/animations'
 const router = useRouter()
 
 const allSDGs = [
-  { id: 1, title: '消除贫困', subtitle: 'No Poverty', color: '#e5243b', icon: '🎯' },
-  { id: 2, title: '零饥饿', subtitle: 'Zero Hunger', color: '#dda63a', icon: '🌾' },
-  { id: 3, title: '良好健康', subtitle: 'Good Health', color: '#4c9f38', icon: '💚' },
-  { id: 4, title: '优质教育', subtitle: 'Quality Education', color: '#c5192d', icon: '📚' },
-  { id: 5, title: '性别平等', subtitle: 'Gender Equality', color: '#ff3a21', icon: '⚖️' },
-  { id: 6, title: '清洁饮水', subtitle: 'Clean Water', color: '#26bde2', icon: '💧' },
-  { id: 7, title: '清洁能源', subtitle: 'Clean Energy', color: '#fcc30b', icon: '⚡' },
-  { id: 8, title: '体面工作', subtitle: 'Decent Work', color: '#a21942', icon: '💼' },
-  { id: 9, title: '产业创新', subtitle: 'Industry & Innovation', color: '#fd6925', icon: '🏭' },
-  { id: 10, title: '减少不平等', subtitle: 'Reduced Inequalities', color: '#dd1367', icon: '🤝' },
-  { id: 11, title: '可持续城市', subtitle: 'Sustainable Cities', color: '#fd9d24', icon: '🏙️' },
-  { id: 12, title: '负责任消费', subtitle: 'Responsible Consumption', color: '#bf8b2e', icon: '♻️' },
-  { id: 13, title: '气候行动', subtitle: 'Climate Action', color: '#3f7e44', icon: '🌍' },
-  { id: 14, title: '水下生物', subtitle: 'Life Below Water', color: '#009444', icon: '🐟' },
-  { id: 15, title: '陆地生物', subtitle: 'Life on Land', color: '#00a651', icon: '🌿' },
-  { id: 16, title: '和平正义', subtitle: 'Peace & Justice', color: '#19489d', icon: '🕊️' },
-  { id: 17, title: '伙伴关系', subtitle: 'Partnerships', color: '#192841', icon: '🌐' }
+  { id: 1, title: '消除贫困', subtitle: 'No Poverty', color: '#e5243b' },
+  { id: 2, title: '零饥饿', subtitle: 'Zero Hunger', color: '#dda63a' },
+  { id: 3, title: '良好健康', subtitle: 'Good Health', color: '#4c9f38' },
+  { id: 4, title: '优质教育', subtitle: 'Quality Education', color: '#c5192d' },
+  { id: 5, title: '性别平等', subtitle: 'Gender Equality', color: '#ff3a21' },
+  { id: 6, title: '清洁饮水', subtitle: 'Clean Water', color: '#26bde2' },
+  { id: 7, title: '清洁能源', subtitle: 'Clean Energy', color: '#fcc30b' },
+  { id: 8, title: '体面工作', subtitle: 'Decent Work', color: '#a21942' },
+  { id: 9, title: '产业创新', subtitle: 'Industry & Innovation', color: '#fd6925' },
+  { id: 10, title: '减少不平等', subtitle: 'Reduced Inequalities', color: '#dd1367' },
+  { id: 11, title: '可持续城市', subtitle: 'Sustainable Cities', color: '#fd9d24' },
+  { id: 12, title: '负责任消费', subtitle: 'Responsible Consumption', color: '#bf8b2e' },
+  { id: 13, title: '气候行动', subtitle: 'Climate Action', color: '#3f7e44' },
+  { id: 14, title: '水下生物', subtitle: 'Life Below Water', color: '#009444' },
+  { id: 15, title: '陆地生物', subtitle: 'Life on Land', color: '#00a651' },
+  { id: 16, title: '和平正义', subtitle: 'Peace & Justice', color: '#19489d' },
+  { id: 17, title: '伙伴关系', subtitle: 'Partnerships', color: '#192841' }
 ]
 
 const teamMembers = [
@@ -34,10 +34,10 @@ const teamMembers = [
 ]
 
 const stats = [
-  { number: '17', label: '可持续发展目标', icon: '🎯' },
-  { number: '193', label: '成员国共同承诺', icon: '🏛️' },
-  { number: '2030', label: '目标实现年份', icon: '📅' },
-  { number: '169', label: '具体行动指标', icon: '📊' }
+  { number: '17', label: '可持续发展目标' },
+  { number: '193', label: '成员国共同承诺' },
+  { number: '2030', label: '目标实现年份' },
+  { number: '169', label: '具体行动指标' }
 ]
 
 const whySDGs = [
@@ -135,8 +135,8 @@ onMounted(() => {
       <div class="container">
         <div class="stats-grid">
           <div v-for="stat in stats" :key="stat.label" class="stat-card">
-            <span class="stat-icon">{{ stat.icon }}</span>
             <div class="stat-number">{{ stat.number }}</div>
+            <div class="stat-rule"></div>
             <div class="stat-label">{{ stat.label }}</div>
           </div>
         </div>
@@ -172,7 +172,6 @@ onMounted(() => {
             @click="router.push('/sdgs')"
           >
             <span class="sdg-num">{{ String(sdg.id).padStart(2, '0') }}</span>
-            <span class="sdg-icon">{{ sdg.icon }}</span>
             <h3>{{ sdg.title }}</h3>
             <p class="sdg-en">{{ sdg.subtitle }}</p>
           </div>
@@ -324,7 +323,6 @@ onMounted(() => {
   content: ''; position: absolute; right: 0; top: 15%; height: 70%;
   width: 1px; background: #e8dfd5;
 }
-.stat-icon { font-size: 1.8rem; display: block; margin-bottom: 12px; }
 .stat-number {
   font-family: Georgia, serif;
   font-size: 3.2rem;
@@ -438,7 +436,6 @@ onMounted(() => {
   display: block;
   margin-bottom: 4px;
 }
-.sdg-icon { font-size: 1.6rem; display: block; margin-bottom: 8px; }
 .sdg-item h3 {
   font-family: Georgia, serif;
   font-size: 0.95rem;

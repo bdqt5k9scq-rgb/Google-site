@@ -4,10 +4,10 @@ import gsap from 'gsap'
 import { GSAP_EASE } from '@/lib/animations'
 
 const objectives = [
-  { title: '提高公众认识', desc: '提高公众对可持续发展目标的认识和理解', icon: '📢' },
-  { title: '教育资源支持', desc: '提供教育资源和工具，赋能个人与组织', icon: '📖' },
-  { title: '跨学科合作', desc: '促进跨学科合作与知识共享', icon: '🤝' },
-  { title: '本地化行动', desc: '推动本地化的可持续发展行动与实践', icon: '📍' }
+  { title: '提高公众认识', desc: '提高公众对可持续发展目标的认识和理解' },
+  { title: '教育资源支持', desc: '提供教育资源和工具，赋能个人与组织' },
+  { title: '跨学科合作', desc: '促进跨学科合作与知识共享' },
+  { title: '本地化行动', desc: '推动本地化的可持续发展行动与实践' }
 ]
 
 onMounted(() => {
@@ -55,7 +55,6 @@ onMounted(() => {
           <h2 class="section-title">我们的目标</h2>
           <div class="objectives-grid">
             <div v-for="(obj, i) in objectives" :key="i" class="obj-card">
-              <span class="obj-icon">{{ obj.icon }}</span>
               <span class="obj-num">{{ String(i + 1).padStart(2, '0') }}</span>
               <h3>{{ obj.title }}</h3>
               <p>{{ obj.desc }}</p>
@@ -158,7 +157,6 @@ onMounted(() => {
   border-color: transparent;
   transform: translateY(-4px);
 }
-.obj-icon { font-size: 2.2rem; display: block; margin-bottom: 12px; }
 .obj-num {
   font-family: Georgia, serif;
   font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em;
