@@ -564,52 +564,89 @@ p { color: var(--text-muted); line-height: 1.75; }
   border-top: 1px solid var(--border-light);
 }
 
-.sdg-grid {
+/* SDG card grid (17 cards + view-all) */
+.sdg-card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  margin-top: 36px;
 }
-
-.sdg-card {
+.sdg-item {
   background: #fff;
   border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: 28px 24px;
+  border-radius: 14px;
+  padding: 28px 18px 22px;
+  text-align: center;
+  cursor: pointer;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
-  transition: all 0.35s var(--ease-out);
+  transition: all 0.3s var(--ease-out);
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
-.sdg-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--sdg-color, var(--terracotta));
-  transform: scaleX(0.3);
-  transform-origin: left;
-  transition: transform 0.35s var(--ease-out);
-}
-.sdg-card:hover {
+.sdg-item:hover {
   box-shadow: var(--shadow-lg);
   border-color: transparent;
+  background: var(--c-light, #fefcf9);
+  transform: translateY(-4px);
 }
-.sdg-card:hover::before { transform: scaleX(1); }
-
-.sdg-card-number {
+.sdg-watermark {
+  position: absolute;
+  top: -8px; right: -4px;
   font-family: var(--font-display);
-  font-size: 0.75rem; font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--sdg-color, var(--terracotta));
+  font-size: 3.5rem; font-weight: 700;
+  color: var(--c, var(--terracotta));
+  opacity: 0.05;
+  line-height: 1;
+  pointer-events: none;
+}
+.sdg-item:hover .sdg-watermark { opacity: 0.1; }
+.sdg-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
   opacity: 0.7;
-  margin-bottom: 12px; display: block;
+  flex-shrink: 0;
 }
-.sdg-card h3 {
+.sdg-bar {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px;
+  transform: scaleX(0.25);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+.sdg-item:hover .sdg-bar { transform: scaleX(1); }
+.sdg-item h3 {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   color: var(--ink);
-  margin-bottom: 8px;
+  position: relative; z-index: 1;
 }
-.sdg-card p { color: var(--text-muted); font-size: 0.9rem; }
+.sdg-en {
+  font-size: 0.68rem;
+  color: var(--text-light);
+  font-style: italic;
+  position: relative; z-index: 1;
+}
+/* View-all card */
+.sdg-more {
+  background: transparent;
+  border: 1.5px dashed #d4c5b0;
+  gap: 8px;
+}
+.sdg-more:hover {
+  background: rgba(196,139,92,0.03);
+  border-color: var(--terracotta);
+  border-style: solid;
+}
+.sdg-more-icon {
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.sdg-more h3 { color: var(--terracotta); }
+.sdg-more .sdg-en { color: #a89880; }
 
 /* Full SDG grid (17 cards) */
 .sdgs-grid-section { padding: 64px 0; background: var(--paper); }
@@ -2041,7 +2078,7 @@ p { color: var(--text-muted); line-height: 1.75; }
   .stat-card:nth-child(2)::after { display: none; }
   .stat-item:nth-child(2)::after { display: none; }
 
-  .sdg-grid { grid-template-columns: 1fr; }
+  .sdg-card-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
   .sdgs-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
 
   .footer-content { grid-template-columns: 1fr; gap: 32px; }
@@ -2201,27 +2238,26 @@ p { color: var(--text-muted); line-height: 1.75; }
       <div class="container">
         <h2 class="section-title">可持续发展目标</h2>
         <p class="section-subtitle">每一项挑战都需要全球协作与行动</p>
-        <div class="sdg-grid">
-          <div class="sdg-card" style="--sdg-color:#e5243b"><span class="sdg-card-number">01</span><h3>消除贫困</h3><p>No Poverty — 在世界各地消除一切形式的贫困</p></div>
-          <div class="sdg-card" style="--sdg-color:#dda63a"><span class="sdg-card-number">02</span><h3>零饥饿</h3><p>Zero Hunger — 消除饥饿，实现粮食安全</p></div>
-          <div class="sdg-card" style="--sdg-color:#4c9f38"><span class="sdg-card-number">03</span><h3>良好健康与福祉</h3><p>Good Health — 确保健康的生活方式</p></div>
-          <div class="sdg-card" style="--sdg-color:#c5192d"><span class="sdg-card-number">04</span><h3>优质教育</h3><p>Quality Education — 确保包容公平的优质教育</p></div>
-          <div class="sdg-card" style="--sdg-color:#ff3a21"><span class="sdg-card-number">05</span><h3>性别平等</h3><p>Gender Equality — 实现性别平等，增强妇女权能</p></div>
-          <div class="sdg-card" style="--sdg-color:#26bde2"><span class="sdg-card-number">06</span><h3>清洁饮水与卫生设施</h3><p>Clean Water — 确保清洁饮水和卫生设施</p></div>
-          <div class="sdg-card" style="--sdg-color:#fcc30b"><span class="sdg-card-number">07</span><h3>廉价清洁能源</h3><p>Affordable Energy — 确保现代可持续能源</p></div>
-          <div class="sdg-card" style="--sdg-color:#a21942"><span class="sdg-card-number">08</span><h3>体面工作与经济增长</h3><p>Decent Work — 促进包容可持续的经济增长</p></div>
-          <div class="sdg-card" style="--sdg-color:#fd6925"><span class="sdg-card-number">09</span><h3>产业、创新与基础设施</h3><p>Industry & Innovation — 建设韧性基础设施</p></div>
-          <div class="sdg-card" style="--sdg-color:#dd1367"><span class="sdg-card-number">10</span><h3>减少不平等</h3><p>Reduced Inequalities — 减少国家内外的不平等</p></div>
-          <div class="sdg-card" style="--sdg-color:#fd9d24"><span class="sdg-card-number">11</span><h3>可持续城市和社区</h3><p>Sustainable Cities — 建设包容安全的城市</p></div>
-          <div class="sdg-card" style="--sdg-color:#bf8b2e"><span class="sdg-card-number">12</span><h3>负责任消费和生产</h3><p>Responsible Consumption — 确保可持续消费模式</p></div>
-          <div class="sdg-card" style="--sdg-color:#3f7e44"><span class="sdg-card-number">13</span><h3>气候行动</h3><p>Climate Action — 采取紧急行动应对气候变化</p></div>
-          <div class="sdg-card" style="--sdg-color:#009444"><span class="sdg-card-number">14</span><h3>水下生物</h3><p>Life Below Water — 保护海洋和海洋资源</p></div>
-          <div class="sdg-card" style="--sdg-color:#00a651"><span class="sdg-card-number">15</span><h3>陆地生物</h3><p>Life on Land — 保护陆地生态系统</p></div>
-          <div class="sdg-card" style="--sdg-color:#19489d"><span class="sdg-card-number">16</span><h3>和平、正义与强大机构</h3><p>Peace & Justice — 促进和平包容的社会</p></div>
-          <div class="sdg-card" style="--sdg-color:#192841"><span class="sdg-card-number">17</span><h3>促进目标实现的伙伴关系</h3><p>Partnerships — 重振可持续发展全球伙伴关系</p></div>
+        <div class="sdg-card-grid">
+          <div class="sdg-item" style="--c:#e5243b; --c-light:#e5243b10"><div class="sdg-watermark">01</div><div class="sdg-dot" style="background:#e5243b"></div><h3>消除贫困</h3><p class="sdg-en">No Poverty</p><div class="sdg-bar" style="background:#e5243b"></div></div>
+          <div class="sdg-item" style="--c:#dda63a; --c-light:#dda63a10"><div class="sdg-watermark">02</div><div class="sdg-dot" style="background:#dda63a"></div><h3>零饥饿</h3><p class="sdg-en">Zero Hunger</p><div class="sdg-bar" style="background:#dda63a"></div></div>
+          <div class="sdg-item" style="--c:#4c9f38; --c-light:#4c9f3810"><div class="sdg-watermark">03</div><div class="sdg-dot" style="background:#4c9f38"></div><h3>良好健康</h3><p class="sdg-en">Good Health</p><div class="sdg-bar" style="background:#4c9f38"></div></div>
+          <div class="sdg-item" style="--c:#c5192d; --c-light:#c5192d10"><div class="sdg-watermark">04</div><div class="sdg-dot" style="background:#c5192d"></div><h3>优质教育</h3><p class="sdg-en">Quality Education</p><div class="sdg-bar" style="background:#c5192d"></div></div>
+          <div class="sdg-item" style="--c:#ff3a21; --c-light:#ff3a2110"><div class="sdg-watermark">05</div><div class="sdg-dot" style="background:#ff3a21"></div><h3>性别平等</h3><p class="sdg-en">Gender Equality</p><div class="sdg-bar" style="background:#ff3a21"></div></div>
+          <div class="sdg-item" style="--c:#26bde2; --c-light:#26bde210"><div class="sdg-watermark">06</div><div class="sdg-dot" style="background:#26bde2"></div><h3>清洁饮水</h3><p class="sdg-en">Clean Water</p><div class="sdg-bar" style="background:#26bde2"></div></div>
+          <div class="sdg-item" style="--c:#fcc30b; --c-light:#fcc30b10"><div class="sdg-watermark">07</div><div class="sdg-dot" style="background:#fcc30b"></div><h3>清洁能源</h3><p class="sdg-en">Clean Energy</p><div class="sdg-bar" style="background:#fcc30b"></div></div>
+          <div class="sdg-item" style="--c:#a21942; --c-light:#a2194210"><div class="sdg-watermark">08</div><div class="sdg-dot" style="background:#a21942"></div><h3>体面工作</h3><p class="sdg-en">Decent Work</p><div class="sdg-bar" style="background:#a21942"></div></div>
+          <div class="sdg-item" style="--c:#fd6925; --c-light:#fd692510"><div class="sdg-watermark">09</div><div class="sdg-dot" style="background:#fd6925"></div><h3>产业创新</h3><p class="sdg-en">Industry & Innovation</p><div class="sdg-bar" style="background:#fd6925"></div></div>
+          <div class="sdg-item" style="--c:#dd1367; --c-light:#dd136710"><div class="sdg-watermark">10</div><div class="sdg-dot" style="background:#dd1367"></div><h3>减少不平等</h3><p class="sdg-en">Reduced Inequalities</p><div class="sdg-bar" style="background:#dd1367"></div></div>
+          <div class="sdg-item" style="--c:#fd9d24; --c-light:#fd9d2410"><div class="sdg-watermark">11</div><div class="sdg-dot" style="background:#fd9d24"></div><h3>可持续城市</h3><p class="sdg-en">Sustainable Cities</p><div class="sdg-bar" style="background:#fd9d24"></div></div>
+          <div class="sdg-item" style="--c:#bf8b2e; --c-light:#bf8b2e10"><div class="sdg-watermark">12</div><div class="sdg-dot" style="background:#bf8b2e"></div><h3>负责任消费</h3><p class="sdg-en">Responsible Consumption</p><div class="sdg-bar" style="background:#bf8b2e"></div></div>
+          <div class="sdg-item" style="--c:#3f7e44; --c-light:#3f7e4410"><div class="sdg-watermark">13</div><div class="sdg-dot" style="background:#3f7e44"></div><h3>气候行动</h3><p class="sdg-en">Climate Action</p><div class="sdg-bar" style="background:#3f7e44"></div></div>
+          <div class="sdg-item" style="--c:#009444; --c-light:#00944410"><div class="sdg-watermark">14</div><div class="sdg-dot" style="background:#009444"></div><h3>水下生物</h3><p class="sdg-en">Life Below Water</p><div class="sdg-bar" style="background:#009444"></div></div>
+          <div class="sdg-item" style="--c:#00a651; --c-light:#00a65110"><div class="sdg-watermark">15</div><div class="sdg-dot" style="background:#00a651"></div><h3>陆地生物</h3><p class="sdg-en">Life on Land</p><div class="sdg-bar" style="background:#00a651"></div></div>
+          <div class="sdg-item" style="--c:#19489d; --c-light:#19489d10"><div class="sdg-watermark">16</div><div class="sdg-dot" style="background:#19489d"></div><h3>和平正义</h3><p class="sdg-en">Peace & Justice</p><div class="sdg-bar" style="background:#19489d"></div></div>
+          <div class="sdg-item" style="--c:#192841; --c-light:#19284110"><div class="sdg-watermark">17</div><div class="sdg-dot" style="background:#192841"></div><h3>伙伴关系</h3><p class="sdg-en">Partnerships</p><div class="sdg-bar" style="background:#192841"></div></div>
+          <div class="sdg-item sdg-more" onclick="location.href='sdgs.html'"><div class="sdg-more-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="#c48b5c" stroke-width="1.5" stroke-dasharray="3 2"/><path d="M13 10l4 4-4 4" stroke="#c48b5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>查看全部</h3><p class="sdg-en">View All 17 Goals</p></div>
         </div>
-        <div class="text-center mt-5">
-          <a href="sdgs.html" class="btn btn-primary">查看全部17项目标</a>
         </div>
       </div>
     </section>
@@ -2515,7 +2551,7 @@ gsap.registerPlugin(ScrollTrigger);
         gsap.fromTo('.hero-globe', { scale: 0.75, opacity: 0, rotate: -15 }, { scale: 1, opacity: 1, rotate: 0, duration: 1.2, delay: 0.2, ease: 'power2.inOut' });
       }
       gsap.fromTo('.stat-card', { y: 60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.12, ease: 'power3.out', scrollTrigger: { trigger: '.stats-section', start: 'top 85%' } });
-      gsap.fromTo('.sdg-card', { y: 56, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, stagger: 0.07, ease: 'power3.out', scrollTrigger: { trigger: '.sdg-highlights', start: 'top 85%' } });
+      gsap.fromTo('.sdg-item', { y: 56, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, stagger: 0.03, ease: 'power3.out', scrollTrigger: { trigger: '.sdg-highlights', start: 'top 90%' } });
       gsap.fromTo('.about-content', { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: '.about-preview', start: 'top 85%' } });
       gsap.fromTo('.carbon-content', { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out', scrollTrigger: { trigger: '.carbon-preview', start: 'top 85%' } });
       gsap.fromTo('.why-sdgs-card', { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.12, ease: 'power3.out', scrollTrigger: { trigger: '.why-sdgs-section', start: 'top 85%' } });
