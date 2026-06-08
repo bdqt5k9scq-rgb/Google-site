@@ -46,35 +46,14 @@ const memberSDGs = [
 
 onMounted(() => {
   gsap.context(() => {
-    const header = document.querySelector('.team-sdgs-header')
-    if (header) {
-      gsap.fromTo(header.querySelector('h1'),
-        { y: 48, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.9, ease: GSAP_EASE.out }
-      )
-      gsap.fromTo(header.querySelector('p'),
-        { y: 32, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.7, delay: 0.15, ease: GSAP_EASE.out }
-      )
-    }
+    gsap.fromTo('.ts-header h1', { y: 48, opacity: 0 }, { y: 0, opacity: 1, duration: 0.9, ease: GSAP_EASE.out })
+    gsap.fromTo('.ts-header p', { y: 32, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, delay: 0.15, ease: GSAP_EASE.out })
+    gsap.fromTo('.member-block', { y: 64, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, stagger: 0.15, ease: GSAP_EASE.out, scrollTrigger: { trigger: '.ts-content', start: 'top 88%' } })
 
-    gsap.fromTo('.member-section',
-      { y: 64, opacity: 0 },
-      {
-        y: 0, opacity: 1, duration: 0.7, stagger: 0.15, ease: GSAP_EASE.out,
-        scrollTrigger: { trigger: '.team-sdgs-content', start: 'top 85%' },
-      }
-    )
-
-    // SDG card hover
-    const cards = gsap.utils.toArray<HTMLElement>('.team-sdg-card')
-    cards.forEach((card) => {
-      card.addEventListener('mouseenter', () => {
-        gsap.to(card, { y: -4, scale: 1.02, duration: 0.3, ease: 'power2.out' })
-      })
-      card.addEventListener('mouseleave', () => {
-        gsap.to(card, { y: 0, scale: 1, duration: 0.35, ease: 'power2.out' })
-      })
+    const cards = gsap.utils.toArray<HTMLElement>('.ts-sdg-card')
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => gsap.to(card, { y: -4, scale: 1.02, duration: 0.3, ease: 'power2.out' }))
+      card.addEventListener('mouseleave', () => gsap.to(card, { y: 0, scale: 1, duration: 0.35, ease: 'power2.out' }))
     })
   })
 })
@@ -83,67 +62,55 @@ onMounted(() => {
 <template>
   <div class="team-sdgs">
     <!-- ====== Header ====== -->
-    <section class="team-sdgs-header">
-      <div class="container container-narrow">
-        <p class="team-sdgs-eyebrow">团队成员 &middot; SDG 目标分工</p>
+    <section class="ts-header">
+      <div class="container">
+        <p class="ts-eyebrow">Team & SDGs</p>
         <h1>每个人都有自己的使命</h1>
-        <p>四位来自不同专业领域的团队成员，将各自专长与可持续发展目标紧密结合</p>
+        <p>四位团队成员将各自专长与可持续发展目标紧密结合</p>
       </div>
     </section>
 
-    <!-- ====== Member SDG sections ====== -->
-    <section class="team-sdgs-content">
-      <div class="container container-narrow">
-        <div
-          v-for="m in memberSDGs"
-          :key="m.member.id"
-          class="member-section"
-        >
-          <!-- Member intro -->
-          <div class="member-header" :style="{ '--member-bg': m.member.bg }">
-            <div class="member-avatar-lg">
-              <div class="avatar-initial-lg">{{ m.member.name.charAt(0) }}</div>
-            </div>
-            <div class="member-info">
-              <h2 class="member-name-lg">{{ m.member.name }}</h2>
-              <span class="member-role-tag">{{ m.member.role }}</span>
-              <span class="member-bg-tag">{{ m.member.background }}</span>
-              <span class="member-id-tag">学号: {{ m.member.studentId }}</span>
+    <!-- ====== Members ====== -->
+    <section class="ts-content">
+      <div class="container">
+        <div v-for="m in memberSDGs" :key="m.member.id" class="member-block">
+          <!-- Profile header -->
+          <div class="mh">
+            <div class="mh-avatar" :style="{ background: m.member.bg }">{{ m.member.name.charAt(0) }}</div>
+            <div class="mh-info">
+              <h2>{{ m.member.name }}</h2>
+              <div class="mh-tags">
+                <span class="tag-role">{{ m.member.role }}</span>
+                <span class="tag-bg">{{ m.member.background }}</span>
+                <span class="tag-id">学号: {{ m.member.studentId }}</span>
+              </div>
             </div>
           </div>
-          <p class="member-focus">{{ m.focus }}</p>
+          <p class="mh-focus">"{{ m.focus }}"</p>
 
-          <!-- SDG cards for this member -->
-          <div class="team-sdg-grid">
-            <div
-              v-for="sdg in m.sdgs"
-              :key="sdg.id"
-              class="team-sdg-card card"
-              :style="{ '--sdg-color': sdg.color, '--sdg-color-light': sdg.color + '15' }"
-            >
-              <div class="team-sdg-top">
-                <span class="team-sdg-num" :style="{ color: sdg.color }">
-                  {{ String(sdg.id).padStart(2, '0') }}
-                </span>
-                <div class="team-sdg-titles">
+          <!-- SDG cards -->
+          <div class="ts-grid">
+            <div v-for="sdg in m.sdgs" :key="sdg.id" class="ts-sdg-card" :style="{ '--c': sdg.color, '--cl': sdg.color + '10' }">
+              <div class="ts-sdg-head">
+                <span class="ts-sdg-num" :style="{ color: sdg.color }">{{ String(sdg.id).padStart(2, '0') }}</span>
+                <div>
                   <h3>{{ sdg.title }}</h3>
-                  <p class="team-sdg-sub">{{ sdg.subtitle }}</p>
+                  <p class="ts-sdg-sub">{{ sdg.subtitle }}</p>
                 </div>
               </div>
-              <p class="team-sdg-desc">{{ sdg.description }}</p>
-              <div class="team-sdg-accent" :style="{ background: sdg.color }"></div>
+              <p class="ts-sdg-desc">{{ sdg.description }}</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ====== Call to action ====== -->
-    <section class="team-sdgs-cta">
-      <div class="container container-narrow">
-        <div class="cta-card">
-          <h2>一起行动</h2>
-          <p>每位团队成员的目标只是起点。17项可持续发展目标相互关联，需要每个人的参与和贡献。</p>
+    <!-- ====== CTA ====== -->
+    <section class="ts-cta">
+      <div class="container">
+        <div class="ts-cta-inner">
+          <h2>一起行动，改变世界</h2>
+          <p>每位成员的目标只是起点。17项可持续发展目标相互关联，需要每个人的参与</p>
           <router-link to="/sdgs" class="btn btn-primary">
             了解全部17项目标
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -156,255 +123,120 @@ onMounted(() => {
 
 <style scoped>
 /* ====== Header ====== */
-.team-sdgs-header {
-  background: linear-gradient(165deg, #1c1c24 0%, #252530 40%, #1c1c24 100%);
-  color: #fff;
-  padding: 72px 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.ts-header {
+  background: linear-gradient(165deg, #0d0d18 0%, #1a1a2e 40%, #0d0d18 100%);
+  color: #fff; padding: 80px 0; text-align: center;
+  position: relative; overflow: hidden;
 }
-
-.team-sdgs-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+.ts-header::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 500px 200px at 50% 25%, rgba(196,139,92,0.05) 0%, transparent 70%);
   pointer-events: none;
 }
-
-.team-sdgs-eyebrow {
-  font-family: var(--font-body, sans-serif);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-terracotta, #c48b5c);
-  margin-bottom: 12px;
+.ts-eyebrow {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #c48b5c; margin-bottom: 16px;
 }
-
-.team-sdgs-header h1 {
-  font-family: var(--font-display, Georgia, serif);
+.ts-header h1 {
+  font-family: Georgia, serif;
   font-size: clamp(2.2rem, 4vw, 3rem);
-  color: #fff;
-  margin-bottom: 16px;
+  color: #fff; margin-bottom: 16px;
 }
-
-.team-sdgs-header p {
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 1.08rem;
-}
+.ts-header p { color: rgba(255,255,255,0.5); font-size: 1.1rem; }
 
 /* ====== Content ====== */
-.team-sdgs-content {
-  padding: 64px 0;
-  background: var(--color-paper, #fdfaf6);
-}
+.ts-content { padding: 80px 0; background: #fdfaf6; }
 
-.member-section {
-  margin-bottom: 72px;
+.member-block {
+  margin-bottom: 80px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 48px 40px;
+  border: 1px solid #f0ebe4;
 }
+.member-block:last-child { margin-bottom: 0; }
 
-.member-section:last-child {
-  margin-bottom: 0;
-}
-
-/* ====== Member Header ====== */
-.member-header {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 20px;
-}
-
-.avatar-initial-lg {
-  width: 80px;
-  height: 80px;
+/* Member header */
+.mh { display: flex; align-items: center; gap: 24px; margin-bottom: 20px; }
+.mh-avatar {
+  width: 72px; height: 72px; min-width: 72px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--member-bg, #c48b5c), color-mix(in srgb, var(--member-bg, #c48b5c) 70%, #fff));
-  color: #fff;
-  font-family: var(--font-display, Georgia, serif);
-  font-size: 2.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  box-shadow: 0 8px 24px rgba(28, 28, 36, 0.12);
+  color: #fff; font-family: Georgia, serif; font-size: 2rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 24px rgba(28,28,36,0.15);
+}
+.mh-info h2 {
+  font-family: Georgia, serif;
+  font-size: 1.6rem; color: #1c1c24; margin-bottom: 8px;
+}
+.mh-tags { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.tag-role {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;
+  text-transform: uppercase; color: #c48b5c;
+  background: rgba(196,139,92,0.1);
+  padding: 4px 12px; border-radius: 100px;
+}
+.tag-bg {
+  font-size: 0.75rem; color: #6b6560;
+  background: rgba(28,28,36,0.04);
+  padding: 4px 12px; border-radius: 100px;
+}
+.tag-id {
+  font-size: 0.72rem; color: #8c8782; font-family: monospace;
+}
+.mh-focus {
+  font-size: 1.05rem; color: #6b6560; line-height: 1.7;
+  font-style: italic; padding-left: 96px; margin-bottom: 36px;
 }
 
-.member-name-lg {
-  font-family: var(--font-display, Georgia, serif);
-  font-size: 1.6rem;
-  color: var(--color-ink, #1c1c24);
-  margin-bottom: 6px;
-}
-
-.member-role-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--color-terracotta, #c48b5c);
-  background: rgba(196, 139, 92, 0.1);
-  padding: 3px 12px;
-  border-radius: 100px;
-  margin-right: 8px;
-  margin-bottom: 4px;
-}
-
-.member-bg-tag {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--color-text-muted, #6b6560);
-  background: rgba(28, 28, 36, 0.05);
-  padding: 3px 12px;
-  border-radius: 100px;
-}
-
-.member-id-tag {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 500;
-  color: var(--color-text-light, #8c8782);
-  margin-top: 6px;
-  font-family: monospace;
-}
-
-.member-focus {
-  font-size: 1.05rem;
-  color: var(--color-text-muted, #6b6560);
-  line-height: 1.7;
-  margin-bottom: 28px;
-  padding-left: 104px;
-  font-style: italic;
-}
-
-/* ====== SDG cards ====== */
-.team-sdg-grid {
+/* SDG cards grid */
+.ts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
-}
-
-.team-sdg-card {
-  padding: 24px;
-  position: relative;
-  overflow: hidden;
-  cursor: default;
-}
-
-.team-sdg-top {
-  display: flex;
   gap: 14px;
-  align-items: flex-start;
-  margin-bottom: 14px;
 }
-
-.team-sdg-num {
-  font-family: var(--font-display, Georgia, serif);
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 1;
-  opacity: 0.8;
-  flex-shrink: 0;
+.ts-sdg-card {
+  padding: 24px;
+  border-radius: 14px;
+  background: var(--cl, #fefcf9);
+  border: 1px solid #f0ebe4;
+  transition: all 0.3s ease;
 }
-
-.team-sdg-titles h3 {
-  font-family: var(--font-display, Georgia, serif);
-  font-size: 1.05rem;
-  color: var(--color-ink, #1c1c24);
-  margin-bottom: 2px;
+.ts-sdg-card:hover {
+  box-shadow: 0 8px 24px rgba(28,28,36,0.08);
+  border-color: transparent;
 }
-
-.team-sdg-sub {
-  font-size: 0.78rem;
-  color: var(--color-text-light, #8c8782);
-  font-style: italic;
+.ts-sdg-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 12px; }
+.ts-sdg-num {
+  font-family: Georgia, serif;
+  font-size: 1.8rem; font-weight: 700; line-height: 1;
+  opacity: 0.8; min-width: 40px;
 }
-
-.team-sdg-desc {
-  color: var(--color-text-muted, #6b6560);
-  font-size: 0.92rem;
-  line-height: 1.7;
+.ts-sdg-head h3 {
+  font-family: Georgia, serif;
+  font-size: 1.05rem; color: #1c1c24; margin-bottom: 2px;
 }
-
-.team-sdg-accent {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.35s var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1));
-}
-
-.team-sdg-card:hover .team-sdg-accent {
-  transform: scaleX(1);
-}
+.ts-sdg-sub { font-size: 0.75rem; color: #8c8782; font-style: italic; }
+.ts-sdg-desc { color: #6b6560; font-size: 0.9rem; line-height: 1.65; }
 
 /* ====== CTA ====== */
-.team-sdgs-cta {
-  padding: 64px 0 80px;
-  background: var(--color-cream, #fefcf9);
-  border-top: 1px solid var(--color-border-light, #f0ebe4);
+.ts-cta {
+  padding: 80px 0;
+  background: linear-gradient(160deg, #1c1c24 0%, #252530 50%, #1c1c24 100%);
+}
+.ts-cta-inner { text-align: center; }
+.ts-cta-inner h2 {
+  font-family: Georgia, serif;
+  font-size: 2rem; color: #fff; margin-bottom: 12px;
+}
+.ts-cta-inner p {
+  color: rgba(255,255,255,0.5); font-size: 1.08rem; margin-bottom: 32px;
 }
 
-.cta-card {
-  text-align: center;
-  background: #fff;
-  border: 1px solid var(--color-border-light, #f0ebe4);
-  border-radius: var(--radius-xl, 20px);
-  padding: 48px 32px;
-  box-shadow: var(--shadow-md, 0 4px 12px rgba(28, 28, 36, 0.06));
-}
-
-.cta-card h2 {
-  font-family: var(--font-display, Georgia, serif);
-  font-size: 1.8rem;
-  color: var(--color-ink, #1c1c24);
-  margin-bottom: 12px;
-}
-
-.cta-card p {
-  color: var(--color-text-muted, #6b6560);
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 28px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ====== Responsive ====== */
 @media (max-width: 768px) {
-  .member-header {
-    flex-direction: column;
-    text-align: center;
-    gap: 16px;
-  }
-
-  .member-focus {
-    padding-left: 0;
-    text-align: center;
-  }
-
-  .team-sdg-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .avatar-initial-lg {
-    width: 64px;
-    height: 64px;
-    font-size: 1.6rem;
-  }
-
-  .member-name-lg {
-    font-size: 1.3rem;
-  }
+  .mh { flex-direction: column; text-align: center; }
+  .mh-focus { padding-left: 0; text-align: center; }
+  .member-block { padding: 32px 20px; }
+  .ts-grid { grid-template-columns: 1fr; }
 }
 </style>
