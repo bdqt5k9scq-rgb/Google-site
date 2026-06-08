@@ -3,13 +3,6 @@ import { onMounted } from 'vue'
 import gsap from 'gsap'
 import { GSAP_EASE } from '@/lib/animations'
 
-const teamMembers = [
-  { id: 1, name: '张明', background: '环境科学专业', careerGoal: '成为可持续发展领域专家', role: '项目负责人' },
-  { id: 2, name: '李华', background: '计算机科学专业', careerGoal: '开发环保科技解决方案', role: '技术开发' },
-  { id: 3, name: '王芳', background: '国际事务专业', careerGoal: '推动全球可持续发展合作', role: '政策研究' },
-  { id: 4, name: '陈伟', background: '统计学专业', careerGoal: '数据分析与可持续发展评估', role: '数据分析师' }
-]
-
 const aboutInfo = {
   mission: '我们致力于促进联合国可持续发展目标的普及与实践，通过教育、宣传和行动，推动个人和组织参与到可持续发展的全球进程中。',
   vision: '构建一个人人参与、共同发展的可持续未来，让地球成为人类和自然和谐共处的美好家园。',
@@ -52,23 +45,11 @@ onMounted(() => {
         scrollTrigger: { trigger: '.objectives-section', start: 'top 85%' } }
     )
 
-    gsap.fromTo('.team-card',
-      { y: 56, opacity: 0 },
-      {
-        y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: GSAP_EASE.out,
-        scrollTrigger: { trigger: '.team-grid', start: 'top 85%' },
-      }
+    gsap.fromTo('.about-cta',
+      { y: 48, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.7, ease: GSAP_EASE.out,
+        scrollTrigger: { trigger: '.about-cta', start: 'top 85%' } }
     )
-
-    const cards = gsap.utils.toArray<HTMLElement>('.team-card')
-    cards.forEach((card) => {
-      card.addEventListener('mouseenter', () => {
-        gsap.to(card, { y: -6, duration: 0.3, ease: 'power2.out' })
-      })
-      card.addEventListener('mouseleave', () => {
-        gsap.to(card, { y: 0, duration: 0.35, ease: 'power2.out' })
-      })
-    })
   })
 })
 </script>
@@ -112,20 +93,16 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- ====== Team ====== -->
-    <section class="team-section">
-      <div class="container">
-        <h2 class="section-title">团队成员</h2>
-        <p class="section-subtitle">多元化的专业背景，共同的目标与使命</p>
-        <div class="team-grid">
-          <div v-for="member in teamMembers" :key="member.id" class="team-card">
-            <div class="member-avatar">
-              <div class="avatar-initial">{{ member.name.charAt(0) }}</div>
-            </div>
-            <h3 class="member-name">{{ member.name }}</h3>
-            <span class="member-role">{{ member.role }}</span>
-            <p class="member-bg">{{ member.background }}</p>
-          </div>
+    <!-- ====== CTA ====== -->
+    <section class="about-cta">
+      <div class="container container-narrow">
+        <div class="cta-card">
+          <h2>认识我们的团队</h2>
+          <p>四位来自不同专业领域的成员，将各自的专长与可持续发展目标紧密结合，分工协作，共同推进可持续发展事业。</p>
+          <router-link to="/team-sdgs" class="btn btn-primary">
+            查看团队SDG目标分工
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </router-link>
         </div>
       </div>
     </section>
@@ -246,78 +223,40 @@ onMounted(() => {
   min-width: 20px;
 }
 
-/* ====== Team ====== */
-.team-section {
+/* ====== CTA ====== */
+.about-cta {
   padding: 72px 0;
   background: var(--color-cream, #fefcf9);
   border-top: 1px solid var(--color-border-light, #f0ebe4);
 }
 
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.team-card {
+.cta-card {
+  text-align: center;
   background: #fff;
   border: 1px solid var(--color-border-light, #f0ebe4);
-  border-radius: var(--radius-lg, 12px);
-  padding: 32px 24px;
-  text-align: center;
-  transition: all 0.35s var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1));
+  border-radius: var(--radius-xl, 20px);
+  padding: 48px 32px;
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(28, 28, 36, 0.06));
 }
 
-.team-card:hover {
-  box-shadow: var(--shadow-lg, 0 12px 32px rgba(28, 28, 36, 0.08));
-  border-color: transparent;
-}
-
-.avatar-initial {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-terracotta, #c48b5c), var(--color-earth, #8b7355));
-  color: #fff;
+.cta-card h2 {
   font-family: var(--font-display, Georgia, serif);
-  font-size: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 16px;
-}
-
-.member-name {
-  font-family: var(--font-display, Georgia, serif);
-  font-size: 1.15rem;
+  font-size: 1.8rem;
   color: var(--color-ink, #1c1c24);
-  margin-bottom: 4px;
-}
-
-.member-role {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--color-terracotta, #c48b5c);
-  background: rgba(196, 139, 92, 0.08);
-  padding: 3px 12px;
-  border-radius: 100px;
   margin-bottom: 12px;
 }
 
-.member-bg {
+.cta-card p {
   color: var(--color-text-muted, #6b6560);
-  font-size: 0.88rem;
-  line-height: 1.5;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
   .mission-section,
   .vision-section,
   .objectives-section {

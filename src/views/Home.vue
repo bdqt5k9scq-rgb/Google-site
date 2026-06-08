@@ -15,6 +15,13 @@ const sdgHighlights = [
   { id: 6, title: '清洁饮水', description: '确保清洁饮水和卫生设施', color: '#26bde2' }
 ]
 
+const teamMembers = [
+  { id: 1, name: 'Li Shuhang', background: '环境科学专业', careerGoal: '成为可持续发展领域专家', role: '项目负责人', studentId: '8168667' },
+  { id: 2, name: 'Feng Jingyi', background: '计算机科学专业', careerGoal: '开发环保科技解决方案', role: '技术开发', studentId: '8168308' },
+  { id: 3, name: 'Wang Luyang', background: '国际事务专业', careerGoal: '推动全球可持续发展合作', role: '政策研究', studentId: '8168505' },
+  { id: 4, name: 'Lu Jianning', background: '统计学专业', careerGoal: '数据分析与可持续发展评估', role: '数据分析师', studentId: '8168379' }
+]
+
 const stats = [
   { number: '17', label: '可持续发展目标' },
   { number: '193', label: '成员国共同承诺' },
@@ -71,6 +78,15 @@ onMounted(() => {
       }
     )
 
+    // Team bios
+    gsap.fromTo('.bio-card',
+      { y: 56, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: GSAP_EASE.out,
+        scrollTrigger: { trigger: '.bios-grid', start: 'top 85%' },
+      }
+    )
+
     // Carbon preview
     gsap.fromTo('.carbon-preview .carbon-content',
       { y: 48, opacity: 0 },
@@ -81,7 +97,7 @@ onMounted(() => {
     )
 
     // GSAP hover for cards
-    const cards = gsap.utils.toArray<HTMLElement>('.sdg-card, .stat-card')
+    const cards = gsap.utils.toArray<HTMLElement>('.sdg-card, .stat-card, .bio-card')
     cards.forEach((card) => {
       card.addEventListener('mouseenter', () => {
         gsap.to(card, { y: -6, duration: 0.3, ease: 'power2.out' })
@@ -205,6 +221,34 @@ onMounted(() => {
         <div class="text-center mt-xl">
           <button class="btn btn-primary" @click="router.push('/sdgs')">
             查看全部17项目标
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Team Bios ====== -->
+    <section class="team-bios">
+      <div class="container">
+        <h2 class="section-title">团队成员</h2>
+        <p class="section-subtitle">多元化的专业背景，共同的目标与使命</p>
+        <div class="bios-grid">
+          <div v-for="member in teamMembers" :key="member.id" class="bio-card">
+            <div class="bio-avatar">
+              <div class="bio-avatar-inner">{{ member.name.charAt(0) }}</div>
+            </div>
+            <div class="bio-info">
+              <h3 class="bio-name">{{ member.name }}</h3>
+              <span class="bio-role">{{ member.role }}</span>
+              <span class="bio-bg">{{ member.background }}</span>
+              <span class="bio-id">学号: {{ member.studentId }}</span>
+            </div>
+            <p class="bio-goal">{{ member.careerGoal }}</p>
+          </div>
+        </div>
+        <div class="text-center mt-xl">
+          <button class="btn btn-primary" @click="router.push('/team-sdgs')">
+            查看团队SDG目标分工
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
@@ -487,6 +531,111 @@ onMounted(() => {
   line-height: 1.6;
 }
 
+/* ====== Team Bios ====== */
+.team-bios {
+  padding: 80px 0;
+  background: var(--color-paper, #fdfaf6);
+  position: relative;
+}
+
+.team-bios::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-sand, #e8dfd5), transparent);
+}
+
+.bios-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.bio-card {
+  background: #fff;
+  border: 1px solid var(--color-border-light, #f0ebe4);
+  border-radius: var(--radius-lg, 12px);
+  padding: 32px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+.bio-card:hover {
+  box-shadow: var(--shadow-lg, 0 12px 32px rgba(28, 28, 36, 0.08));
+  border-color: transparent;
+}
+
+.bio-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.bio-avatar-inner {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-terracotta, #c48b5c), #8b7355);
+  color: #fff;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-info {
+  margin-bottom: 12px;
+}
+
+.bio-name {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 1.15rem;
+  color: var(--color-ink, #1c1c24);
+  margin-bottom: 8px;
+}
+
+.bio-role {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-terracotta, #c48b5c);
+  margin-bottom: 6px;
+}
+
+.bio-bg {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--color-text-muted, #6b6560);
+  background: rgba(28, 28, 36, 0.04);
+  padding: 3px 12px;
+  border-radius: 100px;
+}
+
+.bio-id {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--color-text-light, #8c8782);
+  margin-top: 8px;
+  font-family: monospace;
+}
+
+.bio-goal {
+  color: var(--color-text-muted, #6b6560);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
 /* ====== About Preview ====== */
 .about-preview {
   padding: 80px 0;
@@ -600,6 +749,17 @@ onMounted(() => {
   .sdg-grid {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .bios-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bios-grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>

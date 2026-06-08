@@ -17,6 +17,7 @@ const navItems = [
   { name: '首页', path: '/' },
   { name: '关于我们', path: '/about' },
   { name: 'SDG目标', path: '/sdgs' },
+  { name: '团队SDG', path: '/team-sdgs' },
   { name: '碳足迹计算', path: '/carbon-footprint' },
   { name: '行动倡议', path: '/act-now' }
 ]
