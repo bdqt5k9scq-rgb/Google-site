@@ -168,12 +168,25 @@ onMounted(() => {
             v-for="sdg in allSDGs"
             :key="sdg.id"
             class="sdg-item"
-            :style="{ '--c': sdg.color, '--c-light': sdg.color + '12' }"
+            :style="{ '--c': sdg.color, '--c-light': sdg.color + '10' }"
             @click="router.push('/sdgs')"
           >
-            <span class="sdg-num">{{ String(sdg.id).padStart(2, '0') }}</span>
+            <div class="sdg-watermark">{{ String(sdg.id).padStart(2, '0') }}</div>
+            <div class="sdg-dot" :style="{ background: sdg.color }"></div>
             <h3>{{ sdg.title }}</h3>
             <p class="sdg-en">{{ sdg.subtitle }}</p>
+            <div class="sdg-bar" :style="{ background: sdg.color }"></div>
+          </div>
+          <!-- 查看更多 -->
+          <div class="sdg-item sdg-more" @click="router.push('/sdgs')">
+            <div class="sdg-more-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <circle cx="14" cy="14" r="13" stroke="#c48b5c" stroke-width="1.5" stroke-dasharray="3 2"/>
+                <path d="M13 10l4 4-4 4" stroke="#c48b5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>查看全部</h3>
+            <p class="sdg-en">View All 17 Goals</p>
           </div>
         </div>
       </div>
@@ -400,49 +413,97 @@ onMounted(() => {
 }
 .sdgs-full-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
   margin-top: 36px;
 }
 .sdg-item {
   background: #fff;
   border: 1px solid #f0ebe4;
   border-radius: 14px;
-  padding: 24px 16px;
+  padding: 28px 18px 22px;
   text-align: center;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.16,1,0.3,1);
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
-.sdg-item::after {
-  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
-  background: var(--c); transform: scaleX(0); transform-origin: left;
-  transition: transform 0.35s cubic-bezier(0.16,1,0.3,1);
+.sdg-watermark {
+  position: absolute;
+  top: -8px;
+  right: -4px;
+  font-family: Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--c);
+  opacity: 0.05;
+  line-height: 1;
+  pointer-events: none;
+}
+.sdg-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+.sdg-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform: scaleX(0.25);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
 }
 .sdg-item:hover {
-  box-shadow: 0 12px 28px rgba(28,28,36,0.08);
+  box-shadow: 0 12px 28px rgba(28,28,36,0.1);
   border-color: transparent;
   background: var(--c-light);
+  transform: translateY(-4px);
 }
-.sdg-item:hover::after { transform: scaleX(1); }
-.sdg-num {
-  font-family: Georgia, serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--c);
-  opacity: 0.7;
-  display: block;
-  margin-bottom: 4px;
-}
+.sdg-item:hover .sdg-bar { transform: scaleX(1); }
+.sdg-item:hover .sdg-watermark { opacity: 0.1; }
 .sdg-item h3 {
   font-family: Georgia, serif;
   font-size: 0.95rem;
   color: #1c1c24;
-  margin-bottom: 2px;
+  position: relative;
+  z-index: 1;
 }
-.sdg-en { font-size: 0.7rem; color: #8c8782; font-style: italic; }
+.sdg-en {
+  font-size: 0.68rem;
+  color: #8c8782;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+/* View all card */
+.sdg-more {
+  background: transparent;
+  border: 1.5px dashed #d4c5b0;
+  gap: 8px;
+}
+.sdg-more:hover {
+  background: rgba(196,139,92,0.03);
+  border-color: #c48b5c;
+  border-style: solid;
+}
+.sdg-more-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.sdg-more h3 { color: #c48b5c; }
+.sdg-more .sdg-en { color: #a89880; }
 
 /* ====== TEAM ====== */
 .team-section {
