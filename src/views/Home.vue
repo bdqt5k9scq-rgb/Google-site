@@ -29,6 +29,21 @@ const stats = [
   { number: '169', label: '具体行动指标' }
 ]
 
+const whySDGs = [
+  {
+    title: '前所未有的全球性挑战',
+    text: '当今世界面临着前所未有的全球性挑战。气候变化导致极端天气事件频发，全球平均气温已比工业革命前上升约1.1°C，若不采取行动，到2100年可能上升2.7°C以上（IPCC, 2023）。与此同时，全球仍有超过7亿人生活在极端贫困中，每天生活费不足2.15美元（联合国, 2023）。这些挑战不是单一国家能够独立解决的——因为它们超越了国界，影响着地球上的每一个生命。'
+  },
+  {
+    title: '统一的行动框架',
+    text: '联合国可持续发展目标（SDGs）为全球社会提供了统一的行动框架。与以往的倡议不同，SDGs认识到经济发展、社会包容和环境保护是不可分割的整体——正如SDG 1（消除贫困）与SDG 4（优质教育）和SDG 8（体面工作）相互关联，气候行动（SDG 13）与清洁能源（SDG 7）和可持续城市（SDG 11）密不可分（Sachs et al., 2023）。这种系统性思维确保解决一个问题时不会加剧另一个问题。'
+  },
+  {
+    title: '缺乏指引的代价',
+    text: '没有SDGs的指引，全球发展将面临方向不一、资源分散、重复努力的风险。可持续发展目标提供了明确的指标和时间表——169项具体目标和232项指标——让各国政府、企业、民间组织和个人能够协调行动，衡量进展（联合国, 2015）。更重要的是，SDGs不落下任何人（Leave No One Behind）的核心承诺确保了发展的成果能够惠及最脆弱的群体。'
+  }
+]
+
 onMounted(() => {
   gsap.context(() => {
     const hero = document.querySelector('.hero')
@@ -57,6 +72,15 @@ onMounted(() => {
       {
         y: 0, opacity: 1, duration: 0.7, stagger: 0.12, ease: GSAP_EASE.out,
         scrollTrigger: { trigger: '.stats-section', start: 'top 85%' },
+      }
+    )
+
+    // Why SDGs cards
+    gsap.fromTo('.why-sdgs-card',
+      { y: 48, opacity: 0 },
+      {
+        y: 0, opacity: 1, duration: 0.6, stagger: 0.12, ease: GSAP_EASE.out,
+        scrollTrigger: { trigger: '.why-sdgs-section', start: 'top 85%' },
       }
     )
 
@@ -97,7 +121,7 @@ onMounted(() => {
     )
 
     // GSAP hover for cards
-    const cards = gsap.utils.toArray<HTMLElement>('.sdg-card, .stat-card, .bio-card')
+    const cards = gsap.utils.toArray<HTMLElement>('.sdg-card, .stat-card, .bio-card, .why-sdgs-card')
     cards.forEach((card) => {
       card.addEventListener('mouseenter', () => {
         gsap.to(card, { y: -6, duration: 0.3, ease: 'power2.out' })
@@ -195,6 +219,24 @@ onMounted(() => {
             <div class="stat-number">{{ stat.number }}</div>
             <div class="stat-rule"></div>
             <div class="stat-label">{{ stat.label }}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Why SDGs ====== -->
+    <section class="why-sdgs-section">
+      <div class="container container-narrow">
+        <h2 class="section-title">世界为何需要联合国可持续发展目标的指引</h2>
+        <div class="why-sdgs-content">
+          <div
+            v-for="(item, index) in whySDGs"
+            :key="index"
+            class="why-sdgs-card"
+          >
+            <span class="why-sdgs-num">{{ String(index + 1).padStart(2, '0') }}</span>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
           </div>
         </div>
       </div>
@@ -450,6 +492,73 @@ onMounted(() => {
   color: var(--color-text-muted, #6b6560);
   font-size: 0.9rem;
   font-weight: 500;
+}
+
+/* ====== Why SDGs ====== */
+.why-sdgs-section {
+  padding: 80px 0;
+  background: var(--color-cream, #fefcf9);
+  position: relative;
+}
+
+.why-sdgs-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-sand, #e8dfd5), transparent);
+}
+
+.why-sdgs-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.why-sdgs-card {
+  background: #fff;
+  border: 1px solid var(--color-border-light, #f0ebe4);
+  border-radius: var(--radius-lg, 12px);
+  padding: 32px 24px;
+  transition: all 0.35s var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+.why-sdgs-card:hover {
+  box-shadow: var(--shadow-lg, 0 12px 32px rgba(28, 28, 36, 0.08));
+  border-color: transparent;
+}
+
+.why-sdgs-num {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-terracotta, #c48b5c);
+  opacity: 0.6;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.why-sdgs-card h3 {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 1.15rem;
+  color: var(--color-ink, #1c1c24);
+  margin-bottom: 12px;
+}
+
+.why-sdgs-card p {
+  color: var(--color-text-muted, #6b6560);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .why-sdgs-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ====== SDG Highlights ====== */

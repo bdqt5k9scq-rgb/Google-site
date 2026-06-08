@@ -2,3 +2,10 @@ node_modules/
 dist/
 .DS_Store
 *.log
+*.pdf
+_pdf_*
+_thumb_*
+_small_*
+_readpdf.*
+_preview.*
+public/_design*
