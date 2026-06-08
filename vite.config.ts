@@ -3,12 +3,15 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: '/Google-site/',
-  build: { outDir: 'docs' },
   plugins: [vue()],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
+    }
+  },
+  build: {
+    rollupOptions: {
+      input: 'vue-app.html'
     }
   }
 })
