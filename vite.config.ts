@@ -4,6 +4,7 @@ import { resolve } from 'path'
 
 export default defineConfig({
   base: '/Google-site/',
+  build: { outDir: 'docs' },
   plugins: [vue()],
   resolve: {
     alias: {
