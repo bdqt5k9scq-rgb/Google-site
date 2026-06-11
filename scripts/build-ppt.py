@@ -659,29 +659,35 @@ def main():
     page += 1
     slide14 = build_light_slide(prs, "Website Walkthrough",
                                  "A quick tour of the main pages we built")
-    pages_info = [
-        ("Homepage", "Hero banner, key statistics,\n17-goal interactive grid,\nteam introduction"),
-        ("SDGs Explorer", "Detailed goal-by-goal\ninformation pages with\nvisual data presentation"),
-        ("Carbon Calculator", "Interactive footprint tool:\ntransport, energy, food,\nwaste — with tailored tips"),
-        ("Act Now Guide", "Actionable individual steps\norganized by category:\ntransport, energy, food, waste"),
+    # Screenshots with labels
+    screenshots = [
+        ("output/screenshots/home.png",   "Homepage"),
+        ("output/screenshots/sdgs.png",   "SDGs Explorer"),
+        ("output/screenshots/carbon.png", "Carbon Calculator"),
+        ("output/screenshots/actnow.png", "Act Now"),
     ]
-    showcase_w = Inches(2.45); showcase_gap = Inches(0.25)
-    showcase_total_w = 4 * showcase_w + 3 * showcase_gap; showcase_start_x = (SLIDE_W - showcase_total_w) // 2
-    showcase_y = Inches(1.7)
-    for i, (pname, pdesc) in enumerate(pages_info):
-        x = showcase_start_x + i * (showcase_w + showcase_gap)
-        # Placeholder
-        ph = add_rounded_rect(slide14, x, showcase_y, showcase_w, Inches(1.5), fill_color=RGBColor(0xEE, 0xEA, 0xE4))
-        add_textbox(slide14, x + Inches(0.2), showcase_y + Inches(0.45), showcase_w - Inches(0.4), Inches(0.6),
-                    f"[ {pname}\n  Screenshot ]", font_name=FONT_BODY, font_size=SIZE_CAPTION,
-                    color=C_TEXT_SEC, alignment=PP_ALIGN.CENTER)
-        add_textbox(slide14, x, showcase_y + Inches(1.65), showcase_w, Inches(0.3),
-                    pname, font_name=FONT_TITLE, font_size=SIZE_SMALL, color=C_TEXT, bold=True, alignment=PP_ALIGN.CENTER)
-        add_textbox(slide14, x, showcase_y + Inches(1.98), showcase_w, Inches(0.9),
-                    pdesc, font_name=FONT_BODY, font_size=SIZE_CAPTION, color=C_TEXT_SEC, alignment=PP_ALIGN.CENTER)
+    img_w = Inches(2.35); img_h = Inches(1.55); img_gap = Inches(0.3)
+    img_total_w = 4 * img_w + 3 * img_gap; img_start_x = (SLIDE_W - img_total_w) // 2
+    img_y = Inches(1.7)
+    for i, (img_path, label) in enumerate(screenshots):
+        x = img_start_x + i * (img_w + img_gap)
+        if os.path.exists(img_path):
+            # Rounded rect background then image on top
+            add_rounded_rect(slide14, x, img_y, img_w, img_h, fill_color=C_BORDER)
+            slide14.shapes.add_picture(img_path, x + Inches(0.02), img_y + Inches(0.02),
+                                       img_w - Inches(0.04), img_h - Inches(0.04))
+        else:
+            # Fallback placeholder
+            add_rounded_rect(slide14, x, img_y, img_w, img_h, fill_color=RGBColor(0xEE, 0xEA, 0xE4))
+            add_textbox(slide14, x + Inches(0.2), img_y + Inches(0.45), img_w - Inches(0.4), Inches(0.6),
+                        f"[ {label} ]", font_name=FONT_BODY, font_size=SIZE_CAPTION,
+                        color=C_TEXT_SEC, alignment=PP_ALIGN.CENTER)
+        # Label below
+        add_textbox(slide14, x, img_y + Inches(1.62), img_w, Inches(0.3),
+                    label, font_name=FONT_TITLE, font_size=SIZE_SMALL, color=C_TEXT, bold=True, alignment=PP_ALIGN.CENTER)
     # Tech callout
     add_textbox(slide14, MARGIN_L, Inches(5.5), CONTENT_W, Inches(0.3),
-                "Tech Stack: Vue 3 + TypeScript + Vue Router 4 + GSAP Animations + Vite 6",
+                "Built with: Vue 3 + TypeScript + Vue Router 4 + GSAP + Vite 6",
                 font_name=FONT_BODY, font_size=SIZE_CAPTION, color=C_PRIMARY, bold=True, alignment=PP_ALIGN.CENTER)
     add_page_number(slide14, page)
 
