@@ -208,24 +208,24 @@ STATS_DATA = [
 
 WHY_DATA = [
     {
-        "title": "Unprecedented Global Challenges",
-        "text": "Global temperatures have risen ~1.1°C since pre-industrial times. Over 700 million people live in extreme poverty. Biodiversity is declining faster than at any time in human history. These interconnected crises transcend borders — no single nation can solve them alone."
+        "title": "The Problems Don't Stop at Borders",
+        "text": "Temperatures are up about 1.1°C since the Industrial Revolution. Over 700 million people still live on less than $2.15 a day. Species are going extinct at rates not seen in millions of years. These aren't separate issues — they feed into each other, and no country can fix them by acting alone."
     },
     {
-        "title": "A Unified Action Framework",
-        "text": "The 2030 Agenda provides a shared blueprint for peace and prosperity. It recognizes that ending poverty must go hand-in-hand with strategies that improve health and education, reduce inequality, and spur economic growth — all while tackling climate change."
+        "title": "A Framework That Connects the Dots",
+        "text": "Before the SDGs, development goals tended to be siloed — health over here, environment over there. The 2030 Agenda explicitly links economic, social, and environmental dimensions. The idea is simple: you can't lift people out of poverty while destroying the ecosystems they depend on."
     },
     {
-        "title": "Leave No One Behind",
-        "text": "With 169 targets and 232 indicators across 17 goals, the SDGs provide measurable benchmarks for progress. The pledge to 'Leave No One Behind' ensures development reaches the most vulnerable — women, children, persons with disabilities, and marginalized communities."
+        "title": "Measurable, Not Just Nice Words",
+        "text": "Unlike many international agreements, the SDGs come with teeth — 169 specific targets and 232 indicators that can be tracked. The 'Leave No One Behind' principle means looking past national averages to see who's being excluded: women, children, people with disabilities, and the extreme poor."
     },
 ]
 
 TEAM_DATA = [
-    {"name": "Li Shuhang",   "role": "Project Lead",     "bg": "Environmental Science", "id": "8168667", "color": RGBColor(0x2C, 0x5F, 0x2D), "bio": "Coordinates project strategy and leads research on environmental sustainability and ecological conservation."},
-    {"name": "Feng Jingyi",  "role": "Tech Development", "bg": "Computer Science",      "id": "8168308", "color": RGBColor(0x1A, 0x3A, 0x5C), "bio": "Architects the Vue 3 web platform and develops interactive tools for carbon footprint calculation."},
-    {"name": "Wang Luyang",  "role": "Policy Research",  "bg": "International Affairs", "id": "8168505", "color": RGBColor(0x5C, 0x2D, 0x6E), "bio": "Analyzes SDG policy frameworks and maps goal interconnections across international development agendas."},
-    {"name": "Lu Jianning",  "role": "Data Analyst",     "bg": "Statistics",            "id": "8168379", "color": RGBColor(0xB8, 0x57, 0x3E), "bio": "Performs data-driven SDG progress analysis and validates the carbon calculator emission models."},
+    {"name": "Li Shuhang",   "role": "Project Lead",     "bg": "Environmental Science", "id": "8168667", "color": RGBColor(0x2C, 0x5F, 0x2D), "bio": "Handles the big picture — keeps the project on track and digs into the environmental research behind the planet-related SDGs."},
+    {"name": "Feng Jingyi",  "role": "Tech Development", "bg": "Computer Science",      "id": "8168308", "color": RGBColor(0x1A, 0x3A, 0x5C), "bio": "Built the website from scratch using Vue and TypeScript. Wrote the carbon calculator logic and made sure everything actually works."},
+    {"name": "Wang Luyang",  "role": "Policy Research",  "bg": "International Affairs", "id": "8168505", "color": RGBColor(0x5C, 0x2D, 0x6E), "bio": "Reads a lot of UN reports so we don't have to. Focused on how the SDGs fit into real international policy frameworks."},
+    {"name": "Lu Jianning",  "role": "Data Analyst",     "bg": "Statistics",            "id": "8168379", "color": RGBColor(0xB8, 0x57, 0x3E), "bio": "Crunching numbers — validated our carbon calculator's emission factors and checked SDG progress data against official sources."},
 ]
 
 TEAM_SDG_MAP = [
@@ -236,45 +236,45 @@ TEAM_SDG_MAP = [
 ]
 
 AGENDA_ITEMS = [
-    ("01", "Introduction to the SDGs",      "Origins, structure, and global significance of the 2030 Agenda"),
-    ("02", "The 17 Sustainable Development Goals", "A comprehensive overview of all 17 interconnected goals"),
-    ("03", "Why the World Needs SDGs",      "The urgent case for coordinated global action"),
-    ("04", "Our Team & Project Mission",    "Who we are and what we aim to achieve"),
-    ("05", "Interactive Features & Technology", "Carbon calculator, action guides, and technical architecture"),
-    ("06", "Key Takeaways & Call to Action","What we've learned and how you can make a difference"),
+    ("01", "Introduction to the SDGs",      "Where they came from, what they cover, and how they're structured"),
+    ("02", "The 17 Goals at a Glance",      "A walk through all 17 goals, how they group together, and two deep dives"),
+    ("03", "Why the SDGs Exist",            "The problems they're trying to solve and how they approach them differently"),
+    ("04", "Our Team & This Project",       "Four people, four backgrounds, one website about the SDGs"),
+    ("05", "What We Built",                 "The carbon footprint calculator, action guides, and how the site works under the hood"),
+    ("06", "What We Learned & What's Next", "Key takeaways from this project and how to get involved"),
 ]
 
 OBJECTIVES_DATA = [
-    {"title": "Public Awareness", "desc": "Increase public understanding of the 17 SDGs and their relevance to everyday life through accessible digital content"},
-    {"title": "Educational Resources", "desc": "Provide interactive tools and learning materials that empower individuals and organizations to take action"},
-    {"title": "Cross-Disciplinary Collaboration", "desc": "Bridge environmental science, computer science, international affairs, and statistics for holistic solutions"},
-    {"title": "Local Action", "desc": "Translate global goals into local practice — helping communities identify and implement sustainable development initiatives"},
+    {"title": "Make the SDGs Understandable", "desc": "Most people have heard of the SDGs but can't name more than two. We wanted to build something that makes all 17 easy to explore."},
+    {"title": "Give People Tools, Not Just Information", "desc": "Reading about carbon footprints is one thing. Actually calculating yours and getting personalized tips is more useful."},
+    {"title": "Work Across Disciplines", "desc": "You can't understand the SDGs from just one angle. Our team covers environmental science, CS, international affairs, and statistics."},
+    {"title": "Make It Relevant to Daily Life", "desc": "Global goals feel abstract. We tried to connect each SDG to choices people actually make — what they eat, how they travel, what they buy."},
 ]
 
 CARBON_CATEGORIES = [
-    {"name": "Transportation", "icon": "🚗", "factors": [
-        "Private car: 0.2 kg CO₂ per km driven",
+    {"name": "Transportation", "icon": "", "factors": [
+        "Private car: 0.2 kg CO₂ per km",
         "Public transport: 0.05 kg CO₂ per km",
         "Air travel: 250 kg CO₂ per flight",
-        "Short-haul flights have highest per-km impact"
+        "Short-haul flights are worse per km than long-haul"
     ]},
-    {"name": "Energy", "icon": "⚡", "factors": [
-        "Electricity: 0.5 kg CO₂ per kWh consumed",
+    {"name": "Energy", "icon": "", "factors": [
+        "Electricity: 0.5 kg CO₂ per kWh",
         "Natural gas: 2.3 kg CO₂ per m³",
         "Heating: 1.8 kg CO₂ per unit",
-        "Renewable energy switch can cut this by 80%+"
+        "Switching to renewables cuts this category most"
     ]},
-    {"name": "Food", "icon": "🍽", "factors": [
-        "Meat-heavy diet: higher footprint",
-        "Plant-based days earn reduction credits",
-        "Local food: 0.1 kg CO₂ benefit per item",
-        "Food systems account for ~26% of global emissions"
+    {"name": "Food", "icon": "", "factors": [
+        "Meat-heavy diet = higher footprint",
+        "Eating more plant-based meals earns credits",
+        "Locally sourced food: 0.1 kg CO₂ benefit",
+        "Food production = ~26% of global emissions"
     ]},
-    {"name": "Waste", "icon": "♻", "factors": [
-        "No recycling: +100 kg CO₂ penalty",
-        "No composting: +50 kg CO₂ penalty",
-        "Landfill methane is 25× more potent than CO₂",
-        "Circular economy principles reduce total footprint"
+    {"name": "Waste", "icon": "", "factors": [
+        "Not recycling: +100 kg CO₂ penalty",
+        "Not composting: +50 kg CO₂ penalty",
+        "Methane from landfills is 25× worse than CO₂",
+        "Better waste habits are the easiest win"
     ]},
 ]
 
@@ -290,35 +290,35 @@ CARBON_LEVELS = [
 ]
 
 ACTION_ITEMS = [
-    {"category": "Transportation", "icon": "🚲", "actions": [
-        "Switch to public transit, cycling, or walking for daily commutes",
-        "Reduce air travel — one fewer long-haul flight saves ~1.6 tonnes CO₂",
-        "Carpool or use electric vehicles where available"
+    {"category": "Transportation", "icon": "", "actions": [
+        "Take the bus or subway instead of driving — even once a week adds up",
+        "One fewer round-trip flight per year saves about 1.6 tonnes of CO₂",
+        "If you need a car, carpool or look into electric options"
     ]},
-    {"category": "Energy at Home", "icon": "💡", "actions": [
-        "Switch to LED bulbs and energy-efficient appliances (Energy Star rated)",
-        "Unplug devices when not in use — standby power wastes 5-10% of home energy",
-        "Consider switching to a renewable energy provider or installing solar panels"
+    {"category": "Energy at Home", "icon": "", "actions": [
+        "LED bulbs use 75% less energy and last years longer than incandescent",
+        "Standby power from plugged-in devices can be 5-10% of your bill — unplug things",
+        "If your area offers green power plans, they're often not much more expensive"
     ]},
-    {"category": "Food Choices", "icon": "🥗", "actions": [
-        "Adopt Meatless Mondays — reducing meat by 50% cuts food footprint by ~40%",
-        "Choose seasonal, locally sourced produce to reduce transport emissions",
-        "Minimize food waste — if food waste were a country, it would be the 3rd largest emitter"
+    {"category": "Food Choices", "icon": "", "actions": [
+        "Cutting meat consumption in half roughly cuts your food footprint by 40%",
+        "Seasonal local produce doesn't need to be flown or trucked across continents",
+        "A third of all food gets wasted — meal planning helps more than people think"
     ]},
-    {"category": "Waste & Circularity", "icon": "♻", "actions": [
-        "Implement full waste sorting: recyclables, compost, and landfill",
-        "Compost kitchen scraps — reduces methane and creates valuable soil",
-        "Choose reusable products over single-use plastics"
+    {"category": "Waste", "icon": "", "actions": [
+        "Separate your trash: recyclables, kitchen scraps for compost, and actual landfill",
+        "Composting turns food waste into soil instead of methane in a landfill",
+        "Bring a reusable bag and water bottle — simple but effective over time"
     ]},
 ]
 
 TECH_STACK = [
-    {"layer": "Frontend Framework", "tech": "Vue 3 with Composition API", "why": "Reactive, component-based architecture for maintainable UI"},
-    {"layer": "Type System",        "tech": "TypeScript — Strict Mode",   "why": "Compile-time error detection and self-documenting code"},
-    {"layer": "Routing",            "tech": "Vue Router 4 — History Mode","why": "Clean URLs and seamless SPA page transitions"},
-    {"layer": "Animations",         "tech": "GSAP with ScrollTrigger",    "why": "High-performance scroll-linked animations and micro-interactions"},
-    {"layer": "Build Tooling",      "tech": "Vite 6 with HMR",            "why": "Sub-second dev server startup and optimized production builds"},
-    {"layer": "Styling",            "tech": "Scoped CSS + Design Tokens",  "why": "Component-isolated styles with consistent design system"},
+    {"layer": "Frontend Framework", "tech": "Vue 3 (Composition API)", "why": "Component-based, easy to refactor, good TypeScript support"},
+    {"layer": "Type System",        "tech": "TypeScript (strict mode)", "why": "Catches mistakes before runtime, makes the code self-documenting"},
+    {"layer": "Routing",            "tech": "Vue Router 4", "why": "Client-side routing with clean URLs, no page reloads"},
+    {"layer": "Animations",         "tech": "GSAP + ScrollTrigger", "why": "Industry standard for scroll-linked animation, works reliably across browsers"},
+    {"layer": "Build Tooling",      "tech": "Vite 6", "why": "Fast dev server, quick HMR, straightforward production builds"},
+    {"layer": "Styling",            "tech": "Scoped CSS", "why": "Styles are tied to components so they don't leak or conflict"},
 ]
 
 # ── Slide Builder Functions ────────────────────────────────────
@@ -398,7 +398,7 @@ def main():
                 "The Sustainable\nDevelopment Goals",
                 font_name=FONT_TITLE, font_size=Pt(42), color=C_WHITE, bold=True, alignment=PP_ALIGN.CENTER)
     add_textbox(slide, Inches(1.5), Inches(3.4), Inches(10.3), Inches(0.7),
-                "A Comprehensive Overview of the 17 Global Goals\nand Our Project to Promote Awareness and Action",
+                "A course project exploring all 17 goals, what they mean,\nand how technology can help people understand them better",
                 font_name=FONT_BODY, font_size=SIZE_BODY, color=RGBColor(0xAA, 0xAA, 0xBB), alignment=PP_ALIGN.CENTER)
     # Bottom info
     _, tf = add_textbox(slide, Inches(2.0), Inches(5.2), Inches(9.3), Inches(1.6),
@@ -410,7 +410,7 @@ def main():
 
     # ── Slide 2: Agenda ──
     page += 1
-    slide2 = build_light_slide(prs, "Presentation Outline", "Navigating our exploration of the Sustainable Development Goals")
+    slide2 = build_light_slide(prs, "Presentation Outline", "What we'll cover in the next 20 minutes")
     card_w = Inches(3.2); card_h = Inches(2.05); gap = Inches(0.25)
     start_x = MARGIN_L; start_y = Inches(1.65)
     for i, (num, item, desc) in enumerate(AGENDA_ITEMS):
@@ -422,7 +422,7 @@ def main():
     # ═══ SECTION B: BACKGROUND ═══
     # ── Slide 3: What Are the SDGs ──
     page += 1
-    slide3 = build_light_slide(prs, "What Are the SDGs?", "Understanding the 2030 Agenda for Sustainable Development")
+    slide3 = build_light_slide(prs, "What Are the SDGs?", "A quick background on where they came from and what they're trying to do")
     _, tf3 = add_textbox(slide3, MARGIN_L, Inches(1.6), CONTENT_W, Inches(0.9),
         "The Sustainable Development Goals are 17 interconnected global objectives adopted unanimously "
         "by all 193 United Nations Member States in September 2015. They form the core of the 2030 Agenda "
@@ -450,7 +450,7 @@ def main():
 
     # ── Slide 4: Key Statistics ──
     page += 1
-    slide4 = build_light_slide(prs, "Key Statistics", "The scale and ambition of the 2030 Agenda in numbers")
+    slide4 = build_light_slide(prs, "Key Statistics", "The SDGs by the numbers")
     stat_w = Inches(2.35); stat_h = Inches(2.8); stat_gap = Inches(0.35)
     stat_total_w = 4 * stat_w + 3 * stat_gap; stat_start_x = (SLIDE_W - stat_total_w) // 2
     for i, stat in enumerate(STATS_DATA):
@@ -466,7 +466,7 @@ def main():
 
     # ── Slide 5: Why SDGs ──
     page += 1
-    slide5 = build_light_slide(prs, "Why the World Needs SDGs", "Three compelling reasons for coordinated global action")
+    slide5 = build_light_slide(prs, "Why the SDGs Exist", "Three reasons the old approach wasn't working")
     why_w = Inches(3.3); why_h = Inches(4.0); why_gap = Inches(0.35)
     why_total_w = 3 * why_w + 2 * why_gap; why_start_x = (SLIDE_W - why_total_w) // 2
     for i, why in enumerate(WHY_DATA):
@@ -478,7 +478,7 @@ def main():
     # ── Slide 6: Goals Overview Grid ──
     page += 1
     slide6 = build_light_slide(prs, "The 17 Sustainable Development Goals",
-                               "Each goal addresses a critical dimension of human and planetary well-being — click any goal on our website to explore in depth")
+                               "From ending poverty to protecting the oceans — all 17 goals at a glance")
     grid_item_w = Inches(1.55); grid_item_h = Inches(1.2); grid_gap_x = Inches(0.15); grid_gap_y = Inches(0.12)
     grid_cols = 6; grid_start_x = MARGIN_L; grid_start_y = Inches(1.7)
     for i, sdg in enumerate(SDG_DATA):
@@ -515,17 +515,17 @@ def main():
 
     page += 1
     build_5p_slide(prs, "Goals Grouped — The 5P Framework",
-                   "The 17 goals are organized into five critical areas for people and the planet",
+                   "The 17 goals organized into five clusters — the UN calls this the 5P framework",
                    groups_list[:2], page)
     page += 1
     build_5p_slide(prs, "Goals Grouped — Prosperity, Peace & Partnership",
-                   "Completing the 5P framework: building thriving, peaceful, and collaborative societies",
+                   "The remaining groups: prosperity, peace, and the partnerships that make it all possible",
                    groups_list[2:], page)
 
     # ── Slide 9: Spotlight SDG 13 ──
     page += 1
     slide9 = build_light_slide(prs, "Spotlight: SDG 13 — Climate Action",
-                                "Take urgent action to combat climate change and its impacts")
+                                "The science is clear, the solutions exist — why this goal matters most")
     sdg13_color = SDG_COLORS[13]
     add_accent_bar(slide9, MARGIN_L, Inches(1.6), Inches(0.15), Inches(4.0), sdg13_color)
     add_textbox(slide9, MARGIN_L + Inches(0.4), Inches(1.6), Inches(5.0), Inches(0.5),
@@ -547,7 +547,7 @@ def main():
     # ── Slide 10: Spotlight SDG 4 ──
     page += 1
     slide10 = build_light_slide(prs, "Spotlight: SDG 4 — Quality Education",
-                                 "Ensure inclusive and equitable quality education and promote lifelong learning for all")
+                                 "Why education is the foundation for every other SDG")
     sdg4_color = SDG_COLORS[4]
     add_accent_bar(slide10, MARGIN_L, Inches(1.6), Inches(0.15), Inches(4.0), sdg4_color)
     add_textbox(slide10, MARGIN_L + Inches(0.4), Inches(1.6), Inches(5.0), Inches(0.5),
@@ -570,7 +570,7 @@ def main():
     # ── Slide 11: Meet the Team ──
     page += 1
     slide11 = build_light_slide(prs, "Meet the Team",
-                                 "Four members bringing diverse expertise to the SDG mission")
+                                 "Four students, four different majors, one project")
     tcard_w = Inches(2.45); tcard_h = Inches(4.2); tcard_gap = Inches(0.3)
     tcard_total_w = 4 * tcard_w + 3 * tcard_gap; tcard_start_x = (SLIDE_W - tcard_total_w) // 2
     tcard_y = Inches(1.65)
@@ -602,7 +602,7 @@ def main():
     # ── Slide 12: Team SDG Assignments ──
     page += 1
     slide12 = build_light_slide(prs, "Team SDG Assignments",
-                                 "Each member focuses on goals aligned with their academic expertise and career aspirations")
+                                 "Who worked on which goals, and why")
     rows, cols = 5, 4
     tbl_shape = slide12.shapes.add_table(rows, cols, MARGIN_L, Inches(1.8), CONTENT_W, Inches(3.8))
     tbl = tbl_shape.table
@@ -628,19 +628,19 @@ def main():
 
     # ── Slide 13: Mission & Vision ──
     page += 1
-    slide13 = build_light_slide(prs, "Project Mission & Vision",
-                                 "What drives our work and where we hope to make an impact")
+    slide13 = build_light_slide(prs, "What We're Trying to Do",
+                                 "The point of this project, honestly stated")
     col13_w = Inches(5.05)
     add_gold_left_accent_card(slide13, MARGIN_L, Inches(1.65), col13_w, Inches(2.15),
-        title="Our Mission",
-        body="To promote awareness and understanding of the UN Sustainable Development Goals through "
-             "accessible digital education, interactive tools, and community engagement. We believe "
-             "knowledge is the first step toward meaningful action.")
+        title="What We Set Out to Do",
+        body="Build a website that explains all 17 SDGs clearly, includes an interactive carbon "
+             "calculator people can actually use, and shows how individual choices connect to "
+             "global issues. Nothing revolutionary — just making the information accessible.")
     add_gold_left_accent_card(slide13, MARGIN_L + col13_w + Inches(0.35), Inches(1.65), col13_w, Inches(2.15),
-        title="Our Vision",
-        body="A world where every individual — regardless of background — understands their role in "
-             "sustainable development and is empowered with the knowledge and tools to take meaningful "
-             "action toward a just, peaceful, and environmentally sustainable future.")
+        title="What We'd Like to See",
+        body="More people understanding that the SDGs aren't just for governments and NGOs. "
+             "The choices we make every day — what we eat, how we get around, what we throw away — "
+             "are directly connected to global sustainability. Small changes at scale matter.")
     obj_w = Inches(2.45); obj_h = Inches(2.0); obj_gap = Inches(0.25)
     obj_total_w = 4 * obj_w + 3 * obj_gap; obj_start_x = (SLIDE_W - obj_total_w) // 2
     obj_y = Inches(4.2)
@@ -657,8 +657,8 @@ def main():
 
     # ── Slide 14: Website Showcase ──
     page += 1
-    slide14 = build_light_slide(prs, "Website Showcase",
-                                 "A Vue 3 single-page application bringing the SDGs to life through interactive design")
+    slide14 = build_light_slide(prs, "Website Walkthrough",
+                                 "A quick tour of the main pages we built")
     pages_info = [
         ("Homepage", "Hero banner, key statistics,\n17-goal interactive grid,\nteam introduction"),
         ("SDGs Explorer", "Detailed goal-by-goal\ninformation pages with\nvisual data presentation"),
@@ -689,7 +689,7 @@ def main():
     # ── Slide 15: Carbon Footprint Calculator ──
     page += 1
     slide15 = build_light_slide(prs, "Carbon Footprint Calculator",
-                                 "An interactive tool estimating annual CO₂ emissions across four lifestyle categories")
+                                 "How our interactive calculator estimates your annual CO₂ emissions")
     cat_w = Inches(2.5); cat_h = Inches(3.1); cat_gap = Inches(0.2)
     cat_total_w = 4 * cat_w + 3 * cat_gap; cat_start_x = (SLIDE_W - cat_total_w) // 2
     for i, cat in enumerate(CARBON_CATEGORIES):
@@ -711,8 +711,8 @@ def main():
 
     # ── Slide 16: Act Now ──
     page += 1
-    slide16 = build_light_slide(prs, "Act Now — Individual Action Guide",
-                                 "Practical steps every person can take starting today to reduce their environmental footprint")
+    slide16 = build_light_slide(prs, "What You Can Actually Do",
+                                 "Simple changes that make a real difference — no heroics required")
     act_col_w = Inches(5.05); act_h = Inches(2.25)
     for i, cat in enumerate(ACTION_ITEMS):
         col = i % 2; row = i // 2
@@ -725,8 +725,8 @@ def main():
 
     # ── Slide 17: Technology & Architecture ──
     page += 1
-    slide17 = build_light_slide(prs, "Technology & Architecture",
-                                 "How our Vue 3 single-page application is built and organized")
+    slide17 = build_light_slide(prs, "How We Built It",
+                                 "The tech stack and architecture behind the website")
     # Architecture flow
     arch_boxes = [
         ("Browser", "User Interface\nVue 3 SPA"),
@@ -773,18 +773,18 @@ def main():
     # ═══ SECTION F: CLOSING ═══
     # ── Slide 18: Key Takeaways ──
     page += 1
-    slide18 = build_light_slide(prs, "Key Takeaways", "What we hope you remember from this presentation")
+    slide18 = build_light_slide(prs, "What We Learned", "Five things this project taught us about the SDGs")
     takeaways = [
-        ("Interconnected Framework",
-         "Progress on one SDG accelerates progress on others. Poverty reduction (SDG 1) improves health (SDG 3) and education (SDG 4). Climate action (SDG 13) protects life below water (SDG 14) and on land (SDG 15)."),
-        ("Everyone Has a Role",
-         "Governments set policy, businesses drive innovation, civil society holds institutions accountable, and individuals make daily choices. The SDG framework creates space for all actors to contribute meaningfully."),
-        ("Technology Amplifies Impact",
-         "Digital tools — from our carbon calculator to global data dashboards — make SDG awareness accessible at scale. Technology converts abstract goals into personal, actionable insights."),
-        ("Local Action, Global Change",
-         "Every sustainable choice — how we travel, what we eat, how we consume — ripples outward. Individual action multiplied across billions of people is the engine of transformation the SDGs envision."),
-        ("2030 Is Now",
-         "With only 4 years remaining to the target deadline, urgent acceleration is essential. The midpoint review showed only 15% of targets are on track. This is not a distant future — it is our present responsibility."),
+        ("Everything Is Connected",
+         "You can't fix poverty without also addressing education, health, and gender equality. The SDGs work as a system, not a list. That's both the challenge and the point."),
+        ("Everyone Is in This",
+         "It's easy to think international goals are for governments and the UN. But businesses, local communities, and individual choices are how these goals actually get implemented — or don't."),
+        ("Tech Helps, But It's Just a Tool",
+         "Our carbon calculator makes an abstract concept feel personal. But the hard part isn't the technology — it's getting people to care enough to use it and act on the results."),
+        ("Small Changes Compound",
+         "One person switching to public transit doesn't matter. Millions doing it changes emissions trajectories. The scale problem cuts both ways — individual actions feel tiny, but they're the only lever we have."),
+        ("2030 Is Close and We're Behind",
+         "The UN's own midpoint review found only 15% of SDG targets are on track. Four years isn't much time. This isn't a future problem we're preparing for — it's happening now."),
     ]
     for i, (title, detail) in enumerate(takeaways):
         y_pos = Inches(1.55) + i * Inches(1.05)
@@ -801,41 +801,41 @@ def main():
 
     # ── Slide 19: Call to Action ──
     page += 1
-    slide19 = build_dark_slide(prs, "Act for Our Common Future",
-                                "\"The future is not something that happens to us — it is something we create.\"")
+    slide19 = build_dark_slide(prs, "So, What Can You Do?",
+                                "The whole point of learning about the SDGs is doing something with that knowledge")
     add_textbox(slide19, Inches(2.0), Inches(4.3), Inches(9.3), Inches(0.5),
-                "Start by visiting our website. Explore the 17 goals. Calculate your carbon footprint.",
+                "Check out the 17 goals on our site. Try the carbon calculator.\nPick one thing to change and see if it sticks.",
                 font_name=FONT_BODY, font_size=SIZE_BODY, color=RGBColor(0xAA, 0xAA, 0xBB), alignment=PP_ALIGN.CENTER)
-    add_textbox(slide19, Inches(2.5), Inches(5.0), Inches(8.3), Inches(0.5),
-                "Every action counts. Every voice matters. Every choice shapes our common future.",
+    add_textbox(slide19, Inches(2.5), Inches(5.1), Inches(8.3), Inches(0.5),
+                "The SDGs aren't just for the UN. They're for everyone.",
                 font_name=FONT_TITLE, font_size=SIZE_SMALL, color=C_PRIMARY, alignment=PP_ALIGN.CENTER)
     add_page_number(slide19, page)
 
     # ── Slide 20: Thank You & References ──
     page += 1
-    slide20 = build_light_slide(prs, "Thank You", "We appreciate your attention and welcome your questions")
+    slide20 = build_light_slide(prs, "Thanks", "Questions, comments, arguments — all welcome")
     add_textbox(slide20, Inches(2.0), Inches(1.6), Inches(9.3), Inches(0.8),
-                "Thank You for Your Time and Attention",
+                "Thanks for Listening",
                 font_name=FONT_TITLE, font_size=Pt(30), color=C_TEXT, bold=True, alignment=PP_ALIGN.CENTER)
     # References column
     _, tf_ref = add_textbox(slide20, MARGIN_L, Inches(2.8), Inches(5.5), Inches(0.3),
-                            "Key References", font_name=FONT_TITLE, font_size=SIZE_HEADING, color=C_TEXT, bold=True)
+                            "Sources We Used", font_name=FONT_TITLE, font_size=SIZE_HEADING, color=C_TEXT, bold=True)
     refs = [
-        "United Nations. (2015). Transforming Our World: The 2030 Agenda for Sustainable Development. A/RES/70/1.",
-        "IPCC. (2023). Climate Change 2023: Synthesis Report. Contribution of Working Groups I, II and III.",
-        "UN DESA. (2024). The Sustainable Development Goals Report 2024. United Nations Publications.",
-        "UN Statistics Division. SDG Indicators Global Database. https://unstats.un.org/sdgs",
+        "United Nations. (2015). Transforming Our World: The 2030 Agenda. A/RES/70/1.",
+        "IPCC. (2023). Climate Change 2023: Synthesis Report.",
+        "UN DESA. (2024). The Sustainable Development Goals Report 2024.",
+        "UN Stats. SDG Indicators Database. https://unstats.un.org/sdgs",
     ]
     for ref in refs:
         add_paragraph(tf_ref, f"•  {ref}", font_size=SIZE_CAPTION, color=C_TEXT_SEC)
     # Team column
     _, tf_team = add_textbox(slide20, Inches(7.5), Inches(2.8), Inches(4.5), Inches(0.3),
-                             "Project Team", font_name=FONT_TITLE, font_size=SIZE_HEADING, color=C_TEXT, bold=True)
+                             "Team", font_name=FONT_TITLE, font_size=SIZE_HEADING, color=C_TEXT, bold=True)
     for m in TEAM_DATA:
         add_paragraph(tf_team, f"{m['name']} — {m['role']}", font_size=SIZE_SMALL, color=C_TEXT)
         add_paragraph(tf_team, f"{m['bg']}  ·  {m['id']}", font_size=SIZE_CAPTION, color=C_TEXT_SEC)
     add_textbox(slide20, Inches(2.0), Inches(5.8), Inches(9.3), Inches(0.4),
-                "Questions & Discussion Welcome  ·  Thank you for engaging with the SDGs",
+                "Happy to take questions — or just chat about the SDGs",
                 font_name=FONT_BODY, font_size=SIZE_CAPTION, color=C_PRIMARY, alignment=PP_ALIGN.CENTER)
     add_page_number(slide20, page)
 
