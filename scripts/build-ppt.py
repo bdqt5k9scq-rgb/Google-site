@@ -10,6 +10,7 @@ from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR, MSO_AUTO_SIZE
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.oxml.ns import qn
+from lxml import etree
 import os
 
 # ── Color Palette ──────────────────────────────────────────────
@@ -129,10 +130,13 @@ def add_accent_bar(slide, left, top, width, height=Inches(0.05), color=C_PRIMARY
     return shape
 
 def add_page_number(slide, num):
-    """Add subtle page number at bottom-right."""
+    """Add subtle page number at bottom-right and apply text entrance animations."""
     add_textbox(slide, Inches(11.8), Inches(7.05), Inches(1.2), Inches(0.35),
                 str(num), font_name=FONT_BODY, font_size=Pt(9),
                 color=C_BORDER, alignment=PP_ALIGN.RIGHT)
+    # Apply staggered text animations (skip title slide and appendix)
+    if num not in (1, 21, 22):
+        add_text_animations(slide, delay_between_ms=100, duration_ms=350)
 
 def add_subtitle_line(slide, text, top=Inches(1.05)):
     """Add a subtitle under the main title."""
@@ -168,6 +172,111 @@ def style_table_cells(table, header_rows=1):
             pad = Pt(8) if ri < header_rows else Pt(5)
             set_cell_margins(cell, Pt(8), Pt(6), pad, pad)
             set_cell_vertical_anchor(cell, MSO_ANCHOR.MIDDLE if ri >= header_rows else MSO_ANCHOR.MIDDLE)
+
+# ── Slide Transitions ──────────────────────────────────────────
+
+def add_slide_transition(slide, trans_type="fade", speed="fast", duration_ms=300):
+    """Add a smooth slide transition via XML manipulation."""
+    NS = 'http://schemas.openxmlformats.org/presentationml/2006/main'
+    NS14 = 'http://schemas.microsoft.com/office/powerpoint/2010/main'
+    nsmap = {'p': NS, 'p14': NS14}
+
+    cSld = slide._element
+    for existing in cSld.findall('p:transition', nsmap):
+        cSld.remove(existing)
+
+    trans_el = etree.SubElement(cSld, f'{{{NS}}}transition')
+    trans_el.set('spd', speed)
+    # No advTm — slide advances on click only
+
+    morph_types = ['morph']
+    if trans_type in morph_types:
+        etree.SubElement(trans_el, f'{{{NS14}}}{trans_type}')
+    else:
+        child = etree.SubElement(trans_el, f'{{{NS}}}{trans_type}')
+        if trans_type in ('push', 'wipe', 'cover', 'uncover', 'reveal'):
+            child.set('dir', 'l')
+
+# ── Shape Animations ───────────────────────────────────────────
+
+def add_text_animations(slide, delay_between_ms=120, duration_ms=400):
+    """
+    Add staggered fade-in entrance animations to all text shapes on a slide.
+    Shapes animate one after another, creating a reveal sequence.
+    Only animates shapes that contain text.
+    """
+    NS = 'http://schemas.openxmlformats.org/presentationml/2006/main'
+    A = 'http://schemas.openxmlformats.org/drawingml/2006/main'
+
+    # Collect text shapes with their shape IDs
+    animated = []
+    for shape in slide.shapes:
+        if shape.has_text_frame and shape.text_frame.text.strip():
+            shape_id = shape.shape_id
+            if shape_id:
+                animated.append(str(shape_id))
+
+    if len(animated) < 2:
+        return  # Not enough shapes to animate meaningfully
+
+    # Remove existing timing
+    cSld = slide._element
+    nsmap_p = {'p': NS}
+    for existing in cSld.findall('p:timing', nsmap_p):
+        cSld.remove(existing)
+
+    # Build the timing tree XML string
+    # Structure: root → seq (main sequence) → parallel blocks (one per shape)
+    # Each block: after previous, staggered by delay_between_ms
+
+    shape_blocks = []
+    for i, shape_id in enumerate(animated):
+        delay = i * delay_between_ms
+        node_id_base = 10 + i * 10
+
+        block = f"""
+        <p:par xmlns:p="{NS}">
+          <p:cTn id="{node_id_base}" dur="{duration_ms}" fill="hold" grpId="0" nodeType="clickEffect">
+            <p:stCondLst>
+              <p:cond delay="{delay}"/>
+            </p:stCondLst>
+            <p:childTnLst>
+              <p:animEffect transition="in" filter="fade">
+                <p:cBhvr>
+                  <p:cTn id="{node_id_base + 1}" dur="{duration_ms}" fill="hold"/>
+                  <p:tgtEl>
+                    <p:spTgt spid="{shape_id}"/>
+                  </p:tgtEl>
+                </p:cBhvr>
+              </p:animEffect>
+            </p:childTnLst>
+          </p:cTn>
+        </p:par>"""
+        shape_blocks.append(block)
+
+    # On the first shape, add a "with previous" trigger so it starts automatically
+    # The rest already have delay offsets creating the stagger
+
+    timing_xml = f"""<p:timing xmlns:p="{NS}" xmlns:a="{A}">
+      <p:tnLst>
+        <p:par>
+          <p:cTn id="1" dur="indefinite" restart="never" nodeType="tmRoot">
+            <p:childTnLst>
+              <p:seq concurrent="0" nextAc="seek">
+                <p:cTn id="5" dur="indefinite" nodeType="mainSeq">
+                  <p:childTnLst>
+                    {''.join(shape_blocks)}
+                  </p:childTnLst>
+                </p:cTn>
+              </p:seq>
+            </p:childTnLst>
+          </p:cTn>
+        </p:par>
+      </p:tnLst>
+    </p:timing>"""
+
+    timing_el = etree.fromstring(timing_xml)
+    cSld.append(timing_el)
 
 # ── Data (all English) ─────────────────────────────────────────
 
@@ -323,8 +432,8 @@ TECH_STACK = [
 
 # ── Slide Builder Functions ────────────────────────────────────
 
-def build_light_slide(prs, title_text, subtitle_text=""):
-    """Light slide with title, optional subtitle, bottom line, and page number."""
+def build_light_slide(prs, title_text, subtitle_text="", transition="fade"):
+    """Light slide with title, optional subtitle, bottom line, and slide transition."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_slide_bg(slide, C_BG)
     add_accent_bar(slide, MARGIN_L, Inches(0.85), Inches(0.6), Inches(0.04))
@@ -333,9 +442,10 @@ def build_light_slide(prs, title_text, subtitle_text=""):
     if subtitle_text:
         add_subtitle_line(slide, subtitle_text, top=Inches(0.95))
     add_bottom_line(slide)
+    add_slide_transition(slide, transition)
     return slide
 
-def build_light_slide_no_accent(prs, title_text, subtitle_text=""):
+def build_light_slide_no_accent(prs, title_text, subtitle_text="", transition="fade"):
     """Light slide without accent bar (continuation)."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_slide_bg(slide, C_BG)
@@ -344,10 +454,11 @@ def build_light_slide_no_accent(prs, title_text, subtitle_text=""):
     if subtitle_text:
         add_subtitle_line(slide, subtitle_text, top=Inches(0.95))
     add_bottom_line(slide)
+    add_slide_transition(slide, transition)
     return slide
 
-def build_dark_slide(prs, title_text, subtitle_text=""):
-    """Dark slide with centered title."""
+def build_dark_slide(prs, title_text, subtitle_text="", transition="fade"):
+    """Dark slide with centered title, subtitle, and slide transition."""
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     set_slide_bg(slide, C_DARK_BG)
     add_accent_bar(slide, Inches(5.5), Inches(3.2), Inches(2.3), Inches(0.04), C_PRIMARY)
@@ -356,6 +467,7 @@ def build_dark_slide(prs, title_text, subtitle_text=""):
     if subtitle_text:
         add_textbox(slide, Inches(1.5), Inches(3.4), Inches(10.3), Inches(0.6),
                     subtitle_text, font_name=FONT_BODY, font_size=SIZE_BODY, color=C_TEXT_SEC, alignment=PP_ALIGN.CENTER)
+    add_slide_transition(slide, transition)
     return slide
 
 def add_gold_left_accent_card(slide, left, top, width, height, title="", body=""):
@@ -406,11 +518,12 @@ def main():
                         font_name=FONT_BODY, font_size=SIZE_SMALL, color=RGBColor(0x88, 0x88, 0x99),
                         alignment=PP_ALIGN.CENTER)
     add_paragraph(tf, "Academic Course Presentation  ·  June 2026", font_size=SIZE_CAPTION, color=C_TEXT_SEC, alignment=PP_ALIGN.CENTER)
+    add_text_animations(slide, delay_between_ms=200, duration_ms=600)
     add_page_number(slide, page)
 
     # ── Slide 2: Agenda ──
     page += 1
-    slide2 = build_light_slide(prs, "Presentation Outline", "What we'll cover in the next 20 minutes")
+    slide2 = build_light_slide(prs, "Presentation Outline", "What we'll cover in the next 20 minutes", transition="push")
     card_w = Inches(3.2); card_h = Inches(2.05); gap = Inches(0.25)
     start_x = MARGIN_L; start_y = Inches(1.65)
     for i, (num, item, desc) in enumerate(AGENDA_ITEMS):
@@ -478,7 +591,7 @@ def main():
     # ── Slide 6: Goals Overview Grid ──
     page += 1
     slide6 = build_light_slide(prs, "The 17 Sustainable Development Goals",
-                               "From ending poverty to protecting the oceans — all 17 goals at a glance")
+                               "From ending poverty to protecting the oceans — all 17 goals at a glance", transition="push")
     grid_item_w = Inches(1.55); grid_item_h = Inches(1.2); grid_gap_x = Inches(0.15); grid_gap_y = Inches(0.12)
     grid_cols = 6; grid_start_x = MARGIN_L; grid_start_y = Inches(1.7)
     for i, sdg in enumerate(SDG_DATA):
@@ -808,7 +921,7 @@ def main():
     # ── Slide 19: Call to Action ──
     page += 1
     slide19 = build_dark_slide(prs, "So, What Can You Do?",
-                                "The whole point of learning about the SDGs is doing something with that knowledge")
+                                "The whole point of learning about the SDGs is doing something with that knowledge", transition="dissolve")
     add_textbox(slide19, Inches(2.0), Inches(4.3), Inches(9.3), Inches(0.5),
                 "Check out the 17 goals on our site. Try the carbon calculator.\nPick one thing to change and see if it sticks.",
                 font_name=FONT_BODY, font_size=SIZE_BODY, color=RGBColor(0xAA, 0xAA, 0xBB), alignment=PP_ALIGN.CENTER)
@@ -819,7 +932,7 @@ def main():
 
     # ── Slide 20: Thank You & References ──
     page += 1
-    slide20 = build_light_slide(prs, "Thanks", "Questions, comments, arguments — all welcome")
+    slide20 = build_light_slide(prs, "Thanks", "Questions, comments, arguments — all welcome", transition="dissolve")
     add_textbox(slide20, Inches(2.0), Inches(1.6), Inches(9.3), Inches(0.8),
                 "Thanks for Listening",
                 font_name=FONT_TITLE, font_size=Pt(30), color=C_TEXT, bold=True, alignment=PP_ALIGN.CENTER)
