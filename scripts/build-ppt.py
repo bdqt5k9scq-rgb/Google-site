@@ -40,13 +40,13 @@ SDG_COLORS = {
 # ── Typography ──────────────────────────────────────────────────
 FONT_TITLE   = "Georgia"
 FONT_BODY    = "Segoe UI"
-SIZE_TITLE   = Pt(28)
-SIZE_HEADING = Pt(22)
-SIZE_BODY    = Pt(14)
-SIZE_SMALL   = Pt(12)
-SIZE_CAPTION = Pt(11)
-SIZE_LABEL   = Pt(10)
-SIZE_STAT    = Pt(36)
+SIZE_TITLE   = Pt(32)
+SIZE_HEADING = Pt(26)
+SIZE_BODY    = Pt(16)
+SIZE_SMALL   = Pt(14)
+SIZE_CAPTION = Pt(12)
+SIZE_LABEL   = Pt(12)
+SIZE_STAT    = Pt(42)
 
 # ── Layout ──────────────────────────────────────────────────────
 SLIDE_W = Inches(13.333)
@@ -132,7 +132,7 @@ def add_accent_bar(slide, left, top, width, height=Inches(0.05), color=C_PRIMARY
 def add_page_number(slide, num):
     """Add subtle page number at bottom-right and apply text entrance animations."""
     add_textbox(slide, Inches(11.8), Inches(7.05), Inches(1.2), Inches(0.35),
-                str(num), font_name=FONT_BODY, font_size=Pt(9),
+                str(num), font_name=FONT_BODY, font_size=Pt(11),
                 color=C_BORDER, alignment=PP_ALIGN.RIGHT)
     # Apply staggered text animations (skip title slide and appendix)
     if num not in (1, 21, 22):
@@ -331,10 +331,10 @@ WHY_DATA = [
 ]
 
 TEAM_DATA = [
-    {"name": "Li Shuhang",   "role": "Project Lead",     "bg": "Environmental Science", "id": "8168667", "color": RGBColor(0x2C, 0x5F, 0x2D), "bio": "Handles the big picture — keeps the project on track and digs into the environmental research behind the planet-related SDGs."},
-    {"name": "Feng Jingyi",  "role": "Tech Development", "bg": "Computer Science",      "id": "8168308", "color": RGBColor(0x1A, 0x3A, 0x5C), "bio": "Built the website from scratch using Vue and TypeScript. Wrote the carbon calculator logic and made sure everything actually works."},
-    {"name": "Wang Luyang",  "role": "Policy Research",  "bg": "International Affairs", "id": "8168505", "color": RGBColor(0x5C, 0x2D, 0x6E), "bio": "Reads a lot of UN reports so we don't have to. Focused on how the SDGs fit into real international policy frameworks."},
-    {"name": "Lu Jianning",  "role": "Data Analyst",     "bg": "Statistics",            "id": "8168379", "color": RGBColor(0xB8, 0x57, 0x3E), "bio": "Crunching numbers — validated our carbon calculator's emission factors and checked SDG progress data against official sources."},
+    {"name": "Li Shuhang",   "role": "Project Lead",     "bg": "Environmental Science", "id": "8168667", "color": RGBColor(0x2C, 0x5F, 0x2D), "photo": "public/images/team/li-shuhang.jpg", "bio": "Handles the big picture — keeps the project on track and digs into the environmental research behind the planet-related SDGs."},
+    {"name": "Feng Jingyi",  "role": "Tech Development", "bg": "Computer Science",      "id": "8168308", "color": RGBColor(0x1A, 0x3A, 0x5C), "photo": "public/images/team/feng-jingyi.jpg", "bio": "Built the website from scratch using Vue and TypeScript. Wrote the carbon calculator logic and made sure everything actually works."},
+    {"name": "Wang Luyang",  "role": "Policy Research",  "bg": "International Affairs", "id": "8168505", "color": RGBColor(0x5C, 0x2D, 0x6E), "photo": "public/images/team/wang-luyang.jpg", "bio": "Reads a lot of UN reports so we don't have to. Focused on how the SDGs fit into real international policy frameworks."},
+    {"name": "Lu Jianning",  "role": "Data Analyst",     "bg": "Statistics",            "id": "8168379", "color": RGBColor(0xB8, 0x57, 0x3E), "photo": "public/images/team/lu-jianning.jpg", "bio": "Crunching numbers — validated our carbon calculator's emission factors and checked SDG progress data against official sources."},
 ]
 
 TEAM_SDG_MAP = [
@@ -600,9 +600,9 @@ def main():
         color = SDG_COLORS[sdg["id"]]
         add_rounded_rect(slide6, x, y, grid_item_w, grid_item_h, fill_color=color, border_color=color)
         add_textbox(slide6, x + Inches(0.1), y + Inches(0.08), Inches(0.4), Inches(0.3),
-                    f"{sdg['id']:02d}", font_name=FONT_TITLE, font_size=Pt(12), color=C_WHITE, bold=True)
+                    f"{sdg['id']:02d}", font_name=FONT_TITLE, font_size=Pt(14), color=C_WHITE, bold=True)
         add_textbox(slide6, x + Inches(0.1), y + Inches(0.42), grid_item_w - Inches(0.2), Inches(0.55),
-                    sdg["en"], font_name=FONT_BODY, font_size=Pt(8), color=C_WHITE)
+                    sdg["en"], font_name=FONT_BODY, font_size=Pt(10), color=C_WHITE)
     add_page_number(slide6, page)
 
     # ── Slides 7-8: 5P Framework ──
@@ -622,7 +622,7 @@ def main():
                         gdata["desc"], font_name=FONT_BODY, font_size=SIZE_CAPTION, color=C_TEXT_SEC)
             chips = " · ".join([SDG_DATA[gid-1]["en"] for gid in gdata["goals"]])
             add_textbox(slide_obj, x + Inches(0.3), y + Inches(1.15), col_w5 - Inches(0.6), Inches(0.9),
-                        chips, font_name=FONT_BODY, font_size=Pt(9), color=C_TEXT)
+                        chips, font_name=FONT_BODY, font_size=Pt(11), color=C_TEXT)
         add_page_number(slide_obj, start_page_num)
         return slide_obj
 
@@ -684,32 +684,57 @@ def main():
     page += 1
     slide11 = build_light_slide(prs, "Meet the Team",
                                  "Four students, four different majors, one project")
-    tcard_w = Inches(2.45); tcard_h = Inches(4.2); tcard_gap = Inches(0.3)
-    tcard_total_w = 4 * tcard_w + 3 * tcard_gap; tcard_start_x = (SLIDE_W - tcard_total_w) // 2
-    tcard_y = Inches(1.65)
+    # 4 portrait cards in a row — photos dominate, compact text below
+    card_w = Inches(2.4)
+    card_h = Inches(3.7)
+    card_gap = Inches(0.35)
+    total_w = 4 * card_w + 3 * card_gap
+    start_x = (SLIDE_W - total_w) // 2
+    start_y = Inches(1.65)
+
     for i, m in enumerate(TEAM_DATA):
-        x = tcard_start_x + i * (tcard_w + tcard_gap)
-        add_rounded_rect(slide11, x, tcard_y, tcard_w, tcard_h)
-        # Color top bar
-        top_bar = slide11.shapes.add_shape(MSO_SHAPE.RECTANGLE, x, tcard_y, tcard_w, Inches(0.08))
-        top_bar.fill.solid(); top_bar.fill.fore_color.rgb = m["color"]; top_bar.line.fill.background()
-        # Avatar
-        avatar = slide11.shapes.add_shape(MSO_SHAPE.OVAL, x + Inches(0.78), tcard_y + Inches(0.35), Inches(0.9), Inches(0.9))
-        avatar.fill.solid(); avatar.fill.fore_color.rgb = m["color"]; avatar.line.fill.background()
-        tf_av = avatar.text_frame; p_av = tf_av.paragraphs[0]
-        p_av.text = m["name"][0]; p_av.font.size = Pt(24); p_av.font.color.rgb = C_WHITE
-        p_av.font.bold = True; p_av.alignment = PP_ALIGN.CENTER
-        # Info
-        add_textbox(slide11, x + Inches(0.18), tcard_y + Inches(1.5), tcard_w - Inches(0.36), Inches(0.35),
-                    m["name"], font_name=FONT_TITLE, font_size=Pt(15), color=C_TEXT, bold=True, alignment=PP_ALIGN.CENTER)
-        add_textbox(slide11, x + Inches(0.18), tcard_y + Inches(1.88), tcard_w - Inches(0.36), Inches(0.25),
-                    m["role"], font_name=FONT_BODY, font_size=SIZE_LABEL, color=C_PRIMARY, bold=True, alignment=PP_ALIGN.CENTER)
-        add_textbox(slide11, x + Inches(0.18), tcard_y + Inches(2.2), tcard_w - Inches(0.36), Inches(0.25),
-                    m["bg"], font_name=FONT_BODY, font_size=SIZE_CAPTION, color=C_TEXT_SEC, alignment=PP_ALIGN.CENTER)
-        add_textbox(slide11, x + Inches(0.18), tcard_y + Inches(2.5), tcard_w - Inches(0.36), Inches(0.2),
-                    f"ID: {m['id']}", font_name="Consolas", font_size=Pt(8), color=C_BORDER, alignment=PP_ALIGN.CENTER)
-        add_textbox(slide11, x + Inches(0.18), tcard_y + Inches(2.85), tcard_w - Inches(0.36), Inches(1.1),
-                    m["bio"], font_name=FONT_BODY, font_size=Pt(9), color=C_TEXT_SEC, alignment=PP_ALIGN.CENTER)
+        x = start_x + i * (card_w + card_gap)
+        y = start_y
+
+        # White card surface
+        add_rounded_rect(slide11, x, y, card_w, card_h)
+
+        # Photo — large, nearly full card width, portrait proportions
+        photo_w = Inches(1.8); photo_h = Inches(2.15)
+        px = x + (card_w - photo_w) / 2
+        py = y + Inches(0.2)
+        photo_path = m.get("photo", "")
+
+        # Color accent border behind photo
+        border_w = photo_w + Inches(0.08); border_h = photo_h + Inches(0.08)
+        bx = x + (card_w - border_w) / 2
+        border_rect = slide11.shapes.add_shape(
+            MSO_SHAPE.ROUNDED_RECTANGLE,
+            bx, py - Inches(0.04), border_w, border_h)
+        border_rect.fill.solid(); border_rect.fill.fore_color.rgb = m["color"]
+        border_rect.line.fill.background()
+
+        if photo_path and os.path.exists(photo_path):
+            slide11.shapes.add_picture(photo_path, px, py, photo_w, photo_h)
+        else:
+            fallback = slide11.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, px, py, photo_w, photo_h)
+            fallback.fill.solid(); fallback.fill.fore_color.rgb = m["color"]; fallback.line.fill.background()
+            tf_fb = fallback.text_frame; p_fb = tf_fb.paragraphs[0]
+            p_fb.text = m["name"][0]; p_fb.font.size = Pt(48); p_fb.font.color.rgb = C_WHITE
+            p_fb.font.bold = True; p_fb.alignment = PP_ALIGN.CENTER
+
+        # Info below photo
+        info_y = py + photo_h + Inches(0.15)
+        add_textbox(slide11, x + Inches(0.12), info_y, card_w - Inches(0.24), Inches(0.28),
+                    m["name"], font_name=FONT_TITLE, font_size=Pt(18), color=C_TEXT, bold=True,
+                    alignment=PP_ALIGN.CENTER)
+        add_textbox(slide11, x + Inches(0.12), info_y + Inches(0.3), card_w - Inches(0.24), Inches(0.2),
+                    m["role"], font_name=FONT_BODY, font_size=SIZE_LABEL, color=C_PRIMARY, bold=True,
+                    alignment=PP_ALIGN.CENTER)
+        add_textbox(slide11, x + Inches(0.12), info_y + Inches(0.5), card_w - Inches(0.24), Inches(0.35),
+                    f"{m['bg']}\nID: {m['id']}", font_name=FONT_BODY, font_size=Pt(10), color=C_TEXT_SEC,
+                    alignment=PP_ALIGN.CENTER)
+
     add_page_number(slide11, page)
 
     # ── Slide 12: Team SDG Assignments ──
@@ -725,7 +750,7 @@ def main():
         tbl.columns[ci].width = widths[ci]
         cell = tbl.cell(0, ci); cell.text = h
         for p in cell.text_frame.paragraphs:
-            p.font.size = Pt(14); p.font.bold = True; p.font.color.rgb = C_WHITE; p.font.name = FONT_BODY
+            p.font.size = Pt(16); p.font.bold = True; p.font.color.rgb = C_WHITE; p.font.name = FONT_BODY
         cell.fill.solid(); cell.fill.fore_color.rgb = C_DARK_BG
     for ri, m in enumerate(TEAM_SDG_MAP):
         bg_match = next(t["bg"] for t in TEAM_DATA if t["name"] == m["name"])
@@ -733,7 +758,7 @@ def main():
         for ci, val in enumerate(row_data):
             cell = tbl.cell(ri + 1, ci); cell.text = val
             for p in cell.text_frame.paragraphs:
-                p.font.size = Pt(11); p.font.name = FONT_BODY; p.font.color.rgb = C_TEXT
+                p.font.size = Pt(13); p.font.name = FONT_BODY; p.font.color.rgb = C_TEXT
             if ri % 2 == 0:
                 cell.fill.solid(); cell.fill.fore_color.rgb = C_TINT
     style_table_cells(tbl)
@@ -817,9 +842,9 @@ def main():
         add_textbox(slide15, x + Inches(0.2), y + Inches(0.15), cat_w - Inches(0.4), Inches(0.3),
                     f"{cat['icon']}  {cat['name']}", font_name=FONT_TITLE, font_size=Pt(14), color=C_PRIMARY, bold=True)
         _, tf_cat = add_textbox(slide15, x + Inches(0.2), y + Inches(0.55), cat_w - Inches(0.4), Inches(0.3),
-                                "", font_size=Pt(9), color=C_TEXT_SEC)
+                                "", font_size=Pt(11), color=C_TEXT_SEC)
         for factor in cat["factors"]:
-            add_paragraph(tf_cat, f"•  {factor}", font_size=Pt(9), color=C_TEXT_SEC, space_after=Pt(4))
+            add_paragraph(tf_cat, f"•  {factor}", font_size=Pt(11), color=C_TEXT_SEC, space_after=Pt(4))
     # Rating summary
     _, tf_ratings = add_textbox(slide15, MARGIN_L, Inches(5.05), CONTENT_W, Inches(0.3),
                                 "Rating Thresholds:", font_name=FONT_BODY, font_size=SIZE_SMALL, color=C_TEXT, bold=True)
@@ -883,7 +908,7 @@ def main():
         for ci, key in enumerate(["layer", "tech", "why"]):
             cell = tbl17.cell(ri + 1, ci); cell.text = row[key]
             for p in cell.text_frame.paragraphs:
-                p.font.size = Pt(10); p.font.name = FONT_BODY; p.font.color.rgb = C_TEXT
+                p.font.size = Pt(12); p.font.name = FONT_BODY; p.font.color.rgb = C_TEXT
             if ri % 2 == 0:
                 cell.fill.solid(); cell.fill.fore_color.rgb = C_TINT
     style_table_cells(tbl17)
@@ -969,13 +994,13 @@ def main():
     for ci, h in enumerate(["#", "Goal", "Official Short Description"]):
         cell = tbl21.cell(0, ci); cell.text = h
         for p in cell.text_frame.paragraphs:
-            p.font.size = Pt(12); p.font.bold = True; p.font.color.rgb = C_WHITE; p.font.name = FONT_BODY
+            p.font.size = Pt(14); p.font.bold = True; p.font.color.rgb = C_WHITE; p.font.name = FONT_BODY
         cell.fill.solid(); cell.fill.fore_color.rgb = C_DARK_BG
     for ri, sdg in enumerate(SDG_DATA):
         for ci, key in enumerate(["id", "en", "short"]):
             cell = tbl21.cell(ri + 1, ci); cell.text = str(sdg[key])
             for p in cell.text_frame.paragraphs:
-                p.font.size = Pt(10); p.font.name = FONT_BODY; p.font.color.rgb = C_TEXT
+                p.font.size = Pt(12); p.font.name = FONT_BODY; p.font.color.rgb = C_TEXT
             if ri % 2 == 0:
                 cell.fill.solid(); cell.fill.fore_color.rgb = C_TINT
     style_table_cells(tbl21)
@@ -1003,7 +1028,7 @@ def main():
     _, tf_f = add_textbox(slide22, MARGIN_L, Inches(2.0), Inches(5.5), Inches(0.3),
                           "", font_name="Consolas", font_size=SIZE_CAPTION, color=C_TEXT)
     for f in formulas:
-        add_paragraph(tf_f, f"▹  {f}", font_name="Consolas", font_size=Pt(10), color=C_TEXT, space_after=Pt(3))
+        add_paragraph(tf_f, f"▹  {f}", font_name="Consolas", font_size=Pt(11), color=C_TEXT, space_after=Pt(3))
     # Ratings
     add_textbox(slide22, Inches(7.0), Inches(1.55), Inches(5.0), Inches(0.35),
                 "Rating Thresholds & Interpretation", font_name=FONT_TITLE, font_size=SIZE_HEADING, color=C_TEXT, bold=True)
