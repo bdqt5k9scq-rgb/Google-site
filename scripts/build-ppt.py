@@ -331,10 +331,10 @@ WHY_DATA = [
 ]
 
 TEAM_DATA = [
-    {"name": "Li Shuhang",   "role": "Project Lead",     "bg": "Environmental Science", "id": "8168667", "color": RGBColor(0x2C, 0x5F, 0x2D), "photo": "public/images/team/li-shuhang.jpg", "bio": "Handles the big picture — keeps the project on track and digs into the environmental research behind the planet-related SDGs."},
-    {"name": "Feng Jingyi",  "role": "Tech Development", "bg": "Computer Science",      "id": "8168308", "color": RGBColor(0x1A, 0x3A, 0x5C), "photo": "public/images/team/feng-jingyi.jpg", "bio": "Built the website from scratch using Vue and TypeScript. Wrote the carbon calculator logic and made sure everything actually works."},
-    {"name": "Wang Luyang",  "role": "Policy Research",  "bg": "International Affairs", "id": "8168505", "color": RGBColor(0x5C, 0x2D, 0x6E), "photo": "public/images/team/wang-luyang.jpg", "bio": "Reads a lot of UN reports so we don't have to. Focused on how the SDGs fit into real international policy frameworks."},
-    {"name": "Lu Jianning",  "role": "Data Analyst",     "bg": "Statistics",            "id": "8168379", "color": RGBColor(0xB8, 0x57, 0x3E), "photo": "public/images/team/lu-jianning.jpg", "bio": "Crunching numbers — validated our carbon calculator's emission factors and checked SDG progress data against official sources."},
+    {"name": "Li Shuhang",   "role": "Project Lead",     "bg": "Finance",            "id": "8168667", "color": RGBColor(0x2C, 0x5F, 0x2D), "photo": "public/images/team/li-shuhang.jpg", "bio": "Handles the big picture — keeps the project on track and brings financial analysis expertise to the SDG research."},
+    {"name": "Feng Jingyi",  "role": "Tech Development", "bg": "Accounting",         "id": "8168308", "color": RGBColor(0x1A, 0x3A, 0x5C), "photo": "public/images/team/feng-jingyi.jpg", "bio": "Built the website from scratch using Vue and TypeScript. Wrote the carbon calculator logic and made sure everything actually works."},
+    {"name": "Wang Luyang",  "role": "Policy Research",  "bg": "Accounting",         "id": "8168505", "color": RGBColor(0x5C, 0x2D, 0x6E), "photo": "public/images/team/wang-luyang.jpg", "bio": "Reads a lot of UN reports so we don't have to. Focused on how the SDGs fit into real international policy frameworks."},
+    {"name": "Lu Jianning",  "role": "Data Analyst",     "bg": "Finance",            "id": "8168379", "color": RGBColor(0xB8, 0x57, 0x3E), "photo": "public/images/team/lu-jianning.jpg", "bio": "Crunching numbers — validated our carbon calculator's emission factors and checked SDG progress data against official sources."},
 ]
 
 TEAM_SDG_MAP = [

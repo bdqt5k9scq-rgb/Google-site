@@ -5,7 +5,7 @@ import { GSAP_EASE } from '@/lib/animations'
 
 const memberSDGs = [
   {
-    member: { id: 1, name: 'Li Shuhang', role: '项目负责人', background: '环境科学专业', photo: '/images/team/li-shuhang.jpg', bg: '#2c5f2d', studentId: '8168667' },
+    member: { id: 1, name: 'Li Shuhang', role: '项目负责人', background: 'Finance', photo: '/images/team/li-shuhang.jpg', bg: '#2c5f2d', studentId: '8168667' },
     focus: '聚焦生态环境领域，探索气候变化与生物多样性保护的科学解决方案',
     sdgs: [
       { id: 13, title: '气候行动', subtitle: 'Climate Action', color: '#3f7e44', description: '气候变化是21世纪最严峻的全球性挑战。Li Shuhang致力于通过环境科学研究，分析碳排放趋势，提出切实可行的减排方案，推动社会各界采取紧急行动应对气候变化及其影响。' },
@@ -14,7 +14,7 @@ const memberSDGs = [
     ]
   },
   {
-    member: { id: 2, name: 'Feng Jingyi', role: '技术开发', background: '计算机科学专业', photo: '/images/team/feng-jingyi.jpg', bg: '#1a3a5c', studentId: '8168308' },
+    member: { id: 2, name: 'Feng Jingyi', role: '技术开发', background: 'Accounting', photo: '/images/team/feng-jingyi.jpg', bg: '#1a3a5c', studentId: '8168308' },
     focus: '用技术创新驱动可持续发展，开发环保科技解决方案应对全球挑战',
     sdgs: [
       { id: 9, title: '产业、创新与基础设施', subtitle: 'Industry, Innovation and Infrastructure', color: '#fd6925', description: '技术创新是实现可持续发展目标的关键驱动力。Feng Jingyi专注于运用计算机科学技术，构建智慧环保平台，推动包容性工业化和可持续基础设施建设。' },
@@ -23,7 +23,7 @@ const memberSDGs = [
     ]
   },
   {
-    member: { id: 3, name: 'Wang Luyang', role: '政策研究', background: '国际事务专业', photo: '/images/team/wang-luyang.jpg', bg: '#5c2d6e', studentId: '8168505' },
+    member: { id: 3, name: 'Wang Luyang', role: '政策研究', background: 'Accounting', photo: '/images/team/wang-luyang.jpg', bg: '#5c2d6e', studentId: '8168505' },
     focus: '推动全球可持续发展合作，促进公平正义与伙伴关系建设',
     sdgs: [
       { id: 16, title: '和平、正义与强大机构', subtitle: 'Peace, Justice and Strong Institutions', color: '#19489d', description: '和平与正义是可持续发展的基石。Wang Luyang研究国际法治与治理机制，推动建立有效、负责和包容的机构，为所有人提供诉诸司法的机会。' },
@@ -33,7 +33,7 @@ const memberSDGs = [
     ]
   },
   {
-    member: { id: 4, name: 'Lu Jianning', role: '数据分析师', background: '统计学专业', photo: '/images/team/lu-jianning.jpg', bg: '#2c4a3e', studentId: '8168379' },
+    member: { id: 4, name: 'Lu Jianning', role: '数据分析师', background: 'Finance', photo: '/images/team/lu-jianning.jpg', bg: '#2c4a3e', studentId: '8168379' },
     focus: '以数据驱动可持续发展评估，用量化分析揭示问题、验证成效',
     sdgs: [
       { id: 4, title: '优质教育', subtitle: 'Quality Education', color: '#c5192d', description: '教育是打破贫困循环最有力的工具。Lu Jianning通过数据分析评估教育资源分配的公平性，为政策制定者提供数据驱动的决策支持，推动包容和公平的优质教育。' },

@@ -27,10 +27,10 @@ const allSDGs = [
 ]
 
 const teamMembers = [
-  { id: 1, name: 'Li Shuhang', background: '环境科学专业', careerGoal: '成为可持续发展领域专家', role: '项目负责人', studentId: '8168667', color: '#2c5f2d', photo: '/images/team/li-shuhang.jpg' },
-  { id: 2, name: 'Feng Jingyi', background: '计算机科学专业', careerGoal: '开发环保科技解决方案', role: '技术开发', studentId: '8168308', color: '#1a3a5c', photo: '/images/team/feng-jingyi.jpg' },
-  { id: 3, name: 'Wang Luyang', background: '国际事务专业', careerGoal: '推动全球可持续发展合作', role: '政策研究', studentId: '8168505', color: '#5c2d6e', photo: '/images/team/wang-luyang.jpg' },
-  { id: 4, name: 'Lu Jianning', background: '统计学专业', careerGoal: '数据分析与可持续发展评估', role: '数据分析师', studentId: '8168379', color: '#b8573e', photo: '/images/team/lu-jianning.jpg' }
+  { id: 1, name: 'Li Shuhang', background: 'Finance', careerGoal: '成为可持续发展领域专家', role: '项目负责人', studentId: '8168667', color: '#2c5f2d', photo: '/images/team/li-shuhang.jpg' },
+  { id: 2, name: 'Feng Jingyi', background: 'Accounting', careerGoal: '开发环保科技解决方案', role: '技术开发', studentId: '8168308', color: '#1a3a5c', photo: '/images/team/feng-jingyi.jpg' },
+  { id: 3, name: 'Wang Luyang', background: 'Accounting', careerGoal: '推动全球可持续发展合作', role: '政策研究', studentId: '8168505', color: '#5c2d6e', photo: '/images/team/wang-luyang.jpg' },
+  { id: 4, name: 'Lu Jianning', background: 'Finance', careerGoal: '数据分析与可持续发展评估', role: '数据分析师', studentId: '8168379', color: '#b8573e', photo: '/images/team/lu-jianning.jpg' }
 ]
 
 const stats = [
