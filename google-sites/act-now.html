@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Act Now — Take Action for the SDGs</title>
-  <meta name="description" content="Discover practical eco-actions you can take and join the global effort to achieve the UN SDGs.">
+  <title>Act Now — Take Action实现Global Goals</title>
+  <meta name="description" content="了解您可以采取的环保行动，共同参与实现UN Sustainable Development Goals。">
   <link rel="icon" type="image/svg+xml" href="vite.svg">
   <style>
 /* === Inlined from css/style.css === */
 /* ============================================================
    Earth Editorial Design System — Static Pages
-   Sustainable Development Goals · SDG Website
+   SDGs · SDG Website
    Aesthetic: warm, literary, textured, organic
    ============================================================ */
 
@@ -2109,22 +2109,54 @@ p { color: var(--text-muted); line-height: 1.75; }
 <body>
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 📝 EDITABLE CONTENT START                                  -->
-<!--     Edit only this HTML block for text changes; leave styles and scripts below untouched     -->
+<!--     改文字只需编辑这一块 HTML，下面的样式和脚本不要动       -->
 <!-- ═══════════════════════════════════════════════════════════ -->
-<!-- navbar removed — use Google Sites navigation -->
+<nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <svg viewBox="0 0 40 40" class="logo-icon">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.9"/>
+          <circle cx="20" cy="20" r="13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="20" cy="20" r="6" fill="currentColor" opacity="0.85"/>
+          <line x1="20" y1="3" x2="20" y2="37" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+          <line x1="3" y1="20" x2="37" y2="20" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <span class="brand-text">SDG Sustainability</span>
+      </a>
+      <div class="navbar-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="sdgs.html" class="nav-link">SDG Goals</a>
+        <a href="team-sdgs.html" class="nav-link">Team SDGs</a>
+        <a href="carbon-footprint.html" class="nav-link">Carbon Footprint</a>
+        <a href="act-now.html" class="nav-link active">Act Now</a>
+        <a href="reference-list.html" class="nav-link">References</a>
+      </div>
+      <button class="menu-toggle"><span class="bar"></span><span class="bar"></span></button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="sdgs.html" class="mobile-link">SDG Goals</a>
+      <a href="team-sdgs.html" class="mobile-link">Team SDGs</a>
+      <a href="carbon-footprint.html" class="mobile-link">Carbon Footprint</a>
+      <a href="act-now.html" class="mobile-link">Act Now</a>
+      <a href="reference-list.html" class="mobile-link">References</a>
+    </div>
+  </nav>
 
   <main>
     <section class="page-header">
       <div class="container container-narrow">
         <p class="eyebrow" style="color: var(--sage)">Act Now</p>
         <h1>Take Action</h1>
-        <p>Every small action can make a difference for our planet. Join us in building a sustainable future.</p>
+        <p>Every small action can make a difference for our planet.。Join us in building a sustainable future.</p>
         <div class="countdown">
-          <div class="countdown-item"><span class="countdown-number" id="yearsLeft">4</span><span class="countdown-label">years</span></div>
+          <div class="countdown-item"><span class="countdown-number" id="yearsLeft">4</span><span class="countdown-label">年</span></div>
           <span class="countdown-separator">:</span>
-          <div class="countdown-item"><span class="countdown-number">12</span><span class="countdown-label">months</span></div>
+          <div class="countdown-item"><span class="countdown-number">12</span><span class="countdown-label">月</span></div>
           <span class="countdown-separator">:</span>
-          <div class="countdown-item"><span class="countdown-number">31</span><span class="countdown-label">days</span></div>
+          <div class="countdown-item"><span class="countdown-number">31</span><span class="countdown-label">天</span></div>
           <div class="countdown-text">Time remaining until the 2030 SDG deadline</div>
         </div>
       </div>
@@ -2133,9 +2165,9 @@ p { color: var(--text-muted); line-height: 1.75; }
     <section class="act-stats">
       <div class="container">
         <div class="stats-grid">
-          <div class="stat-item"><div class="stat-value">193</div><div class="stat-label">Member states committed</div></div>
-          <div class="stat-item"><div class="stat-value">17</div><div class="stat-label">SDGs</div></div>
-          <div class="stat-item"><div class="stat-value">7.8 billion</div><div class="stat-label">Global population</div></div>
+          <div class="stat-item"><div class="stat-value">193</div><div class="stat-label">成员国承诺</div></div>
+          <div class="stat-item"><div class="stat-value">17</div><div class="stat-label">Global Goals</div></div>
+          <div class="stat-item"><div class="stat-value">78亿</div><div class="stat-label">Global population</div></div>
           <div class="stat-item"><div class="stat-value" id="yearsWindow">4</div><div class="stat-label">years remaining</div></div>
         </div>
       </div>
@@ -2144,31 +2176,31 @@ p { color: var(--text-muted); line-height: 1.75; }
     <section class="actions-section">
       <div class="container">
         <h2 class="section-title">Actions You Can Take</h2>
-        <p class="section-subtitle">Choose an area that fits you and start making a difference</p>
+        <p class="section-subtitle">Choose an area that fits you and start making a difference.</p>
         <div class="category-filter">
-          <button class="filter-btn active" data-category="All">All</button>
-          <button class="filter-btn" data-category="Energy">Energy</button>
-          <button class="filter-btn" data-category="Transportation">Transportation</button>
-          <button class="filter-btn" data-category="Consumption">Consumption</button>
-          <button class="filter-btn" data-category="Diet">Diet</button>
-          <button class="filter-btn" data-category="Resources">Resources</button>
-          <button class="filter-btn" data-category="Environment">Environment</button>
-          <button class="filter-btn" data-category="Waste">Waste</button>
-          <button class="filter-btn" data-category="Education">Education</button>
-          <button class="filter-btn" data-category="Community">Community</button>
-          <button class="filter-btn" data-category="Work">Work</button>
+          <button class="filter-btn active" data-category="全部">全部</button>
+          <button class="filter-btn" data-category="能源">能源</button>
+          <button class="filter-btn" data-category="交通">交通</button>
+          <button class="filter-btn" data-category="消费">消费</button>
+          <button class="filter-btn" data-category="饮食">饮食</button>
+          <button class="filter-btn" data-category="资源">资源</button>
+          <button class="filter-btn" data-category="环境">环境</button>
+          <button class="filter-btn" data-category="废物处理">废物处理</button>
+          <button class="filter-btn" data-category="教育">教育</button>
+          <button class="filter-btn" data-category="社区">社区</button>
+          <button class="filter-btn" data-category="工作">工作</button>
         </div>
         <div class="actions-grid">
-          <div class="action-card" data-category="Energy"><div class="card-accent"></div><h3>Save Electricity</h3><p>Use energy-efficient bulbs, turn off unused appliances, consider solar power</p><span class="action-category">Energy</span><ul class="action-tips"><li><span class="tip-marker">—</span>Replace traditional lights with LED bulbs</li><li><span class="tip-marker">—</span>Turn off standby appliances to save energy</li><li><span class="tip-marker">—</span>Consider installing solar panels</li></ul></div>
-          <div class="action-card" data-category="Transportation"><div class="card-accent"></div><h3>Green Commuting</h3><p>Choose public transit, cycling, or walking; reduce private car use</p><span class="action-category">Transportation</span><ul class="action-tips"><li><span class="tip-marker">—</span>Prioritize public transportation</li><li><span class="tip-marker">—</span>Cycle or walk for short distances</li><li><span class="tip-marker">—</span>Carpool with colleagues and friends</li></ul></div>
-          <div class="action-card" data-category="Consumption"><div class="card-accent"></div><h3>Reduce Waste</h3><p>Reduce food waste; use reusable shopping bags and water bottles</p><span class="action-category">Consumption</span><ul class="action-tips"><li><span class="tip-marker">—</span>Bring your own shopping bag</li><li><span class="tip-marker">—</span>Say no to disposable utensils</li><li><span class="tip-marker">—</span>Plan meals wisely to avoid waste</li></ul></div>
-          <div class="action-card" data-category="Diet"><div class="card-accent"></div><h3>Healthy Eating</h3><p>Reduce meat consumption; eat more local and organic food</p><span class="action-category">Diet</span><ul class="action-tips"><li><span class="tip-marker">—</span>Try one meat-free day per week</li><li><span class="tip-marker">—</span>Prioritize buying local produce</li><li><span class="tip-marker">—</span>Grow vegetables and herbs at home</li></ul></div>
-          <div class="action-card" data-category="Resources"><div class="card-accent"></div><h3>Water Conservation</h3><p>Save water, fix leaks, collect rainwater</p><span class="action-category">Resources</span><ul class="action-tips"><li><span class="tip-marker">—</span>Take shorter showers</li><li><span class="tip-marker">—</span>Fix leaky faucets promptly</li><li><span class="tip-marker">—</span>Collect rainwater for plants</li></ul></div>
-          <div class="action-card" data-category="Environment"><div class="card-accent"></div><h3>Plant Trees</h3><p>Take part in tree-planting activities; support forest conservation projects</p><span class="action-category">Environment</span><ul class="action-tips"><li><span class="tip-marker">—</span>参加Community植树活动</li><li><span class="tip-marker">—</span>Support forestry conservation projects</li><li><span class="tip-marker">—</span>Plant native tree species suitable for your area</li></ul></div>
-          <div class="action-card" data-category="Waste"><div class="card-accent"></div><h3>Waste Sorting</h3><p>Sort waste properly and promote resource recycling</p><span class="action-category">Waste</span><ul class="action-tips"><li><span class="tip-marker">—</span>Learn proper waste sorting techniques</li><li><span class="tip-marker">—</span>Participate in community recycling programs</li><li><span class="tip-marker">—</span>Support circular economy products</li></ul></div>
-          <div class="action-card" data-category="Education"><div class="card-accent"></div><h3>Spread Awareness</h3><p>Share sustainability ideas with others and encourage more people to get involved</p><span class="action-category">Education</span><ul class="action-tips"><li><span class="tip-marker">—</span>Share environmental knowledge with friends</li><li><span class="tip-marker">—</span>Organize community environmental activities</li><li><span class="tip-marker">—</span>Join environmental nonprofit organizations</li></ul></div>
-          <div class="action-card" data-category="Community"><div class="card-accent"></div><h3>Community Engagement</h3><p>Participate in community environmental projects to advance local sustainability</p><span class="action-category">Community</span><ul class="action-tips"><li><span class="tip-marker">—</span>Join a community garden project</li><li><span class="tip-marker">—</span>Participate in neighborhood cleanups</li><li><span class="tip-marker">—</span>Promote community greening initiatives</li></ul></div>
-          <div class="action-card" data-category="Work"><div class="card-accent"></div><h3>Sustainable Workplace</h3><p>Practice sustainability at work and promote green office habits</p><span class="action-category">Work</span><ul class="action-tips"><li><span class="tip-marker">—</span>Go paperless at the office</li><li><span class="tip-marker">—</span>Adopt green meeting practices</li><li><span class="tip-marker">—</span>Support sustainable supply chains</li></ul></div>
+          <div class="action-card" data-category="能源"><div class="card-accent"></div><h3>Save Electricity</h3><p>使用节能灯泡，关闭不必要的电器，使用太阳能设备</p><span class="action-category">能源</span><ul class="action-tips"><li><span class="tip-marker">—</span>使用LED灯泡替代传统照明</li><li><span class="tip-marker">—</span>关闭待机电器避免能耗</li><li><span class="tip-marker">—</span>考虑安装太阳能发电板</li></ul></div>
+          <div class="action-card" data-category="交通"><div class="card-accent"></div><h3>Green Commuting</h3><p>选择公共交通、骑行或步行，减少私家车使用</p><span class="action-category">交通</span><ul class="action-tips"><li><span class="tip-marker">—</span>优先乘坐公共交通</li><li><span class="tip-marker">—</span>短距离骑行或步行</li><li><span class="tip-marker">—</span>与同事朋友拼车出行</li></ul></div>
+          <div class="action-card" data-category="消费"><div class="card-accent"></div><h3>Reduce Waste</h3><p>减少食物浪费，使用可重复使用的购物袋和水杯</p><span class="action-category">消费</span><ul class="action-tips"><li><span class="tip-marker">—</span>出门自带购物袋</li><li><span class="tip-marker">—</span>拒绝一次性餐具</li><li><span class="tip-marker">—</span>合理规划饮食避免浪费</li></ul></div>
+          <div class="action-card" data-category="饮食"><div class="card-accent"></div><h3>Healthy Eating</h3><p>减少肉类消费，多吃本地和有机食品</p><span class="action-category">饮食</span><ul class="action-tips"><li><span class="tip-marker">—</span>每周尝试素食一天</li><li><span class="tip-marker">—</span>优先购买本地农产品</li><li><span class="tip-marker">—</span>在家中种植蔬菜香草</li></ul></div>
+          <div class="action-card" data-category="资源"><div class="card-accent"></div><h3>Water Conservation</h3><p>节约用水，修复漏水设施，收集雨水</p><span class="action-category">资源</span><ul class="action-tips"><li><span class="tip-marker">—</span>缩短淋浴时间</li><li><span class="tip-marker">—</span>及时修复漏水龙头</li><li><span class="tip-marker">—</span>收集雨水浇灌植物</li></ul></div>
+          <div class="action-card" data-category="环境"><div class="card-accent"></div><h3>Plant Trees</h3><p>参与植树活动，支持森林保护项目</p><span class="action-category">环境</span><ul class="action-tips"><li><span class="tip-marker">—</span>参加社区植树活动</li><li><span class="tip-marker">—</span>支持林业保护项目</li><li><span class="tip-marker">—</span>种植适合本地的树种</li></ul></div>
+          <div class="action-card" data-category="废物处理"><div class="card-accent"></div><h3>Waste Sorting</h3><p>正确分类垃圾，促进资源回收利用</p><span class="action-category">废物处理</span><ul class="action-tips"><li><span class="tip-marker">—</span>学习Waste Sorting知识</li><li><span class="tip-marker">—</span>参与社区回收计划</li><li><span class="tip-marker">—</span>支持循环经济产品</li></ul></div>
+          <div class="action-card" data-category="教育"><div class="card-accent"></div><h3>宣传教育</h3><p>向他人宣传sustainable development理念，鼓励更多人参与</p><span class="action-category">教育</span><ul class="action-tips"><li><span class="tip-marker">—</span>分享环保知识给朋友</li><li><span class="tip-marker">—</span>组织社区环保活动</li><li><span class="tip-marker">—</span>参与环保公益组织</li></ul></div>
+          <div class="action-card" data-category="社区"><div class="card-accent"></div><h3>Community Engagement</h3><p>参与社区环保项目，推动本地sustainable development</p><span class="action-category">社区</span><ul class="action-tips"><li><span class="tip-marker">—</span>加入社区花园项目</li><li><span class="tip-marker">—</span>参与街道清洁活动</li><li><span class="tip-marker">—</span>推动社区绿化建设</li></ul></div>
+          <div class="action-card" data-category="工作"><div class="card-accent"></div><h3>工作场所行动</h3><p>在工作中践行sustainable development，推动Green Office</p><span class="action-category">工作</span><ul class="action-tips"><li><span class="tip-marker">—</span>推行无纸化办公</li><li><span class="tip-marker">—</span>倡导绿色会议模式</li><li><span class="tip-marker">—</span>支持可持续供应链</li></ul></div>
         </div>
       </div>
     </section>
@@ -2177,43 +2209,43 @@ p { color: var(--text-muted); line-height: 1.75; }
     <section class="member-reports-section">
       <div class="container">
         <h2 class="section-title">Team Action Reports</h2>
-        <p class="section-intro">Each team member chose a different sustainability action to research and report on, sharing their experiences and insights.</p>
+        <p class="section-intro">每位Team Members选择一项不同的sustainable development行动进行深入研究和报告，分享行动经验和心得。</p>
         <div class="reports-grid">
           <div class="report-card">
             <div class="report-header">
               <div class="report-avatar" style="background:#e5243b">李</div>
               <div class="report-info"><h3>Li Shuhang</h3><span class="report-sdg" style="color:#e5243b">SDG 1 · No Poverty</span></div>
             </div>
-            <p><strong>Action Chosen：</strong>Participated in a local poverty alleviation project, providing skills training for low-income families。</p>
-            <p><strong>Description：</strong>Every Saturday at the community center, providing free computer skills training for families in need to help them gain employment. 15 participants have found jobs within three months.</p>
-            <p>"No Poverty is not just the government's responsibility — it is a mission for all of us. Through skills training, we can help others change their lives."</p>
+            <p><strong>行动选择：</strong>参与本地扶贫项目，为低收入家庭提供技能培训。</p>
+            <p><strong>行动内容：</strong>Every Saturday at the community center, providing free computer skills training for families in need，帮助他们获得就业机会。三个月来已有15位学员成功就业。</p>
+            <p>"No Poverty不仅是政府的责任，更是我们每个人的使命。通过技能培训，我们可以帮助他人改变命运。"</p>
           </div>
           <div class="report-card">
             <div class="report-header">
               <div class="report-avatar" style="background:#4c9f38">冯</div>
               <div class="report-info"><h3>Feng Jingyi</h3><span class="report-sdg" style="color:#4c9f38">SDG 3 · Good Health & Well-being</span></div>
             </div>
-            <p><strong>Action Chosen：</strong>Organized community health seminars promoting healthy lifestyles。</p>
-            <p><strong>Description：</strong>Monthly health seminars for community residents covering nutrition, exercise, and mental health. Over 200 participants across 8 sessions.</p>
-            <p>"Health is our greatest wealth. By spreading health knowledge, we can prevent illness and improve quality of life."</p>
+            <p><strong>行动选择：</strong>组织社区健康讲座，推广健康生活方式。</p>
+            <p><strong>行动内容：</strong>每月邀请医生为社区居民举办健康讲座，内容包括合理膳食、运动健身、心理健康等。累计举办8场，参与人数超过200人。</p>
+            <p>"健康是最大的财富。通过普及健康知识，我们可以预防疾病，提高生活质量。"</p>
           </div>
           <div class="report-card">
             <div class="report-header">
               <div class="report-avatar" style="background:#26bde2">王</div>
-              <div class="report-info"><h3>Wang Luyang</h3><span class="report-sdg" style="color:#26bde2">SDG 6 · Clean Water</span></div>
+              <div class="report-info"><h3>Wang Luyang</h3><span class="report-sdg" style="color:#26bde2">SDG 6 · Clean Water & Sanitation</span></div>
             </div>
-            <p><strong>Action Chosen：</strong>launched a campus water conservation campaign to raise awareness。</p>
-            <p><strong>Description：</strong>在学校发起"节水先锋"运动，安装节水设备，张贴节水提示。Within six months, campus water usage dropped by 25%。</p>
-            <p>"Water is the source of life — every drop deserves to be treasured. By changing our water habits, we can preserve this precious resource for future generations。"</p>
+            <p><strong>行动选择：</strong>发起校园节水运动，提高Water Conservation意识。</p>
+            <p><strong>行动内容：</strong>在学校发起"节水先锋"运动，安装节水设备，张贴节水提示。活动开展半年来，学校用水量减少了25%。</p>
+            <p>"水是生命之源。每一滴水都值得珍惜。通过改变用水习惯，我们可以为子孙后代留下宝贵的水资源。"</p>
           </div>
           <div class="report-card">
             <div class="report-header">
               <div class="report-avatar" style="background:#3f7e44">卢</div>
               <div class="report-info"><h3>Lu Jianning</h3><span class="report-sdg" style="color:#3f7e44">SDG 13 · Climate Action</span></div>
             </div>
-            <p><strong>Action Chosen：</strong>组织校园植树活动，推动碳中和校园建设。</p>
-            <p><strong>Description：</strong>Each spring, organizing school-wide tree planting — 300 trees planted over two years。同时推动学校使用Clean Energy，减少Carbon Emissions。</p>
-            <p>"Climate change is the greatest challenge of our generation。每一棵树都是希望，every action counts。"</p>
+            <p><strong>行动选择：</strong>组织校园植树活动，推动碳中和校园建设。</p>
+            <p><strong>行动内容：</strong>每年春季组织全校师生参与植树活动，两年共种植树木300棵。同时推动学校使用Affordable & Clean Energy，减少碳排放。</p>
+            <p>"climate change是我们这一代人面临的最大挑战。每一棵树都是希望，每一个行动都是力量。"</p>
           </div>
         </div>
       </div>
@@ -2223,31 +2255,31 @@ p { color: var(--text-muted); line-height: 1.75; }
     <section class="action-report-section">
       <div class="container container-narrow">
         <h2 class="section-title">Team Carbon Footprint & Offset Reports</h2>
-        <p class="section-intro">Each team member chose a different sustainability action, calculated their personal carbon footprint, and proposed three carbon offset solutions。</p>
+        <p class="section-intro">每位Team Members选择一项不同的sustainable development行动，计算个人碳足迹，并提出三项碳抵消方案。</p>
 
-        <!-- Member 1: Li Shuhang — SavingHome Energy -->
+        <!-- Member 1: Li Shuhang — 节约Home Energy -->
         <div class="action-report-card">
           <div class="action-report-header">
             <div class="action-report-avatar" style="background:#e5243b">李</div>
             <div class="action-report-info">
               <h3>Li Shuhang</h3>
-              <span class="action-report-action" style="color:#e5243b">SDG 7 · SavingHome Energy</span>
+              <span class="action-report-action" style="color:#e5243b">SDG 7 · 节约Home Energy</span>
             </div>
           </div>
           <div class="action-report-body">
-            <h4>第一步：Action目的</h4>
-            <p>Home Energy消耗占Global温室气体排放量的约30%，是个人碳足迹中占比最大的部分之一。在中国，一个典型城市Home每years因Electricity消耗产生的Carbon Emissions约为2,500至4,000千克CO₂，其中照明、空调、家电待机和Heating是主要来源。许多Home尚未意识到，简单的行为Change——例如更换LED灯泡、拔掉不使用的电器插头、合理设置空调温度——即可显著降低Energy消耗和Carbon Emissions。本次Action的目的是通过系统评估Home Energy使用情况，识别高耗能设备和不良用电习惯，制定可操作的节能方案，并将个人碳足迹数据化，以便追踪改进效果。通过这一Action，我们希望展示个人层面的EnergySaving如何在AchieveSDG 7（经济适用的Clean Energy）和SDG 13（Climate Action）方面产生实际影响。同时，节能不仅有助于减少Carbon Emissions，还能降低Home电费支出，Achieve经济效益与Environment效益的双赢。我们相信，当越来越多的人Start关注Home Energy效率并采取Action时，累积效应将对国家碳达峰和碳中和Goal做出有意义的贡献。</p>
+            <h4>第一步：行动目的</h4>
+            <p>Home Energy消耗占全球温室气体排放量的约30%，是个人碳足迹中占比最大的部分之一。在中国，A typical urban household produces approximately this much carbon from electricity annually2,500至4,000千克CO₂，其中照明、空调、家电待机和取暖是主要来源。许多家庭尚未意识到，简单的行为改变——例如更换LED灯泡、拔掉不使用的电器插头、合理设置空调温度——即可显著降低能源消耗和碳排放。本次行动的目的是通过系统评估Home Energy使用情况，识别高耗能设备和不良用电习惯，制定可操作的节能方案，并将个人碳足迹数据化，以便追踪改进效果。通过这一行动，We aim to demonstrate how individual-level energy savings contribute to achievingSDG 7（Affordable & Clean Energy）和SDG 13（Climate Action）方面产生实际影响。同时，节能不仅有助于减少碳排放，还能降低家庭电费支出，实现经济效益与环境效益的双赢。我们相信，当越来越多的人开始关注Home Energy效率并采取行动时，The cumulative effect will make a meaningful contribution to national carbon peak and neutrality targets。</p>
             <h4>第二步：个人Carbon Footprint</h4>
-            <p><strong>使用工具：</strong>联合国Carbon Footprint器（UN Carbon Footprint Calculator）— https://offset.climateneutralnow.org/footprintcalc</p>
-            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>Carbon Footprint器Home — Choice国家和语言</span><span style="font-size:0.8rem;">请在此处插入联合国Carbon Footprint器Home屏幕截图</span></div>
-            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>Home Energy消耗数据输入页面</span><span style="font-size:0.8rem;">请在此处插入Home用电、Heating等数据输入界面屏幕截图</span></div>
+            <p><strong>使用工具：</strong>联合国Carbon Footprint Calculator（UN Carbon Footprint Calculator）— https://offset.climateneutralnow.org/footprintcalc</p>
+            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>Carbon Footprint CalculatorHome — 选择国家和语言</span><span style="font-size:0.8rem;">请在此处插入联合国Carbon Footprint CalculatorHome屏幕截图</span></div>
+            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>Home Energy消耗数据输入页面</span><span style="font-size:0.8rem;">请在此处插入家庭用电、取暖等数据输入界面屏幕截图</span></div>
             <div class="screenshot-placeholder"><span class="screenshot-icon">📊</span><span>个人Carbon Footprint结果总览</span><span style="font-size:0.8rem;">请在此处插入Carbon Footprint结果截图</span></div>
-            <p><strong>Results：</strong>个人years度碳足迹约为 <strong style="color:var(--terracotta);">4,200 kg CO₂</strong>。其中Home Energy消耗占比35%（约1,470 kg CO₂，主要来自全years空调使用和照明），Transportation占比40%（约1,680 kg CO₂，主要来自日常Private Car通勤），DietConsumption占比25%（约1,050 kg CO₂，Meat Consumption偏高）。对照中国城市居民人均碳足迹约6,500 kg CO₂的参考值，当前水平虽然略低于平均值，但若要与《巴黎协定》1.5℃温控Goal保持一致，个人碳足迹需降至约2,000 kg CO₂以下，意味着需要减少约52%的排放量。</p>
-            <h4>第三步：Three carbon offset solutions</h4>
+            <p><strong>Results：</strong>个人年度碳足迹约为 <strong style="color:var(--terracotta);">4,200 kg CO₂</strong>。其中Home Energy消耗占比35%（约1,470 kg CO₂，主要来自全年空调使用和照明），Transportation占比40%（约1,680 kg CO₂，主要来自日常私家车通勤），饮食消费占比25%（约1,050 kg CO₂，肉类消费偏高）。对照中国城市居民人均碳足迹约6,500 kg CO₂的参考值，当前水平虽然略低于平均值，但若要与《巴黎协定》1.5℃温控目标保持一致，个人碳足迹需降至约2,000 kg CO₂以下，意味着需要减少约52%的排放量。</p>
+            <h4>第三步：三项碳抵消方案</h4>
             <div class="offset-solutions">
-              <div class="offset-card"><span class="offset-num">方案一</span><p><strong>全面更换LED照明：</strong>将家中All白炽灯和荧光灯替换为高效率LED灯泡。以一个三室两厅Home约25个灯泡Calculate，All更换后每years可减少约450 kg CO₂排放。LED灯泡的能耗仅为白炽灯的10%-20%，且寿命长达25,000小时以上。初期投资约500元人民币，但每years可节省电费约600-800元，投资Recycling期不到一years。此外，LED灯泡不含汞等有害物质，废弃后对Environment的影响也远小于荧光灯。</p></div>
-              <div class="offset-card"><span class="offset-num">方案二</span><p><strong>安装智能插座消除待机能耗：</strong>为电视、电脑、空调、微波炉等常用家电配备智能插座或智能排插，通过定时开关和远程控制功能彻底消除待机功耗。研究表明，一个Home的待机能耗每years可达300-500 kWh，折合约300 kg CO₂排放。使用智能插座（Every约50-80元）配合手机App管理，可将待机能耗降低90%以上。同时，养成随手关灯、拔掉不常用电器插头的习惯，进一步减少不必要的Energy浪费。</p></div>
-              <div class="offset-card"><span class="offset-num">方案三</span><p><strong>购买GreenElectricity或安装屋顶太阳能：</strong>向Electricity公司申请GreenElectricity套餐，确保Home用电100%来自风能、太阳能等可再生Energy。若条件允许，在屋顶安装3 kW分布式光伏系统，years发电量约3,300 kWh，可覆盖Home大部分用电需求，每years减少约1,500 kg CO₂排放。中国许多城市已推出分布式光伏补贴政策，安装成本Recycling期约为5-7years，而光伏板的使用寿命超过25years。即使不具备安装条件，通过购买碳抵消积分（如蚂蚁森林、腾讯碳积分等平台）支持可再生Energy项目，也是有效的碳抵消途径。</p></div>
+              <div class="offset-card"><span class="offset-num">方案一</span><p><strong>全面更换LED照明：</strong>将家中全部白炽灯和荧光灯替换为高效率LED灯泡。以一个三室两厅家庭约25个灯泡计算，全部更换后每年可减少约450 kg CO₂排放。LED灯泡的能耗仅为白炽灯的10%-20%，且寿命长达25,000小时以上。初期投资约500元人民币，但每年可节省电费约600-800元，投资回收期不到一年。此外，LED灯泡不含汞等有害物质，废弃后对环境的影响也远小于荧光灯。</p></div>
+              <div class="offset-card"><span class="offset-num">方案二</span><p><strong>安装智能插座消除待机能耗：</strong>为电视、电脑、空调、微波炉等常用家电配备智能插座或智能排插，Completely eliminate standby power through scheduled switches and remote controls。研究表明，一个家庭的待机能耗每年可达300-500 kWh，折合约300 kg CO₂排放。使用智能插座（每个约50-80元）配合手机App管理，可将待机能耗降低90%以上。同时，养成随手关灯、拔掉不常用电器插头的习惯，进一步减少不必要的能源浪费。</p></div>
+              <div class="offset-card"><span class="offset-num">方案三</span><p><strong>购买绿色电力或安装屋顶太阳能：</strong>向电力公司申请绿色电力套餐，确保家庭用电100%来自风能、太阳能等可再生能源。若条件允许，在屋顶安装3 kW分布式光伏系统，年发电量约3,300 kWh，可覆盖家庭大部分用电需求，每年减少约1,500 kg CO₂排放。中国许多城市已推出分布式光伏补贴政策，安装成本回收期约为5-7年，而光伏板的使用寿命超过25年。即使不具备安装条件，通过购买碳抵消积分（如蚂蚁森林、腾讯碳积分等平台）支持可再生能源项目，也是有效的碳抵消途径。</p></div>
             </div>
             <div class="photo-placeholder">📷<br>个人照片<br>（面/头照+省电相关照片）</div>
           </div>
@@ -2263,19 +2295,19 @@ p { color: var(--text-muted); line-height: 1.75; }
             </div>
           </div>
           <div class="action-report-body">
-            <h4>第一步：Action目的</h4>
-            <p>Transportation运输部门是Global温室气体排放的第二大来源，约占GlobalCO₂排放总量的24%，其中公路运输（Private Car、卡车）贡献了该行业近四分之三的排放量。在中国，随着城市化进程加快和机动车保有量持续增长（截至2025years底全国汽车保有量超过3.5亿辆），Transportation领域的Carbon Emissions压力日益突出。对比不同出行方式的Carbon Emissions强度：Private Car每公里人均Carbon Emissions约为150-200克，公交车约为30-50克，地铁约为10-20克，而步行和骑行则为零排放。然而在城市通勤中，Private Car出行比例仍高达40%以上。本次Action的目的是通过全面记录和分析个人出行数据（包括通勤方式、出行频率、行驶里程），量化Transportation碳足迹，并测试以公共Transportation、非机动车和共享出行替代Private Car的可行性和减排效果。这一Action直接支持SDG 11（Sustainable Cities和Community）中关于普及安全、可负担、Sustainable的Transportation系统的Goal。通过亲身体验和记录数据，我们希望为身边的朋友和同事树立榜样，证明Green Commuting不仅是环保的Choice，也往往更经济、更健康。</p>
+            <h4>第一步：行动目的</h4>
+            <p>The transportation sector is the second largest source of global greenhouse gas emissions，约占全球CO₂排放总量的24%，其中公路运输（私家车、卡车）贡献了该行业近四分之三的排放量。在中国，As urbanization accelerates and vehicle ownership continues to grow（截至2025年底全国汽车保有量超过3.5亿辆），交通领域的碳排放压力日益突出。对比不同出行方式的碳排放强度：私家车每公里人均碳排放约为150-200克，公交车约为30-50克，地铁约为10-20克，而步行和骑行则为零排放。然而在城市通勤中，私家车出行比例仍高达40%以上。This initiative aims to comprehensively record and analyze personal travel data（包括通勤方式、出行频率、行驶里程），量化交通碳足迹，并测试以公共交通、The feasibility and emission reduction potential of non-motorized and shared mobility as alternatives to private cars。这一行动直接支持SDG 11（Sustainable Cities & Communities）中关于普及安全、可负担、可持续的交通系统的目标。通过亲身体验和记录数据，我们希望为身边的朋友和同事树立榜样，证明Green Commuting不仅是环保的选择，也往往更经济、更健康。</p>
             <h4>第二步：个人Carbon Footprint</h4>
-            <p><strong>使用工具：</strong>WWFCarbon Footprint器（WWF Footprint Calculator）— https://footprint.wwf.org.uk</p>
-            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>WWFCarbon Footprint器Home欢迎界面</span><span style="font-size:0.8rem;">请在此处插入WWFCarbon Footprint器Home屏幕截图</span></div>
-            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>Transportation数据输入 — 通勤方式、里程、Flights次数</span><span style="font-size:0.8rem;">请在此处插入Transportation数据输入页面屏幕截图</span></div>
+            <p><strong>使用工具：</strong>WWFCarbon Footprint Calculator（WWF Footprint Calculator）— https://footprint.wwf.org.uk</p>
+            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>WWFCarbon Footprint CalculatorHome欢迎界面</span><span style="font-size:0.8rem;">请在此处插入WWFCarbon Footprint CalculatorHome屏幕截图</span></div>
+            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>Transportation数据输入 — 通勤方式、里程、飞行次数</span><span style="font-size:0.8rem;">请在此处插入Transportation数据输入页面屏幕截图</span></div>
             <div class="screenshot-placeholder"><span class="screenshot-icon">📊</span><span>WWF个人碳足迹分析结果 — 按类别分解</span><span style="font-size:0.8rem;">请在此处插入Carbon Footprint结果与分类图表截图</span></div>
-            <p><strong>Results：</strong>个人years度碳足迹约为 <strong style="color:var(--terracotta);">5,800 kg CO₂</strong>。Transportation是最大的Carbon Emissions来源，占比高达45%（约2,610 kg CO₂），其中每日Private Car通勤（往返约30公里）贡献了约1,800 kg，全years两次国内往返航班（北京-广州、上海-成都）贡献了约810 kg。DietConsumption占比30%（约1,740 kg），Home Energy占比25%（约1,450 kg）。与Global人均碳足迹约4,700 kg CO₂相比，个人Carbon Emissions高出约23%。若要达到Sustainable水平（人均2,000 kg以下），需削减约66%的排放量，Transportation领域是减排的关键突破口。</p>
-            <h4>第三步：Three carbon offset solutions</h4>
+            <p><strong>Results：</strong>个人年度碳足迹约为 <strong style="color:var(--terracotta);">5,800 kg CO₂</strong>。Transportation是最大的碳排放来源，占比高达45%（约2,610 kg CO₂），其中每日私家车通勤（往返约30公里）贡献了约1,800 kg，全年两次国内往返航班（北京-广州、上海-成都）贡献了约810 kg。饮食消费占比30%（约1,740 kg），Home Energy占比25%（约1,450 kg）。与全球人均碳足迹约4,700 kg CO₂相比，个人碳排放高出约23%。若要达到可持续水平（人均2,000 kg以下），需削减约66%的排放量，交通领域是减排的关键突破口。</p>
+            <h4>第三步：三项碳抵消方案</h4>
             <div class="offset-solutions">
-              <div class="offset-card"><span class="offset-num">方案一</span><p><strong>Private Car通勤改为地铁+共享单车：</strong>将每日30公里Private Car通勤替换为"地铁+共享单车"组合出行。以每公里Private CarCarbon Emissions约180克Calculate，全years通勤250days可减少约1,350 kg CO₂排放。实际测试显示，地铁通勤时间与高峰期驾车相当甚至更短（约45分钟 vs 驾车50-70分钟），且months均Transportation费用从约1,200元（油费+停车费+保养折旧）降至约300元（地铁months票+共享单车季卡），years度节省近11,000元。利用地铁通勤时间阅读或处理Work，还能提高时间利用效率。</p></div>
-              <div class="offset-card"><span class="offset-num">方案二</span><p><strong>短途Flights改为高铁出行：</strong>对于800公里以内的国内出行，将飞机替换为高铁。以北京至上海（约1,200公里）为例，飞机单程Carbon Emissions约350-460 kg CO₂，而高铁仅约30-50 kg —— 减排幅度高达85%-90%。即使对于1,200至1,500公里的中长途线路，高铁Carbon Emissions也仅为飞机的10%-15%。中国拥有世界上最发达的高铁网络，覆盖主要城市群，门到门时间与飞机相差不大。每years若能避免两次中短途Flights，可减少约460-690 kg CO₂排放。</p></div>
-              <div class="offset-card"><span class="offset-num">方案三</span><p><strong>Participate碳抵消植树项目：</strong>通过中国绿化基金会或蚂蚁森林等平台ParticipatePlant Trees项目，以抵消无法削减的剩余Carbon Emissions。以一棵成years阔叶树每years吸收约22-30 kg CO₂Calculate，若Participate种植200棵树（约需1-2亩土地），成林后每years可吸收约4,400-6,000 kg CO₂，基本可抵消一个人的years度排放。除了购买碳抵消积分外，主动Participate周末植树志愿活动、在Community和学校推广城市绿化，不仅能固碳释氧，还能改善局部微Climate、Protect生物多样性和提升CommunityEnvironment品质。</p></div>
+              <div class="offset-card"><span class="offset-num">方案一</span><p><strong>私家车通勤改为地铁+共享单车：</strong>将每日30公里私家车通勤替换为"地铁+共享单车"组合出行。以每公里私家车碳排放约180克计算，全年通勤250天可减少约1,350 kg CO₂排放。实际测试显示，地铁通勤时间与高峰期驾车相当甚至更短（约45分钟 vs 驾车50-70分钟），且月均交通费用从约1,200元（油费+停车费+保养折旧）降至约300元（地铁月票+共享单车季卡），年度节省近11,000元。利用地铁通勤时间阅读或处理工作，还能提高时间利用效率。</p></div>
+              <div class="offset-card"><span class="offset-num">方案二</span><p><strong>短途飞行改为高铁出行：</strong>对于800公里以内的国内出行，将飞机替换为高铁。以北京至上海（约1,200公里）为例，飞机单程碳排放约350-460 kg CO₂，而高铁仅约30-50 kg —— 减排幅度高达85%-90%。即使对于1,200至1,500公里的中长途线路，高铁碳排放也仅为飞机的10%-15%。中国拥有世界上最发达的高铁网络，覆盖主要城市群，门到门时间与飞机相差不大。每年若能避免两次中短途飞行，可减少约460-690 kg CO₂排放。</p></div>
+              <div class="offset-card"><span class="offset-num">方案三</span><p><strong>参与碳抵消植树项目：</strong>通过中国绿化基金会或蚂蚁森林等平台参与Plant Trees项目，以抵消无法削减的剩余碳排放。以一棵成年阔叶树每年吸收约22-30 kg CO₂计算，若参与种植200棵树（约需1-2亩土地），成林后每年可吸收约4,400-6,000 kg CO₂，基本可抵消一个人的年度排放。除了购买碳抵消积分外，主动参与周末植树志愿活动、在社区和学校推广城市绿化，不仅能固碳释氧，还能改善局部微气候、保护生物多样性和提升社区环境品质。</p></div>
             </div>
             <div class="photo-placeholder">📷<br>个人照片<br>（面/头照+骑行或步行照片）</div>
           </div>
@@ -2287,29 +2319,29 @@ p { color: var(--text-muted); line-height: 1.75; }
             <div class="action-report-avatar" style="background:#2c5282">王</div>
             <div class="action-report-info">
               <h3>Wang Luyang</h3>
-              <span class="action-report-action" style="color:#2c5282">SDG 2 / SDG 12 · 植物性Diet</span>
+              <span class="action-report-action" style="color:#2c5282">SDG 2 / SDG 12 · 植物性饮食</span>
             </div>
           </div>
           <div class="action-report-body">
-            <h4>第一步：Action目的</h4>
-            <p>Global食品系统贡献了约26%的人为温室气体排放，其中畜牧业所占比重尤为突出。根据联合国粮农组织（FAO）的数据，生产1公斤牛肉的碳足迹约为60 kg CO₂当量（包括饲料种植、肠道发酵甲烷排放、运输加工等环节），而生产1公斤蔬菜的碳足迹仅为0.5-2 kg CO₂，两者相差30至120倍。中国是Global最大的Meat Consumption国，years人均Meat Consumption量约70公斤，远超《中国居民膳食指南》推荐的健康摄入量（约40-50公斤/years）。高肉类Diet不仅加剧Climate变化，还与心血管疾病、糖尿病、某些癌症等慢性病风险升高相关。本次Action的目的是通过逐步调整Diet结构——从高肉Diet向以植物为基础、肉类适量摄入的方向转变——在减少Food碳足迹的同时改善个人健康。该Action与SDG 2（Zero Hunger与营养）、SDG 12（Responsible Consumption和生产）和SDG 13（Climate Action）密切相关。通过记录四周的Diet日志，量化不同FoodChoice的Environment影响，我们希望找到适合中国Diet习惯的、可长期坚持的SustainableDiet模式，并向周围人展示：吃得健康与吃得环保可以兼得。</p>
+            <h4>第一步：行动目的</h4>
+            <p>全球食品系统贡献了约26%的人为温室气体排放，其中畜牧业所占比重尤为突出。根据联合国粮农组织（FAO）的数据，生产1公斤牛肉的碳足迹约为60 kg CO₂当量（包括饲料种植、肠道发酵甲烷排放、运输加工等环节），而生产1公斤蔬菜的碳足迹仅为0.5-2 kg CO₂，两者相差30至120倍。中国是全球最大的肉类消费国，年人均肉类消费量约70公斤，远超《中国居民膳食指南》推荐的健康摄入量（约40-50公斤/年）。高肉类饮食不仅加剧climate change，还与心血管疾病、糖尿病、某些癌症等慢性病风险升高相关。本次行动的目的是通过逐步调整饮食结构——从高肉饮食向以植物为基础、肉类适量摄入的方向转变——在减少食物碳足迹的同时改善个人健康。该行动与SDG 2（Zero Hunger与营养）、SDG 12（Responsible Consumption & Production）和SDG 13（Climate Action）密切相关。通过记录四周的饮食日志，量化不同食物选择的环境影响，我们希望找到适合中国饮食习惯的、可长期坚持的可持续饮食模式，并向周围人展示：吃得健康与吃得环保可以兼得。</p>
             <h4>第二步：个人Carbon Footprint</h4>
-            <p><strong>使用工具：</strong>CarbonFootprint.com Carbon Footprint器 — https://www.carbonfootprint.com/calculator.aspx</p>
-            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>CarbonFootprintCalculate器Home — ChoiceCalculate范围</span><span style="font-size:0.8rem;">请在此处插入CarbonFootprint.comCalculate器Home屏幕截图</span></div>
-            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>DietConsumption数据输入 — 肉类、乳制品、蔬果Consumption频率</span><span style="font-size:0.8rem;">请在此处插入Diet数据输入页面屏幕截图</span></div>
-            <div class="screenshot-placeholder"><span class="screenshot-icon">📊</span><span>Carbon Footprint结果 — 按类别（食品、Home、Transportation）分解</span><span style="font-size:0.8rem;">请在此处插入Carbon Footprint结果截图</span></div>
-            <p><strong>Results：</strong>个人years度碳足迹约为 <strong style="color:var(--terracotta);">3,600 kg CO₂</strong>。DietConsumption占比30%（约1,080 kg CO₂），主要来自频繁的红肉Consumption（每周约5-6次牛肉或猪肉）和少量乳制品；Home Energy占比35%（约1,260 kg CO₂）；Transportation占比30%（约1,080 kg CO₂）；其他Consumption占比5%。在Diet细分中，红肉贡献了约65%的Food碳足迹（约700 kg），乳制品约15%（约160 kg），其余食品约20%。与SustainableDietGoal（Food碳足迹应控制在约500 kg/years以下）相比，需削减约44%的总排放量，Diet是性价比最高的减排切入点。</p>
-            <h4>第三步：Three carbon offset solutions</h4>
+            <p><strong>使用工具：</strong>CarbonFootprint.com Carbon Footprint Calculator — https://www.carbonfootprint.com/calculator.aspx</p>
+            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>CarbonFootprint计算器Home — 选择计算范围</span><span style="font-size:0.8rem;">请在此处插入CarbonFootprint.com计算器Home屏幕截图</span></div>
+            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>饮食消费数据输入 — 肉类、乳制品、蔬果消费频率</span><span style="font-size:0.8rem;">请在此处插入饮食数据输入页面屏幕截图</span></div>
+            <div class="screenshot-placeholder"><span class="screenshot-icon">📊</span><span>Carbon Footprint结果 — 按类别（食品、家庭、交通）分解</span><span style="font-size:0.8rem;">请在此处插入Carbon Footprint结果截图</span></div>
+            <p><strong>Results：</strong>个人年度碳足迹约为 <strong style="color:var(--terracotta);">3,600 kg CO₂</strong>。饮食消费占比30%（约1,080 kg CO₂），主要来自频繁的红肉消费（每周约5-6次牛肉或猪肉）和少量乳制品；Home Energy占比35%（约1,260 kg CO₂）；Transportation占比30%（约1,080 kg CO₂）；其他消费占比5%。在饮食细分中，红肉贡献了约65%的食物碳足迹（约700 kg），乳制品约15%（约160 kg），其余食品约20%。与可持续饮食目标（食物碳足迹应控制在约500 kg/年以下）相比，需削减约44%的总排放量，饮食是性价比最高的减排切入点。</p>
+            <h4>第三步：三项碳抵消方案</h4>
             <div class="offset-solutions">
-              <div class="offset-card"><span class="offset-num">方案一</span><p><strong>每周两days无肉日（Meat-Free Days）：</strong>将每周的周一和周四设定为"无肉日"，全days以豆制品（豆腐、豆浆、毛豆）、菌菇类、坚果和全谷物替代肉类。以每周减少约1公斤红肉Calculate，全years可减少约600 kg CO₂排放。大豆的蛋白质含量与牛肉相当（每100克约含35-38克蛋白质），但碳足迹仅为牛肉的约1/30。中国有丰富的豆腐、腐竹、面筋等植物蛋白传统食材，无肉日并不意味着牺牲口味或营养。此外，豆浆替代牛奶作为日常饮品，每杯可额外减少约0.3 kg CO₂排放。</p></div>
-              <div class="offset-card"><span class="offset-num">方案二</span><p><strong>Join本地CSA有机农场并优先购买当季食材：</strong>JoinCommunity支持农业（CSA）项目，每周从本地有机农场直接订购当季蔬菜和水果。本地当季食材避免了温室种植和长途冷藏运输的高Carbon Emissions，有机种植不使用合成氮肥（氮肥生产是农业Carbon Emissions的主要来源之一）。同时，减少Food里程意味着食材从田间到餐桌的距离不超过100公里。据估算，从本地CSA农场采购蔬菜替代超市进口蔬菜，每years可减少约300 kg CO₂排放，并且CSA模式帮助中小农户获得稳定收入，促进本地农业SustainableDevelopment。</p></div>
-              <div class="offset-card"><span class="offset-num">方案三</span><p><strong>阳台菜园+厨余Composting：</strong>利用阳台或窗台空间种植香草（罗勒、薄荷、香菜）、叶菜（生菜、菠菜、小青菜）和樱桃番茄等易于管理的作物。一个3平方米的阳台菜园每years可产出约30-50公斤蔬菜，替代超市购买可减少约150 kg CO₂排放（包括包装、运输和冷藏环节的Carbon Emissions）。同时，使用小型Composting桶将厨余（果皮、菜叶、咖啡渣等）转化为有机肥料，一方面减少了垃圾填埋产生的甲烷排放，另一方面为阳台菜园提供了免费的优质肥料，形成小型的Home物质循环系统。种植过程本身也是减压和亲近自然的好方式。</p></div>
+              <div class="offset-card"><span class="offset-num">方案一</span><p><strong>每周两天无肉日（Meat-Free Days）：</strong>将每周的周一和周四设定为"无肉日"，全天以豆制品（豆腐、豆浆、毛豆）、菌菇类、坚果和全谷物替代肉类。以每周减少约1公斤红肉计算，全年可减少约600 kg CO₂排放。大豆的蛋白质含量与牛肉相当（每100克约含35-38克蛋白质），但碳足迹仅为牛肉的约1/30。中国有丰富的豆腐、腐竹、面筋等植物蛋白传统食材，无肉日并不意味着牺牲口味或营养。此外，豆浆替代牛奶作为日常饮品，每杯可额外减少约0.3 kg CO₂排放。</p></div>
+              <div class="offset-card"><span class="offset-num">方案二</span><p><strong>加入本地CSA有机农场并优先购买当季食材：</strong>加入社区支持农业（CSA）项目，Order seasonal vegetables and fruits directly from local organic farms each week。Local seasonal ingredients avoid the high carbon emissions of greenhouse cultivation and long-distance refrigerated transport，有机种植不使用合成氮肥（氮肥生产是农业碳排放的主要来源之一）。同时，Reducing food miles means the distance from field to table does not exceed100公里。据估算，从本地CSA农场采购蔬菜替代超市进口蔬菜，每年可减少约300 kg CO₂排放，并且CSA模式帮助中小农户获得稳定收入，促进本地农业sustainable development。</p></div>
+              <div class="offset-card"><span class="offset-num">方案三</span><p><strong>阳台菜园+厨余堆肥：</strong>利用阳台或窗台空间种植香草（罗勒、薄荷、香菜）、叶菜（生菜、菠菜、小青菜）和樱桃番茄等易于管理的作物。一个3平方米的阳台菜园每年可产出约30-50公斤蔬菜，替代超市购买可减少约150 kg CO₂排放（包括包装、运输和冷藏环节的碳排放）。同时，使用小型堆肥桶将厨余（果皮、菜叶、咖啡渣等）转化为有机肥料，一方面减少了垃圾填埋产生的甲烷排放，while also providing free quality fertilizer for balcony gardens，形成小型的家庭物质循环系统。种植过程本身也是减压和亲近自然的好方式。</p></div>
             </div>
             <div class="photo-placeholder">📷<br>个人照片<br>（面/头照+吃胡萝卜或其他蔬菜照片）</div>
           </div>
         </div>
 
-        <!-- Member 4: Lu Jianning — 减少、再利用、修复、Recycling -->
+        <!-- Member 4: Lu Jianning — 减少、再利用、修复、回收 -->
         <div class="action-report-card">
           <div class="action-report-header">
             <div class="action-report-avatar" style="background:#009444">卢</div>
@@ -2319,21 +2351,21 @@ p { color: var(--text-muted); line-height: 1.75; }
             </div>
           </div>
           <div class="action-report-body">
-            <h4>第一步：Action目的</h4>
-            <p>Global每years产生约20亿吨城市固体废物，其中仅有约13.5%得到Recycling利用，其余大部分被填埋或焚烧。垃圾填埋场是Global第三大人为甲烷排放源，甲烷的温室效应在20years时间尺度上是CO₂的80多倍。在中国，"快时尚"文化和电子产品的快速迭代导致ConsumptionWaste急剧增长——中国人均每years丢弃约30公斤旧衣物，电子垃圾years产生量超过1,000万吨，但正规Recycling率不足40%。许多被丢弃的物品其实仍具有使用价值，或是可以通过简单的维修延长使用寿命。本次Action的目的是全面践行"4R"原则（Reduce减少、Reuse再利用、Repair修复、RecycleRecycling），从Consumption源头减量Start，到物品的重复使用和自我修复，最终确保可Recycling物进入正确的Recycling渠道。该Action直接对应SDG 12（Responsible Consumption和生产）中关于"大幅减少废物产生，通过预防、减少、Recycling和再利用"的具体Goal。通过为期三个months的实践和数据记录，我们希望量化个人Waste减量的潜力，证明SustainableConsumption不仅不会降低生活质量，反而能带来更简约、更有意识的生活方式。</p>
+            <h4>第一步：行动目的</h4>
+            <p>全球每年产生约20亿吨城市固体废物，其中仅有约13.5%得到回收利用，其余大部分被填埋或焚烧。垃圾填埋场是全球第三大人为甲烷排放源，甲烷的温室效应在20年时间尺度上是CO₂的80多倍。在中国，"快时尚"The rapid iteration of consumer culture and electronics has led to surging consumer waste——中国人均每年丢弃约30公斤旧衣物，电子垃圾年产生量超过1,000万吨，但正规回收率不足40%。许多被丢弃的物品其实仍具有使用价值，或是可以通过简单的维修延长使用寿命。本次行动的目的是全面践行"4R"原则（Reduce减少、Reuse再利用、Repair修复、Recycle回收），从消费源头减量开始，到物品的重复使用和自我修复，最终确保可回收物进入正确的回收渠道。该行动直接对应SDG 12（Responsible Consumption & Production）中关于"大幅减少废物产生，通过预防、减少、回收和再利用"的具体目标。通过为期三个月的实践和数据记录，我们希望量化个人废弃物减量的潜力，证明可持续消费不仅不会降低生活质量，反而能带来更简约、更有意识的生活方式。</p>
             <h4>第二步：个人Carbon Footprint</h4>
-            <p><strong>使用工具：</strong>联合国Carbon Footprint器（UN Carbon Footprint Calculator）— https://offset.climateneutralnow.org/footprintcalc</p>
-            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>UNCarbon Footprint器Home — Choice语言和单位</span><span style="font-size:0.8rem;">请在此处插入UNCarbon Footprint器Home屏幕截图</span></div>
-            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>Consumption品与Waste数据输入页面</span><span style="font-size:0.8rem;">请在此处插入Consumption品和Waste数据输入界面屏幕截图</span></div>
-            <div class="screenshot-placeholder"><span class="screenshot-icon">📊</span><span>Carbon Footprint结果 — Consumption/Waste板块详析</span><span style="font-size:0.8rem;">请在此处插入Carbon Footprint结果与分类明细截图</span></div>
-            <p><strong>Results：</strong>个人years度碳足迹约为 <strong style="color:var(--terracotta);">5,100 kg CO₂</strong>。Consumption品和Waste相关排放占比28%（约1,428 kg CO₂），高于Average居民水平，主要原因是频繁购买新衣物（months均3-4件新衣）和电子产品更新较快（每1-2years更换手机）。Transportation占比35%（约1,785 kg），Home Energy占比22%（约1,122 kg），Diet占比15%（约765 kg）。值得注意的是，由于垃圾分类不够细致，可Recycling物中约有60%被混合丢弃，导致大量可再利用Resources进入填埋或焚烧流程，间接增加了Carbon Emissions。若Achieve完全Recycling和Consumption减量，Waste板块的碳足迹可降低61%以上。</p>
-            <h4>第三步：Three carbon offset solutions</h4>
+            <p><strong>使用工具：</strong>联合国Carbon Footprint Calculator（UN Carbon Footprint Calculator）— https://offset.climateneutralnow.org/footprintcalc</p>
+            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>UNCarbon Footprint CalculatorHome — 选择语言和单位</span><span style="font-size:0.8rem;">请在此处插入UNCarbon Footprint CalculatorHome屏幕截图</span></div>
+            <div class="screenshot-placeholder"><span class="screenshot-icon">📸</span><span>消费品与废弃物数据输入页面</span><span style="font-size:0.8rem;">Insert screenshots of the consumer goods and waste data input interface here</span></div>
+            <div class="screenshot-placeholder"><span class="screenshot-icon">📊</span><span>Carbon Footprint结果 — 消费/废弃物板块详析</span><span style="font-size:0.8rem;">请在此处插入Carbon Footprint结果与分类明细截图</span></div>
+            <p><strong>Results：</strong>个人年度碳足迹约为 <strong style="color:var(--terracotta);">5,100 kg CO₂</strong>。消费品和废弃物相关排放占比28%（约1,428 kg CO₂），高于一般居民水平，主要原因是频繁购买新衣物（月均3-4件新衣）和电子产品更新较快（每1-2年更换手机）。Transportation占比35%（约1,785 kg），Home Energy占比22%（约1,122 kg），饮食占比15%（约765 kg）。值得注意的是，由于Waste Sorting不够细致，可回收物中约有60%被混合丢弃，causing large amounts of reusable resources to enter landfill or incineration，间接增加了碳排放。若实现完全回收和消费减量，废弃物板块的碳足迹可降低61%以上。</p>
+            <h4>第三步：三项碳抵消方案</h4>
             <div class="offset-solutions">
-              <div class="offset-card"><span class="offset-num">方案一</span><p><strong>"30days不购物Challenges"+ 优先购买二手物品：</strong>实施"30days不购买非必需品"Challenges，除食品和日用品外暂停一切Consumption，打破冲动Consumption的惯性。此后，对于确实需要的衣物和日用品，优先在闲鱼、多抓鱼等二手平台购买。二手商品的使用避免了新产品的生产Carbon Emissions——以一件棉质T恤为例，生产环节Carbon Emissions约6-8 kg CO₂，购买二手可避免约90%的相关排放。若全years50%的衣物购买转向二手市场，加之大件物品（如家具、书籍、玩具）也优先二手，每years可减少约800 kg CO₂排放，同时节省约3,000-5,000元Consumption支出。</p></div>
-              <div class="offset-card"><span class="offset-num">方案二</span><p><strong>电子产品自行维修+延长使用周期：</strong>学习基本的电子产品维护和维修技能（如更换手机电池、清理电脑灰尘、更换硬盘等），将手机使用周期从2years延长至4years，笔记本电脑从3years延长至5-6years。以一部智能手机为例，其生产环节Carbon Emissions约50-85 kg CO₂（主要来自芯片制造和稀有金属开采），若将更换周期从2years延长至4years，years均Carbon Emissions从约30-43 kg降至约15-21 kg。同时，利用iFixit等在线维修指南自行更换电池和屏幕，既避免了维修费用，也减少了对新产品的需求。以一台笔记本电脑使用周期延长2yearsCalculate，years均减碳约20-30 kg CO₂。</p></div>
-              <div class="offset-card"><span class="offset-num">方案三</span><p><strong>四分类精细化垃圾管理+电子垃圾专门Recycling：</strong>在家中设置四个分类垃圾桶（可Recycling物、厨余垃圾、其他垃圾、有害垃圾），确保每类Waste进入正确的处理渠道。特别地，将废旧电池、充电线、旧手机等电子垃圾单独收集，送至专门的电子WasteRecycling点（如爱Recycling、华为/苹果门店Recycling计划）。精细化分类后，Home可Recycling物Recycling利用率可从不足40%提升至85%以上，每years可额外Recycling约120公斤废纸、塑料和玻璃，减少约400 kg CO₂的填埋或焚烧排放。同时，厨余垃圾分离后进行Composting或厌氧消化处理，可避免其在填埋场中产生甲烷，每years减少约100-150 kg CO₂当量的温室气体排放。</p></div>
+              <div class="offset-card"><span class="offset-num">方案一</span><p><strong>"30天不购物挑战"+ 优先购买二手物品：</strong>实施"30天不购买非必需品"挑战，除食品和日用品外暂停一切消费，打破冲动消费的惯性。此后，对于确实需要的衣物和日用品，优先在闲鱼、多抓鱼等二手平台购买。二手商品的使用避免了新产品的生产碳排放——以一件棉质T恤为例，生产环节碳排放约6-8 kg CO₂，购买二手可避免约90%的相关排放。若全年50%的衣物购买转向二手市场，加之大件物品（如家具、书籍、玩具）也优先二手，每年可减少约800 kg CO₂排放，同时节省约3,000-5,000元消费支出。</p></div>
+              <div class="offset-card"><span class="offset-num">方案二</span><p><strong>电子产品自行维修+延长使用周期：</strong>学习基本的电子产品维护和维修技能（如更换手机电池、清理电脑灰尘、更换硬盘等），将手机使用周期从2年延长至4年，笔记本电脑从3年延长至5-6年。以一部智能手机为例，其生产环节碳排放约50-85 kg CO₂（主要来自芯片制造和稀有金属开采），若将更换周期从2年延长至4年，年均碳排放从约30-43 kg降至约15-21 kg。同时，利用iFixit等在线维修指南自行更换电池和屏幕，既避免了维修费用，也减少了对新产品的需求。以一台笔记本电脑使用周期延长2年计算，年均减碳约20-30 kg CO₂。</p></div>
+              <div class="offset-card"><span class="offset-num">方案三</span><p><strong>四分类精细化垃圾管理+电子垃圾专门回收：</strong>在家中设置四个分类垃圾桶（可回收物、厨余垃圾、其他垃圾、有害垃圾），确保每类废弃物进入正确的处理渠道。特别地，将废旧电池、充电线、旧手机等电子垃圾单独收集，送至专门的电子废弃物回收点（如爱回收、华为/苹果门店回收计划）。精细化分类后，家庭可回收物回收利用率可从不足40%提升至85%以上，每年可额外回收约120公斤废纸、塑料和玻璃，减少约400 kg CO₂的填埋或焚烧排放。同时，厨余垃圾分离后进行堆肥或厌氧消化处理，可避免其在填埋场中产生甲烷，每年减少约100-150 kg CO₂当量的温室气体排放。</p></div>
             </div>
-            <div class="photo-placeholder">📷<br>个人照片<br>（面/头照+环保Action照片）</div>
+            <div class="photo-placeholder">📷<br>个人照片<br>（面/头照+环保行动照片）</div>
           </div>
         </div>
 
@@ -2345,13 +2377,13 @@ p { color: var(--text-muted); line-height: 1.75; }
       <div class="container">
         <h2 class="section-title">References</h2>
         <div class="references-container">
-          <div class="reference-item"><p>[1] 联合国. (2015). <em>变革Our世界：2030yearsSustainable Development Agenda</em>. 纽约: 联合国.</p></div>
-          <div class="reference-item"><p>[2] 联合国Environment规划署 (UNEP). (2023). <em>Global碳足迹报告</em>. 内罗毕: UNEP.</p></div>
-          <div class="reference-item"><p>[3] 世界自然基金会 (WWF). (2022). <em>Planet生命力报告</em>. 瑞士: WWF.</p></div>
-          <div class="reference-item"><p>[4] 政府间Climate变化专门委员会 (IPCC). (2023). <em>第六次评估报告</em>. 日内瓦: IPCC.</p></div>
+          <div class="reference-item"><p>[1] 联合国. (2015). <em>变革我们的世界：2030年sustainable development议程</em>. 纽约: 联合国.</p></div>
+          <div class="reference-item"><p>[2] 联合国环境规划署 (UNEP). (2023). <em>全球碳足迹报告</em>. 内罗毕: UNEP.</p></div>
+          <div class="reference-item"><p>[3] 世界自然基金会 (WWF). (2022). <em>地球生命力报告</em>. 瑞士: WWF.</p></div>
+          <div class="reference-item"><p>[4] 政府间climate change专门委员会 (IPCC). (2023). <em>第六次评估报告</em>. 日内瓦: IPCC.</p></div>
           <div class="reference-item"><p>[5] "SDG Act Now" 官方网站. 联合国. https://www.un.org/actnow</p></div>
           <div class="reference-item"><p>[6] World Health Organization (WHO). (2023). <em>Global Status Report on Preventable Deaths</em>. Geneva: WHO.</p></div>
-          <div class="apa-note"><p><strong>APA格式说明：</strong>本网站所有引用均遵循APA 7th版格式规范。权威Resources需正确引用，避免抄袭，并为读者提供查证依据。部分内容由AI生成辅助，已进行事实核查。</p></div>
+          <div class="apa-note"><p><strong>APA格式说明：</strong>本网站所有引用均遵循APA 7th版格式规范。权威资源需正确引用，避免抄袭，并为读者提供查证依据。部分内容由AI生成辅助，已进行事实核查。</p></div>
         </div>
       </div>
     </section>
@@ -2359,8 +2391,8 @@ p { color: var(--text-muted); line-height: 1.75; }
     <!-- CTA -->
     <section class="call-to-action">
       <div class="container">
-        <h2>JoinOurAction</h2>
-        <p>每一个Action都很重要。Start Today，做出Change，为SustainableDevelopment贡献Your力量。Your每一个Choice，都在塑造Future。</p>
+        <h2>加入我们的行动</h2>
+        <p>每一个行动都很重要。从今天开始，做出改变，为sustainable development贡献您的力量。您的每一个选择，都在塑造未来。</p>
         <div class="cta-buttons">
           <a href="sdgs.html" class="btn btn-primary">Learn MoreSDG Goals</a>
           <a href="carbon-footprint.html" class="btn btn-secondary">Calculate Your Carbon Footprint</a>
@@ -2372,11 +2404,11 @@ p { color: var(--text-muted); line-height: 1.75; }
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-section"><h3>联合国SDGs</h3><p>Working together for a better,<br>more sustainable future</p></div>
+        <div class="footer-section"><h3>UN Sustainable Development Goals</h3><p>Working together for a better, more sustainable future<br></p></div>
         <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="sdgs.html">SDG Goals</a></li><li><a href="carbon-footprint.html">Carbon Footprint</a></li><li><a href="act-now.html">Act Now</a></li><li><a href="reference-list.html">References</a></li></ul></div>
         <div class="footer-section"><h4>Contact Us</h4><p>Email: contact@sdg-website.org</p><p>Phone: +86 123 4567 8900</p></div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 SDG Website. All rights reserved.</p><p>本网站致力于宣传联合国SDGs</p></div>
+      <div class="footer-bottom"><p>&copy; 2026 SDG Website. All rights reserved.</p><p>This website is dedicated to promoting the UN Sustainable Development Goals</p></div>
     </div>
   </footer>
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -2384,7 +2416,7 @@ p { color: var(--text-muted); line-height: 1.75; }
 <!-- ═══════════════════════════════════════════════════════════ -->
 
 <!-- ═══════════════════════════════════════════════════════════ -->
-<!-- 🔧 SCRIPTS — 编辑时不需要动下面的内容                       -->
+<!-- 🔧 SCRIPTS — (Edit text above only — do not modify styles and scripts below)                       -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
 <!-- GSAP library (must load first) -->
@@ -2443,23 +2475,23 @@ document.addEventListener('DOMContentLoaded', function() {
   var modalBody = document.querySelector('.modal-body p');
 
   var sdgs = [
-    { id: 1, title: 'No Poverty', subtitle: 'No Poverty', color: '#e5243b', description: '在世界各地消除一切形式的贫困。确保所有男女，特别是赤贫人口，享有平等获得经济Resources的权利，以及获得基本服务、所有权和对土地及其他形式财产的控制权。' },
-    { id: 2, title: 'Zero Hunger', subtitle: 'Zero Hunger', color: '#dda63a', description: '消除饥饿，Achieve粮食安全，改善营养状况和促进Sustainable农业。到2030years，确保所有人全years都能获得安全、营养和充足的Food。' },
-    { id: 3, title: 'Good Health & Well-being', subtitle: 'Good Health and Well-being', color: '#4c9f38', description: '确保健康的生活方式，促进各years龄段人群的福祉。到2030years，将Global孕产妇死亡率降低到每10万活产140人以下。' },
-    { id: 4, title: 'Quality Education', subtitle: 'Quality Education', color: '#c5192d', description: '确保包容和公平的Quality Education，促进全民终身学习。到2030years，确保所有男女儿童完成免费、公平和优质的初等和中等Education，并取得相关和有效的学习成果。' },
-    { id: 5, title: 'Gender Equality', subtitle: 'Gender Equality', color: '#ff3a21', description: 'AchieveGender Equality，增强所有妇女和女童的权能。消除对妇女和女童的一切形式歧视。' },
-    { id: 6, title: 'Clean Water', subtitle: 'Clean Water and Sanitation', color: '#26bde2', description: '确保Clean Water和卫生设施。到2030years，普遍和公平地获得安全和负担得起的饮用水。' },
-    { id: 7, title: '廉价Clean Energy', subtitle: 'Affordable and Clean Energy', color: '#fcc30b', description: '确保获得负担得起的、可靠的、Sustainable的和现代的Energy。到2030years，确保人人获得负担得起的、可靠的现代Energy服务。' },
-    { id: 8, title: 'Decent Work与经济增长', subtitle: 'Decent Work and Economic Growth', color: '#a21942', description: '促进持久、包容和Sustainable的经济增长，促进充分的生产性就业和Decent Work。' },
-    { id: 9, title: '产业、创新与基础设施', subtitle: 'Industry, Innovation and Infrastructure', color: '#fd6925', description: '建造具备抵御灾害能力的基础设施，促进包容和Sustainable的工业化，推动创新。' },
-    { id: 10, title: 'Reduced Inequalities', subtitle: 'Reduced Inequalities', color: '#dd1367', description: '减少国家内部和国家之间的不平等。到2030years，根据各国国情，逐步Achieve并维持最底层40%人口的收入增长率高于全国平均水平。' },
-    { id: 11, title: 'Sustainable Cities和Community', subtitle: 'Sustainable Cities and Communities', color: '#fd9d24', description: '建设包容、安全、有抵御灾害能力和Sustainable的城市和人类住区。到2030years，使城市和人类住区具有包容性、安全、韧性和Sustainable性。' },
-    { id: 12, title: 'Responsible Consumption和生产', subtitle: 'Responsible Consumption and Production', color: '#bf8b2e', description: '确保SustainableConsumption和生产模式。到2030years，AchieveGlobalSustainableConsumption和生产模式。' },
-    { id: 13, title: 'Climate Action', subtitle: 'Climate Action', color: '#3f7e44', description: '采取紧急Action应对Climate变化及其影响。加强各国应对Climate变化影响的能力。' },
-    { id: 14, title: 'Life Below Water', subtitle: 'Life Below Water', color: '#009444', description: 'Protect和Sustainable利用海洋和海洋Resources以促进SustainableDevelopment。制止过度捕捞、非法、未报告和无管制的捕捞活动。' },
-    { id: 15, title: 'Life on Land', subtitle: 'Life on Land', color: '#00a651', description: 'Protect、恢复和促进Sustainable利用Land生态系统，Sustainable管理森林，防治荒漠化，制止和扭转土地退化，遏制生物多样性的丧失。' },
-    { id: 16, title: '和平、正义与强大机构', subtitle: 'Peace, Justice and Strong Institutions', color: '#19489d', description: '促进有利于SustainableDevelopment的和平和包容社会，为所有人提供诉诸司法的机会，在各级建立有效、负责和包容的机构。' },
-    { id: 17, title: '促进GoalAchieve的Partnerships', subtitle: 'Partnerships for the Goals', color: '#192841', description: '加强执行手段，重振SustainableDevelopmentGlobalPartnerships。加强多利益攸关方Partnerships，调动和分享knowledge、专长、技术和财政Resources，以AchieveSDGs。' }
+    { id: 1, title: 'No Poverty', subtitle: 'No Poverty', color: '#e5243b', description: 'End poverty in all its forms everywhere。确保所有男女，特别是赤贫人口，enjoy equal rights to economic resources，以及获得基本服务、Ownership and control over land and other forms of property。' },
+    { id: 2, title: 'Zero Hunger', subtitle: 'Zero Hunger', color: '#dda63a', description: '消除饥饿，实现粮食安全，Improve nutrition and promote sustainable agriculture。到2030年，Ensure all people have year-round access to safe、营养和充足的食物。' },
+    { id: 3, title: 'Good Health & Well-being', subtitle: 'Good Health and Well-being', color: '#4c9f38', description: '确保健康的生活方式，促进各年龄段人群的福祉。到2030年，Reduce the global maternal mortality ratio to10万活产140人以下。' },
+    { id: 4, title: 'Quality Education', subtitle: 'Quality Education', color: '#c5192d', description: '确保包容和公平的Quality Education，促进全民终身学习。到2030年，确保所有男女儿童完成免费、equitable and quality primary and secondary education，and achieve relevant and effective learning outcomes。' },
+    { id: 5, title: 'Gender Equality', subtitle: 'Gender Equality', color: '#ff3a21', description: '实现Gender Equality，增强所有妇女和女童的权能。Eliminate all forms of discrimination against women and girls。' },
+    { id: 6, title: 'Clean Water & Sanitation', subtitle: 'Clean Water and Sanitation', color: '#26bde2', description: '确保Clean Water & Sanitation。到2030年，Achieve universal and equitable access to safe and affordable drinking water for all。' },
+    { id: 7, title: '廉价Affordable & Clean Energy', subtitle: 'Affordable and Clean Energy', color: '#fcc30b', description: '确保获得负担得起的、可靠的、可持续的和现代的能源。到2030年，确保人人获得负担得起的、可靠的现代能源服务。' },
+    { id: 8, title: 'Decent Work & Economic Growth与经济增长', subtitle: 'Decent Work and Economic Growth', color: '#a21942', description: '促进持久、包容和可持续的经济增长，促进充分的生产性就业和Decent Work & Economic Growth。' },
+    { id: 9, title: '产业、创新与基础设施', subtitle: 'Industry, Innovation and Infrastructure', color: '#fd6925', description: 'Build resilient infrastructure to withstand disasters，促进包容和可持续的工业化，推动创新。' },
+    { id: 10, title: 'Reduced Inequalities', subtitle: 'Reduced Inequalities', color: '#dd1367', description: 'Reduce inequality within and among countries。到2030年，根据各国国情，逐步实现并维持最底层40%Income growth rate of the bottom 40% population above the national average。' },
+    { id: 11, title: 'Sustainable Cities & Communities', subtitle: 'Sustainable Cities and Communities', color: '#fd9d24', description: '建设包容、安全、Make cities and human settlements inclusive, safe, resilient and sustainable。到2030年，Make cities and human settlements inclusive、安全、韧性和可持续性。' },
+    { id: 12, title: 'Responsible Consumption & Production', subtitle: 'Responsible Consumption and Production', color: '#bf8b2e', description: '确保可持续消费和生产模式。到2030年，Achieve sustainable consumption and production patterns globally。' },
+    { id: 13, title: 'Climate Action', subtitle: 'Climate Action', color: '#3f7e44', description: 'Take urgent action to combat climate change and its impacts。加强各国应对climate change影响的能力。' },
+    { id: 14, title: 'Life Below Water', subtitle: 'Life Below Water', color: '#009444', description: 'Conserve and sustainably use the oceans, seas and marine resources for sustainable development。制止过度捕捞、非法、unreported and unregulated fishing。' },
+    { id: 15, title: 'Life on Land', subtitle: 'Life on Land', color: '#00a651', description: '保护、Protect, restore and promote sustainable use of terrestrial ecosystems，可持续管理森林，防治荒漠化，制止和扭转土地退化，遏制生物多样性的丧失。' },
+    { id: 16, title: 'Peace, Justice & Strong Institutions', subtitle: 'Peace, Justice and Strong Institutions', color: '#19489d', description: 'Promote peaceful and inclusive societies for sustainable development，Provide access to justice for all，在各级建立有效、负责和包容的机构。' },
+    { id: 17, title: 'Partnerships for the Goals', subtitle: 'Partnerships for the Goals', color: '#192841', description: '加强执行手段，重振sustainable development全球Partnerships for the Goals。加强多利益攸关方Partnerships for the Goals，调动和分享知识、专长、技术和财政资源，以实现Global Goals。' }
   ];
 
   var sdgCards = document.querySelectorAll('.sdg-full-card');
@@ -2502,7 +2534,7 @@ document.addEventListener('DOMContentLoaded', function() {
       filterBtns.forEach(function(b) { b.classList.remove('active'); });
       this.classList.add('active');
       actionCards.forEach(function(card) {
-        if (category === 'All' || card.getAttribute('data-category') === category) {
+        if (category === '全部' || card.getAttribute('data-category') === category) {
           card.style.display = 'block';
         } else {
           card.style.display = 'none';

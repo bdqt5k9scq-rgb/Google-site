@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carbon Footprint器 — SDG Website</title>
-  <meta name="description" content="CalculateYour个人碳足迹，Learn日常活动对Environment的影响，获取减少Carbon Emissions的实用建议。">
+  <title>Carbon Footprint Calculator — SDG Website</title>
+  <meta name="description" content="计算您的个人碳足迹，了解日常活动对环境的影响，获取减少碳排放的实用建议。">
   <link rel="icon" type="image/svg+xml" href="vite.svg">
   <style>
 /* === Inlined from css/style.css === */
 /* ============================================================
    Earth Editorial Design System — Static Pages
-   Sustainable Development Goals · SDG Website
+   SDGs · SDG Website
    Aesthetic: warm, literary, textured, organic
    ============================================================ */
 
@@ -2109,16 +2109,48 @@ p { color: var(--text-muted); line-height: 1.75; }
 <body>
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 📝 EDITABLE CONTENT START                                  -->
-<!--     Edit only this HTML block for text changes; leave styles and scripts below untouched     -->
+<!--     改文字只需编辑这一块 HTML，下面的样式和脚本不要动       -->
 <!-- ═══════════════════════════════════════════════════════════ -->
-<!-- navbar removed — use Google Sites navigation -->
+<nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <svg viewBox="0 0 40 40" class="logo-icon">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.9"/>
+          <circle cx="20" cy="20" r="13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="20" cy="20" r="6" fill="currentColor" opacity="0.85"/>
+          <line x1="20" y1="3" x2="20" y2="37" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+          <line x1="3" y1="20" x2="37" y2="20" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+        </svg>
+        <span class="brand-text">SDG Sustainability</span>
+      </a>
+      <div class="navbar-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="sdgs.html" class="nav-link">SDG Goals</a>
+        <a href="team-sdgs.html" class="nav-link">Team SDGs</a>
+        <a href="carbon-footprint.html" class="nav-link active">Carbon Footprint</a>
+        <a href="act-now.html" class="nav-link">Act Now</a>
+        <a href="reference-list.html" class="nav-link">References</a>
+      </div>
+      <button class="menu-toggle"><span class="bar"></span><span class="bar"></span></button>
+    </div>
+    <div class="mobile-menu">
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="sdgs.html" class="mobile-link">SDG Goals</a>
+      <a href="team-sdgs.html" class="mobile-link">Team SDGs</a>
+      <a href="carbon-footprint.html" class="mobile-link">Carbon Footprint</a>
+      <a href="act-now.html" class="mobile-link">Act Now</a>
+      <a href="reference-list.html" class="mobile-link">References</a>
+    </div>
+  </nav>
 
   <main>
     <section class="page-header" style="--terracotta: #5c8d6d;">
       <div class="container container-narrow">
-        <p class="eyebrow" style="color: var(--sage)">Environment足迹</p>
-        <h1>Carbon Footprint器</h1>
-        <p>LearnYour日常活动对Environment的影响，CalculateYour个人Carbon Emissions量</p>
+        <p class="eyebrow" style="color: var(--sage)">环境足迹</p>
+        <h1>Carbon Footprint Calculator</h1>
+        <p>Understand how your daily activities impact the environment，计算您的个人碳排放量</p>
       </div>
     </section>
 
@@ -2129,24 +2161,24 @@ p { color: var(--text-muted); line-height: 1.75; }
         <div class="definition-grid">
           <div class="definition-card">
             <h3>碳足迹定义</h3>
-            <p><strong>碳足迹（Carbon Footprint）</strong>是指个人、组织、活动或产品在其整个生命周期中直接和间接产生的温室气体排放总量，通常以二氧化碳当量（CO₂e）表示。</p>
-            <p>碳足迹的概念源于<strong>生态足迹</strong>理论，由加拿大Environment学家William Rees和Mathis Wackernagel于1992years提出。它帮助我们量化人类活动对Climate变化的影响。</p>
+            <p><strong>碳足迹（Carbon Footprint）</strong>是指个人、组织、Total greenhouse gas emissions produced directly and indirectly throughout the lifecycle of an activity or product，通常以二氧化碳当量（CO₂e）表示。</p>
+            <p>碳足迹的概念源于<strong>生态足迹</strong>理论，由加拿大环境学家William Rees和Mathis Wackernagel于1992年提出。It helps us quantify the impact of human activities on climate change。</p>
           </div>
           <div class="definition-card" style="border-left-color:#3f7e44">
-            <h3>Why It Matters？</h3>
-            <p>Climate变化是21世纪人类面临的最大Challenges之一。Global平均温度已经比工业革命前上升了约1.1°C。</p>
+            <h3>为什么重要？</h3>
+            <p>climate change是21世纪人类面临的最大挑战之一。Global average temperature has risen approximately1.1°C。</p>
             <p><strong>与SDG的关联：</strong></p>
-            <p>• SDG 13（Climate Action）：采取紧急Action应对Climate变化<br>• SDG 7（Clean Energy）：确保Sustainable的现代Energy<br>• SDG 12（Responsible Consumption）：确保SustainableConsumption模式</p>
+            <p>• SDG 13（Climate Action）：采取紧急行动应对climate change<br>• SDG 7（Affordable & Clean Energy）：确保可持续的现代能源<br>• SDG 12（Responsible Consumption & Production）：确保可持续消费模式</p>
           </div>
           <div class="definition-card" style="border-left-color:#00a651">
-            <h3>Carbon Emissions现状</h3>
-            <p>根据联合国Environment规划署（UNEP）2023years报告：</p>
-            <p>• Global人均years碳足迹约为 <strong>4.7吨 CO₂e</strong><br>• 发达国家人均可达 <strong>15-20吨</strong><br>• Global每years排放约 <strong>360亿吨</strong> 二氧化碳</p>
+            <h3>碳排放现状</h3>
+            <p>根据联合国环境规划署（UNEP）2023年报告：</p>
+            <p>• 全球人均年碳足迹约为 <strong>4.7吨 CO₂e</strong><br>• 发达国家人均可达 <strong>15-20吨</strong><br>• 全球每年排放约 <strong>360亿吨</strong> 二氧化碳</p>
           </div>
           <div class="definition-card" style="border-left-color:#fcc30b">
-            <h3>减排Goal</h3>
-            <p>《巴黎协定》Goal：将Global气温上升控制在 <strong>2°C以内</strong>，努力控制在 <strong>1.5°C以内</strong>。</p>
-            <p>为Achieve这一Goal，Global需在2030years前将Carbon Emissions减少 <strong>43%</strong>，2050years前Achieve <strong>净零排放</strong>。</p>
+            <h3>减排目标</h3>
+            <p>《巴黎协定》目标：将全球气温上升控制在 <strong>2°C以内</strong>，努力控制在 <strong>1.5°C以内</strong>。</p>
+            <p>为实现这一目标，全球需在2030年前将碳排放减少 <strong>43%</strong>，2050年前实现 <strong>净零排放</strong>。</p>
           </div>
         </div>
       </div>
@@ -2156,59 +2188,59 @@ p { color: var(--text-muted); line-height: 1.75; }
     <section class="calculator-section">
       <div class="container container-narrow">
         <div class="calculator-form" id="calculatorForm">
-          <h2>Carbon Footprint器 — Home · Transportation · 生活方式</h2>
-          <p style="text-align:center;color:var(--text-muted);margin-bottom:32px;">填写以下Info，CalculateYour个人years度碳足迹</p>
+          <h2>Carbon Footprint Calculator — 家庭 · 交通 · 生活方式</h2>
+          <p style="text-align:center;color:var(--text-muted);margin-bottom:32px;">填写以下信息，计算您的个人年度碳足迹</p>
 
           <div class="form-section">
-            <h3>🏠 HomeInfo</h3>
+            <h3>🏠 家庭信息</h3>
             <div class="form-row">
-              <div class="form-group form-half"><label for="householdSize">Home人数</label><input type="number" id="householdSize" placeholder="例如：4" min="1" max="20"></div>
-              <div class="form-group form-half"><label for="housingType">住房类型</label><select id="housingType"><option value="">请Choice</option><option value="detached">独立住宅</option><option value="semi">联排住宅</option><option value="apartment">公寓</option><option value="studio">单间/小户型</option></select></div>
+              <div class="form-group form-half"><label for="householdSize">家庭人数</label><input type="number" id="householdSize" placeholder="例如：4" min="1" max="20"></div>
+              <div class="form-group form-half"><label for="housingType">住房类型</label><select id="housingType"><option value="">请选择</option><option value="detached">独立住宅</option><option value="semi">联排住宅</option><option value="apartment">公寓</option><option value="studio">单间/小户型</option></select></div>
             </div>
             <div class="form-row">
               <div class="form-group form-half"><label for="housingSize">住房面积（平方米）</label><input type="number" id="housingSize" placeholder="例如：90" min="10" max="1000"></div>
-              <div class="form-group form-half"><label for="electricity">每months用电量（千瓦时）</label><input type="number" id="electricity" placeholder="例如：300" min="0"></div>
+              <div class="form-group form-half"><label for="electricity">每月用电量（千瓦时）</label><input type="number" id="electricity" placeholder="例如：300" min="0"></div>
             </div>
-            <div class="form-group"><label for="heating">冬季供暖方式</label><select id="heating"><option value="">请Choice</option><option value="gas">Natural Gas供暖</option><option value="electric">电供暖</option><option value="coal">燃煤供暖</option><option value="district">集中供暖</option><option value="none">无供暖</option></select></div>
-            <div class="form-group checkbox-group"><label><input type="checkbox" id="greenEnergy"><span>使用GreenEnergy/可再生Energy</span></label></div>
+            <div class="form-group"><label for="heating">冬季供暖方式</label><select id="heating"><option value="">请选择</option><option value="gas">天然气供暖</option><option value="electric">电供暖</option><option value="coal">燃煤供暖</option><option value="district">集中供暖</option><option value="none">无供暖</option></select></div>
+            <div class="form-group checkbox-group"><label><input type="checkbox" id="greenEnergy"><span>使用绿色能源/可再生能源</span></label></div>
           </div>
 
           <div class="form-section">
             <h3>🚗 Transportation</h3>
             <div class="form-group"><label for="carDistance">每周驾车里程（公里）</label><input type="number" id="carDistance" placeholder="例如：200" min="0"></div>
-            <div class="form-group"><label for="carType">车辆类型</label><select id="carType"><option value="">请Choice</option><option value="petrol_small">汽油车（小型，&lt;1.6L）</option><option value="petrol_medium">汽油车（中型，1.6-2.5L）</option><option value="petrol_large">汽油车（大型SUV，&gt;2.5L）</option><option value="diesel">柴油车</option><option value="hybrid">混合动力</option><option value="electric">纯电动</option></select></div>
+            <div class="form-group"><label for="carType">车辆类型</label><select id="carType"><option value="">请选择</option><option value="petrol_small">汽油车（小型，&lt;1.6L）</option><option value="petrol_medium">汽油车（中型，1.6-2.5L）</option><option value="petrol_large">汽油车（大型SUV，&gt;2.5L）</option><option value="diesel">柴油车</option><option value="hybrid">混合动力</option><option value="electric">纯电动</option></select></div>
             <div class="form-group"><label for="publicTransport">每周公共Transportation次数</label><input type="number" id="publicTransport" placeholder="例如：10" min="0"></div>
             <div class="form-row">
-              <div class="form-group form-half"><label for="flightsShort">每years短途Flights次数（&lt;1500km）</label><input type="number" id="flightsShort" placeholder="0" min="0"></div>
-              <div class="form-group form-half"><label for="flightsLong">每years长途Flights次数（&gt;1500km）</label><input type="number" id="flightsLong" placeholder="0" min="0"></div>
+              <div class="form-group form-half"><label for="flightsShort">每年短途飞行次数（&lt;1500km）</label><input type="number" id="flightsShort" placeholder="0" min="0"></div>
+              <div class="form-group form-half"><label for="flightsLong">每年长途飞行次数（&gt;1500km）</label><input type="number" id="flightsLong" placeholder="0" min="0"></div>
             </div>
           </div>
 
           <div class="form-section">
-            <h3>🥗 生活方式与Consumption</h3>
-            <div class="form-group"><label for="dietType">Diet类型</label><select id="dietType"><option value="">请Choice</option><option value="vegan">纯素食</option><option value="vegetarian">素食（含蛋奶）</option><option value="pescatarian">鱼素（吃鱼不吃肉）</option><option value="lowMeat">低肉Diet（每周1-3次）</option><option value="mediumMeat">中等肉食（每days一次）</option><option value="highMeat">高肉Diet（每餐有肉）</option></select></div>
-            <div class="form-group"><label for="localFood">Local FoodConsumption比例（%）</label><input type="number" id="localFood" placeholder="例如：50" min="0" max="100"></div>
+            <h3>🥗 生活方式与消费</h3>
+            <div class="form-group"><label for="dietType">饮食类型</label><select id="dietType"><option value="">请选择</option><option value="vegan">纯素食</option><option value="vegetarian">素食（含蛋奶）</option><option value="pescatarian">鱼素（吃鱼不吃肉）</option><option value="lowMeat">低肉饮食（每周1-3次）</option><option value="mediumMeat">中等肉食（每天一次）</option><option value="highMeat">高肉饮食（每餐有肉）</option></select></div>
+            <div class="form-group"><label for="localFood">本地食品消费比例（%）</label><input type="number" id="localFood" placeholder="例如：50" min="0" max="100"></div>
             <div class="form-row">
-              <div class="form-group form-half"><label for="foodWaste">每周Food浪费（估算，公斤）</label><input type="number" id="foodWaste" placeholder="例如：2" min="0" step="0.5"></div>
-              <div class="form-group form-half"><label for="clothingSpend">每months服装Consumption（元）</label><input type="number" id="clothingSpend" placeholder="例如：500" min="0"></div>
+              <div class="form-group form-half"><label for="foodWaste">每周食物浪费（估算，公斤）</label><input type="number" id="foodWaste" placeholder="例如：2" min="0" step="0.5"></div>
+              <div class="form-group form-half"><label for="clothingSpend">每月服装消费（元）</label><input type="number" id="clothingSpend" placeholder="例如：500" min="0"></div>
             </div>
-            <div class="form-group checkbox-group"><label><input type="checkbox" id="recycling"><span>进行垃圾分类Recycling</span></label></div>
+            <div class="form-group checkbox-group"><label><input type="checkbox" id="recycling"><span>进行Waste Sorting回收</span></label></div>
           </div>
 
-          <button class="btn btn-primary btn-calculate" id="calculateBtn">📊 Calculate碳足迹</button>
+          <button class="btn btn-primary btn-calculate" id="calculateBtn">📊 计算碳足迹</button>
         </div>
 
         <div class="external-tools" style="max-width:860px;margin:48px auto 0;padding:28px;background:#fff;border:1px solid var(--border-light);border-radius:var(--radius-lg);">
           <h3 style="font-family:var(--font-display);color:var(--ink);margin-bottom:16px;">🔗 推荐的外部Carbon Footprint工具</h3>
-          <p style="color:var(--text-muted);margin-bottom:16px;line-height:1.7;">以下为国际公认的Carbon Footprint工具，可用于交叉验证Results并获取更Detail的碳足迹分析。在评估提交中，请使用这些工具的截图作为Calculate过程证据。</p>
+          <p style="color:var(--text-muted);margin-bottom:16px;line-height:1.7;">以下为国际公认的Carbon Footprint工具，可用于交叉验证Results并获取更详细的碳足迹分析。在评估提交中，Please use screenshots of these tools as evidence of your calculation process。</p>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
             <a href="https://offset.climateneutralnow.org/footprintcalc" target="_blank" rel="noopener" style="display:block;padding:16px;background:var(--cream);border:1px solid var(--border-light);border-radius:var(--radius-md);text-decoration:none;color:var(--ink);transition:all 0.3s ease;">
               <strong style="color:var(--terracotta);">UN Carbon Footprint Calculator</strong>
-              <p style="font-size:0.85rem;color:var(--text-muted);margin-top:4px;">联合国Climate中和倡议官方Calculate器</p>
+              <p style="font-size:0.85rem;color:var(--text-muted);margin-top:4px;">UN Climate Neutral Now Initiative Calculator</p>
             </a>
             <a href="https://footprint.wwf.org.uk" target="_blank" rel="noopener" style="display:block;padding:16px;background:var(--cream);border:1px solid var(--border-light);border-radius:var(--radius-md);text-decoration:none;color:var(--ink);transition:all 0.3s ease;">
               <strong style="color:var(--terracotta);">WWF Footprint Calculator</strong>
-              <p style="font-size:0.85rem;color:var(--text-muted);margin-top:4px;">世界自然基金会Carbon Footprint器</p>
+              <p style="font-size:0.85rem;color:var(--text-muted);margin-top:4px;">世界自然基金会Carbon Footprint Calculator</p>
             </a>
             <a href="https://www.carbonfootprint.com/calculator.aspx" target="_blank" rel="noopener" style="display:block;padding:16px;background:var(--cream);border:1px solid var(--border-light);border-radius:var(--radius-md);text-decoration:none;color:var(--ink);transition:all 0.3s ease;">
               <strong style="color:var(--terracotta);">CarbonFootprint.com Calculator</strong>
@@ -2216,20 +2248,20 @@ p { color: var(--text-muted); line-height: 1.75; }
             </a>
           </div>
           <div class="screenshot-guide" style="margin-top:20px;padding:16px;background:#fffbeb;border:1px dashed #d97706;border-radius:var(--radius-md);">
-            <p style="color:#92400e;font-size:0.9rem;margin:0;">📸 <strong>截图指引：</strong>使用上述工具Calculate碳足迹时，请截取Every步骤的屏幕截图（包括输入数据和Results），作为评估提交的证据。建议使用浏览器自带的截图工具或按 <kbd>Print Screen</kbd> 键。</p>
+            <p style="color:#92400e;font-size:0.9rem;margin:0;">📸 <strong>截图指引：</strong>使用上述工具计算碳足迹时，请截取每个步骤的屏幕截图（包括输入数据和Results），作为评估提交的证据。Use your browser built-in screenshot tool or press <kbd>Print Screen</kbd> 键。</p>
           </div>
         </div>
 
         <div class="result-section" id="resultSection">
           <div class="result-card">
-            <h2>YourCarbon Footprint结果</h2>
-            <div class="result-value" id="resultValue">0 <span class="unit">kg CO₂/years</span></div>
-            <div class="result-level" id="resultLevel">Good</div>
+            <h2>您的Carbon Footprint结果</h2>
+            <div class="result-value" id="resultValue">0 <span class="unit">kg CO₂/年</span></div>
+            <div class="result-level" id="resultLevel">良好</div>
             <p class="result-message" id="resultMessage"></p>
             <p style="margin-top:16px;font-weight:600;font-size:0.95rem;" id="targetComparison"></p>
           </div>
-          <div class="tips-section"><h3>🌱 Eco tips</h3><ul id="tipsList"></ul></div>
-          <button class="btn btn-secondary" id="resetBtn">重新Calculate</button>
+          <div class="tips-section"><h3>🌱 环保建议</h3><ul id="tipsList"></ul></div>
+          <button class="btn btn-secondary" id="resetBtn">重新计算</button>
         </div>
       </div>
     </section>
@@ -2238,11 +2270,11 @@ p { color: var(--text-muted); line-height: 1.75; }
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
-        <div class="footer-section"><h3>联合国SDGs</h3><p>Working together for a better,<br>more sustainable future</p></div>
+        <div class="footer-section"><h3>UN Sustainable Development Goals</h3><p>Working together for a better, more sustainable future<br></p></div>
         <div class="footer-section"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="sdgs.html">SDG Goals</a></li><li><a href="carbon-footprint.html">Carbon Footprint</a></li><li><a href="act-now.html">Act Now</a></li><li><a href="reference-list.html">References</a></li></ul></div>
         <div class="footer-section"><h4>Contact Us</h4><p>Email: contact@sdg-website.org</p><p>Phone: +86 123 4567 8900</p></div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 SDG Website. All rights reserved.</p><p>本网站致力于宣传联合国SDGs</p></div>
+      <div class="footer-bottom"><p>&copy; 2026 SDG Website. All rights reserved.</p><p>This website is dedicated to promoting the UN Sustainable Development Goals</p></div>
     </div>
   </footer>
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -2250,7 +2282,7 @@ p { color: var(--text-muted); line-height: 1.75; }
 <!-- ═══════════════════════════════════════════════════════════ -->
 
 <!-- ═══════════════════════════════════════════════════════════ -->
-<!-- 🔧 SCRIPTS — 编辑时不需要动下面的内容                       -->
+<!-- 🔧 SCRIPTS — (Edit text above only — do not modify styles and scripts below)                       -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
 <!-- GSAP library (must load first) -->
@@ -2309,23 +2341,23 @@ document.addEventListener('DOMContentLoaded', function() {
   var modalBody = document.querySelector('.modal-body p');
 
   var sdgs = [
-    { id: 1, title: 'No Poverty', subtitle: 'No Poverty', color: '#e5243b', description: '在世界各地消除一切形式的贫困。确保所有男女，特别是赤贫人口，享有平等获得经济Resources的权利，以及获得基本服务、所有权和对土地及其他形式财产的控制权。' },
-    { id: 2, title: 'Zero Hunger', subtitle: 'Zero Hunger', color: '#dda63a', description: '消除饥饿，Achieve粮食安全，改善营养状况和促进Sustainable农业。到2030years，确保所有人全years都能获得安全、营养和充足的Food。' },
-    { id: 3, title: 'Good Health & Well-being', subtitle: 'Good Health and Well-being', color: '#4c9f38', description: '确保健康的生活方式，促进各years龄段人群的福祉。到2030years，将Global孕产妇死亡率降低到每10万活产140人以下。' },
-    { id: 4, title: 'Quality Education', subtitle: 'Quality Education', color: '#c5192d', description: '确保包容和公平的Quality Education，促进全民终身学习。到2030years，确保所有男女儿童完成免费、公平和优质的初等和中等Education，并取得相关和有效的学习成果。' },
-    { id: 5, title: 'Gender Equality', subtitle: 'Gender Equality', color: '#ff3a21', description: 'AchieveGender Equality，增强所有妇女和女童的权能。消除对妇女和女童的一切形式歧视。' },
-    { id: 6, title: 'Clean Water', subtitle: 'Clean Water and Sanitation', color: '#26bde2', description: '确保Clean Water和卫生设施。到2030years，普遍和公平地获得安全和负担得起的饮用水。' },
-    { id: 7, title: '廉价Clean Energy', subtitle: 'Affordable and Clean Energy', color: '#fcc30b', description: '确保获得负担得起的、可靠的、Sustainable的和现代的Energy。到2030years，确保人人获得负担得起的、可靠的现代Energy服务。' },
-    { id: 8, title: 'Decent Work与经济增长', subtitle: 'Decent Work and Economic Growth', color: '#a21942', description: '促进持久、包容和Sustainable的经济增长，促进充分的生产性就业和Decent Work。' },
-    { id: 9, title: '产业、创新与基础设施', subtitle: 'Industry, Innovation and Infrastructure', color: '#fd6925', description: '建造具备抵御灾害能力的基础设施，促进包容和Sustainable的工业化，推动创新。' },
-    { id: 10, title: 'Reduced Inequalities', subtitle: 'Reduced Inequalities', color: '#dd1367', description: '减少国家内部和国家之间的不平等。到2030years，根据各国国情，逐步Achieve并维持最底层40%人口的收入增长率高于全国平均水平。' },
-    { id: 11, title: 'Sustainable Cities和Community', subtitle: 'Sustainable Cities and Communities', color: '#fd9d24', description: '建设包容、安全、有抵御灾害能力和Sustainable的城市和人类住区。到2030years，使城市和人类住区具有包容性、安全、韧性和Sustainable性。' },
-    { id: 12, title: 'Responsible Consumption和生产', subtitle: 'Responsible Consumption and Production', color: '#bf8b2e', description: '确保SustainableConsumption和生产模式。到2030years，AchieveGlobalSustainableConsumption和生产模式。' },
-    { id: 13, title: 'Climate Action', subtitle: 'Climate Action', color: '#3f7e44', description: '采取紧急Action应对Climate变化及其影响。加强各国应对Climate变化影响的能力。' },
-    { id: 14, title: 'Life Below Water', subtitle: 'Life Below Water', color: '#009444', description: 'Protect和Sustainable利用海洋和海洋Resources以促进SustainableDevelopment。制止过度捕捞、非法、未报告和无管制的捕捞活动。' },
-    { id: 15, title: 'Life on Land', subtitle: 'Life on Land', color: '#00a651', description: 'Protect、恢复和促进Sustainable利用Land生态系统，Sustainable管理森林，防治荒漠化，制止和扭转土地退化，遏制生物多样性的丧失。' },
-    { id: 16, title: '和平、正义与强大机构', subtitle: 'Peace, Justice and Strong Institutions', color: '#19489d', description: '促进有利于SustainableDevelopment的和平和包容社会，为所有人提供诉诸司法的机会，在各级建立有效、负责和包容的机构。' },
-    { id: 17, title: '促进GoalAchieve的Partnerships', subtitle: 'Partnerships for the Goals', color: '#192841', description: '加强执行手段，重振SustainableDevelopmentGlobalPartnerships。加强多利益攸关方Partnerships，调动和分享knowledge、专长、技术和财政Resources，以AchieveSDGs。' }
+    { id: 1, title: 'No Poverty', subtitle: 'No Poverty', color: '#e5243b', description: 'End poverty in all its forms everywhere。确保所有男女，特别是赤贫人口，enjoy equal rights to economic resources，以及获得基本服务、Ownership and control over land and other forms of property。' },
+    { id: 2, title: 'Zero Hunger', subtitle: 'Zero Hunger', color: '#dda63a', description: '消除饥饿，实现粮食安全，Improve nutrition and promote sustainable agriculture。到2030年，Ensure all people have year-round access to safe、营养和充足的食物。' },
+    { id: 3, title: 'Good Health & Well-being', subtitle: 'Good Health and Well-being', color: '#4c9f38', description: '确保健康的生活方式，促进各年龄段人群的福祉。到2030年，Reduce the global maternal mortality ratio to10万活产140人以下。' },
+    { id: 4, title: 'Quality Education', subtitle: 'Quality Education', color: '#c5192d', description: '确保包容和公平的Quality Education，促进全民终身学习。到2030年，确保所有男女儿童完成免费、equitable and quality primary and secondary education，and achieve relevant and effective learning outcomes。' },
+    { id: 5, title: 'Gender Equality', subtitle: 'Gender Equality', color: '#ff3a21', description: '实现Gender Equality，增强所有妇女和女童的权能。Eliminate all forms of discrimination against women and girls。' },
+    { id: 6, title: 'Clean Water & Sanitation', subtitle: 'Clean Water and Sanitation', color: '#26bde2', description: '确保Clean Water & Sanitation。到2030年，Achieve universal and equitable access to safe and affordable drinking water for all。' },
+    { id: 7, title: '廉价Affordable & Clean Energy', subtitle: 'Affordable and Clean Energy', color: '#fcc30b', description: '确保获得负担得起的、可靠的、可持续的和现代的能源。到2030年，确保人人获得负担得起的、可靠的现代能源服务。' },
+    { id: 8, title: 'Decent Work & Economic Growth与经济增长', subtitle: 'Decent Work and Economic Growth', color: '#a21942', description: '促进持久、包容和可持续的经济增长，促进充分的生产性就业和Decent Work & Economic Growth。' },
+    { id: 9, title: '产业、创新与基础设施', subtitle: 'Industry, Innovation and Infrastructure', color: '#fd6925', description: 'Build resilient infrastructure to withstand disasters，促进包容和可持续的工业化，推动创新。' },
+    { id: 10, title: 'Reduced Inequalities', subtitle: 'Reduced Inequalities', color: '#dd1367', description: 'Reduce inequality within and among countries。到2030年，根据各国国情，逐步实现并维持最底层40%Income growth rate of the bottom 40% population above the national average。' },
+    { id: 11, title: 'Sustainable Cities & Communities', subtitle: 'Sustainable Cities and Communities', color: '#fd9d24', description: '建设包容、安全、Make cities and human settlements inclusive, safe, resilient and sustainable。到2030年，Make cities and human settlements inclusive、安全、韧性和可持续性。' },
+    { id: 12, title: 'Responsible Consumption & Production', subtitle: 'Responsible Consumption and Production', color: '#bf8b2e', description: '确保可持续消费和生产模式。到2030年，Achieve sustainable consumption and production patterns globally。' },
+    { id: 13, title: 'Climate Action', subtitle: 'Climate Action', color: '#3f7e44', description: 'Take urgent action to combat climate change and its impacts。加强各国应对climate change影响的能力。' },
+    { id: 14, title: 'Life Below Water', subtitle: 'Life Below Water', color: '#009444', description: 'Conserve and sustainably use the oceans, seas and marine resources for sustainable development。制止过度捕捞、非法、unreported and unregulated fishing。' },
+    { id: 15, title: 'Life on Land', subtitle: 'Life on Land', color: '#00a651', description: '保护、Protect, restore and promote sustainable use of terrestrial ecosystems，可持续管理森林，防治荒漠化，制止和扭转土地退化，遏制生物多样性的丧失。' },
+    { id: 16, title: 'Peace, Justice & Strong Institutions', subtitle: 'Peace, Justice and Strong Institutions', color: '#19489d', description: 'Promote peaceful and inclusive societies for sustainable development，Provide access to justice for all，在各级建立有效、负责和包容的机构。' },
+    { id: 17, title: 'Partnerships for the Goals', subtitle: 'Partnerships for the Goals', color: '#192841', description: '加强执行手段，重振sustainable development全球Partnerships for the Goals。加强多利益攸关方Partnerships for the Goals，调动和分享知识、专长、技术和财政资源，以实现Global Goals。' }
   ];
 
   var sdgCards = document.querySelectorAll('.sdg-full-card');
@@ -2368,7 +2400,7 @@ document.addEventListener('DOMContentLoaded', function() {
       filterBtns.forEach(function(b) { b.classList.remove('active'); });
       this.classList.add('active');
       actionCards.forEach(function(card) {
-        if (category === 'All' || card.getAttribute('data-category') === category) {
+        if (category === '全部' || card.getAttribute('data-category') === category) {
           card.style.display = 'block';
         } else {
           card.style.display = 'none';
@@ -2464,11 +2496,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function getResultLevel(total) {
-    if (total < 3000) return { level: 'Excellent', color: '#10b981', message: 'Your碳足迹远低于Global平均水平（约4.7吨/years），与巴黎协定2°CGoal路径一致。请继续保持！' };
-    if (total < 5000) return { level: 'Good', color: '#3b82f6', message: 'Your碳足迹低于Global平均水平。距离2吨Goal还有改善空间，继续努力！' };
-    if (total < 8000) return { level: 'Average', color: '#f59e0b', message: 'Your碳足迹接近或略高于Global平均水平。建议采取More减排措施。' };
-    if (total < 12000) return { level: '较高', color: '#f97316', message: 'Your碳足迹明显高于Global平均水平，需要采取积极的减排Action。' };
-    return { level: '很高', color: '#ef4444', message: 'Your碳足迹远高于Global平均水平。请立即采取Action，大幅减少Carbon Emissions。' };
+    if (total < 3000) return { level: '优秀', color: '#10b981', message: 'Your carbon footprint is well below the global average（约4.7吨/年），与巴黎协定2°C目标路径一致。请继续保持！' };
+    if (total < 5000) return { level: '良好', color: '#3b82f6', message: '您的碳足迹低于全球平均水平。距离2吨目标还有改善空间，继续努力！' };
+    if (total < 8000) return { level: '一般', color: '#f59e0b', message: 'Your carbon footprint is near or slightly above the global average。建议采取更多减排措施。' };
+    if (total < 12000) return { level: '较高', color: '#f97316', message: 'Your carbon footprint is significantly above the global average，需要采取积极的减排行动。' };
+    return { level: '很高', color: '#ef4444', message: 'Your carbon footprint is far above the global average。请立即采取行动，大幅减少碳排放。' };
   }
 
   function getTips() {
@@ -2480,12 +2512,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var recycling = isChecked('recycling');
     var greenEnergy = isChecked('greenEnergy');
 
-    if (carDistance > 150) tips.push('🚗 尝试每周减少驾车里程，使用公共Transportation、骑行或步行替代');
-    if ((flightsShort + flightsLong) > 2) tips.push('✈️ 减少不必要的Flights，考虑视频会议替代商务出行');
-    if (dietType === 'highMeat' || dietType === 'mediumMeat') tips.push('🥬 减少红肉Consumption，增加植物性Food比例——素食餐的碳足迹仅为肉食餐的1/3');
-    if (!recycling) tips.push('♻️ Start垃圾分类和ResourcesRecycling——这是最容易实施的减排Action之一');
-    if (!greenEnergy) tips.push('⚡ 考虑更换为GreenElectricity供应商或安装Home太阳能系统');
-    if (tips.length === 0) tips.push('🌍 您做得非常好！Your生活方式已经相当环保，请继续保持并影响身边的人。');
+    if (carDistance > 150) tips.push('🚗 尝试每周减少驾车里程，使用公共交通、骑行或步行替代');
+    if ((flightsShort + flightsLong) > 2) tips.push('✈️ 减少不必要的飞行，考虑视频会议替代商务出行');
+    if (dietType === 'highMeat' || dietType === 'mediumMeat') tips.push('🥬 减少红肉消费，增加植物性食物比例——素食餐的碳足迹仅为肉食餐的1/3');
+    if (!recycling) tips.push('♻️ 开始Waste Sorting和资源回收——This is one of the easiest emission reduction actions to implement');
+    if (!greenEnergy) tips.push('⚡ Consider switching to a green electricity provider or installing home solar systems');
+    if (tips.length === 0) tips.push('🌍 您做得非常好！您的生活方式已经相当环保，请继续保持并影响身边的人。');
     return tips;
   }
 
@@ -2495,7 +2527,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var level = getResultLevel(result);
       var tips = getTips();
 
-      resultValue.innerHTML = result.toLocaleString() + ' <span class="unit">kg CO₂/years</span>';
+      resultValue.innerHTML = result.toLocaleString() + ' <span class="unit">kg CO₂/年</span>';
       resultValue.style.color = level.color;
       resultLevel.textContent = level.level;
       resultLevel.style.backgroundColor = level.color;
@@ -2505,8 +2537,8 @@ document.addEventListener('DOMContentLoaded', function() {
       if (comparisonEl) {
         var pctAbove = Math.round((result / 2000 - 1) * 100);
         comparisonEl.textContent = result <= 2000
-          ? '✅ 恭喜！Your碳足迹已达到2030years人均2吨Goal！'
-          : '⚠️ Your碳足迹比2030years2吨人均Goal高出 ' + pctAbove + '%';
+          ? '✅ 恭喜！您的碳足迹已达到2030年人均2吨目标！'
+          : '⚠️ 您的碳足迹比2030年2吨人均目标高出 ' + pctAbove + '%';
       }
 
       tipsList.innerHTML = '';
