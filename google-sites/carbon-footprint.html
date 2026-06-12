@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carbon Footprint Calculator — SDG Website</title>
-  <meta name="description" content="计算您的个人碳足迹，了解日常活动对环境的影响，获取减少碳排放的实用建议。">
+  <meta name="description" content="计算您的个人碳足迹，Understand the impact of daily activities on the environment，获取减少碳排放的实用建议。">
   <link rel="icon" type="image/svg+xml" href="vite.svg">
   <style>
 /* === Inlined from css/style.css === */
@@ -2109,7 +2109,7 @@ p { color: var(--text-muted); line-height: 1.75; }
 <body>
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- 📝 EDITABLE CONTENT START                                  -->
-<!--     改文字只需编辑这一块 HTML，下面的样式和脚本不要动       -->
+<!--     改文字只需编辑这一块 HTML，(Do not modify styles and scripts below)       -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <nav class="navbar">
     <div class="container">
@@ -2166,7 +2166,7 @@ p { color: var(--text-muted); line-height: 1.75; }
           </div>
           <div class="definition-card" style="border-left-color:#3f7e44">
             <h3>为什么重要？</h3>
-            <p>climate change是21世纪人类面临的最大挑战之一。Global average temperature has risen approximately1.1°C。</p>
+            <p>climate change是21one of the greatest challenges facing humanity this century。Global average temperature has risen approximately1.1°C。</p>
             <p><strong>与SDG的关联：</strong></p>
             <p>• SDG 13（Climate Action）：采取紧急行动应对climate change<br>• SDG 7（Affordable & Clean Energy）：确保可持续的现代能源<br>• SDG 12（Responsible Consumption & Production）：确保可持续消费模式</p>
           </div>
@@ -2232,7 +2232,7 @@ p { color: var(--text-muted); line-height: 1.75; }
 
         <div class="external-tools" style="max-width:860px;margin:48px auto 0;padding:28px;background:#fff;border:1px solid var(--border-light);border-radius:var(--radius-lg);">
           <h3 style="font-family:var(--font-display);color:var(--ink);margin-bottom:16px;">🔗 推荐的外部Carbon Footprint工具</h3>
-          <p style="color:var(--text-muted);margin-bottom:16px;line-height:1.7;">以下为国际公认的Carbon Footprint工具，可用于交叉验证Results并获取更详细的碳足迹分析。在评估提交中，Please use screenshots of these tools as evidence of your calculation process。</p>
+          <p style="color:var(--text-muted);margin-bottom:16px;line-height:1.7;">以下为国际公认的Carbon Footprint工具，可用于交叉验证Resultsand get a more detailed carbon footprint analysis。在评估提交中，Please use screenshots of these tools as evidence of your calculation process。</p>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
             <a href="https://offset.climateneutralnow.org/footprintcalc" target="_blank" rel="noopener" style="display:block;padding:16px;background:var(--cream);border:1px solid var(--border-light);border-radius:var(--radius-md);text-decoration:none;color:var(--ink);transition:all 0.3s ease;">
               <strong style="color:var(--terracotta);">UN Carbon Footprint Calculator</strong>
@@ -2248,7 +2248,7 @@ p { color: var(--text-muted); line-height: 1.75; }
             </a>
           </div>
           <div class="screenshot-guide" style="margin-top:20px;padding:16px;background:#fffbeb;border:1px dashed #d97706;border-radius:var(--radius-md);">
-            <p style="color:#92400e;font-size:0.9rem;margin:0;">📸 <strong>截图指引：</strong>使用上述工具计算碳足迹时，请截取每个步骤的屏幕截图（包括输入数据和Results），作为评估提交的证据。Use your browser built-in screenshot tool or press <kbd>Print Screen</kbd> 键。</p>
+            <p style="color:#92400e;font-size:0.9rem;margin:0;">📸 <strong>截图指引：</strong>When using the above tools to calculate your carbon footprint，Please take screenshots of each step（包括输入数据和Results），作为评估提交的证据。Use your browser built-in screenshot tool or press <kbd>Print Screen</kbd> 键。</p>
           </div>
         </div>
 
@@ -2343,16 +2343,16 @@ document.addEventListener('DOMContentLoaded', function() {
   var sdgs = [
     { id: 1, title: 'No Poverty', subtitle: 'No Poverty', color: '#e5243b', description: 'End poverty in all its forms everywhere。确保所有男女，特别是赤贫人口，enjoy equal rights to economic resources，以及获得基本服务、Ownership and control over land and other forms of property。' },
     { id: 2, title: 'Zero Hunger', subtitle: 'Zero Hunger', color: '#dda63a', description: '消除饥饿，实现粮食安全，Improve nutrition and promote sustainable agriculture。到2030年，Ensure all people have year-round access to safe、营养和充足的食物。' },
-    { id: 3, title: 'Good Health & Well-being', subtitle: 'Good Health and Well-being', color: '#4c9f38', description: '确保健康的生活方式，促进各年龄段人群的福祉。到2030年，Reduce the global maternal mortality ratio to10万活产140人以下。' },
-    { id: 4, title: 'Quality Education', subtitle: 'Quality Education', color: '#c5192d', description: '确保包容和公平的Quality Education，促进全民终身学习。到2030年，确保所有男女儿童完成免费、equitable and quality primary and secondary education，and achieve relevant and effective learning outcomes。' },
-    { id: 5, title: 'Gender Equality', subtitle: 'Gender Equality', color: '#ff3a21', description: '实现Gender Equality，增强所有妇女和女童的权能。Eliminate all forms of discrimination against women and girls。' },
+    { id: 3, title: 'Good Health & Well-being', subtitle: 'Good Health and Well-being', color: '#4c9f38', description: '确保健康的生活方式，Promote well-being for all at all ages。到2030年，Reduce the global maternal mortality ratio to10万活产140人以下。' },
+    { id: 4, title: 'Quality Education', subtitle: 'Quality Education', color: '#c5192d', description: '确保包容和公平的Quality Education，促进全民终身学习。到2030年，Ensure that all girls and boys complete free、equitable and quality primary and secondary education，and achieve relevant and effective learning outcomes。' },
+    { id: 5, title: 'Gender Equality', subtitle: 'Gender Equality', color: '#ff3a21', description: '实现Gender Equality，Empower all women and girls。Eliminate all forms of discrimination against women and girls。' },
     { id: 6, title: 'Clean Water & Sanitation', subtitle: 'Clean Water and Sanitation', color: '#26bde2', description: '确保Clean Water & Sanitation。到2030年，Achieve universal and equitable access to safe and affordable drinking water for all。' },
     { id: 7, title: '廉价Affordable & Clean Energy', subtitle: 'Affordable and Clean Energy', color: '#fcc30b', description: '确保获得负担得起的、可靠的、可持续的和现代的能源。到2030年，确保人人获得负担得起的、可靠的现代能源服务。' },
-    { id: 8, title: 'Decent Work & Economic Growth与经济增长', subtitle: 'Decent Work and Economic Growth', color: '#a21942', description: '促进持久、包容和可持续的经济增长，促进充分的生产性就业和Decent Work & Economic Growth。' },
-    { id: 9, title: '产业、创新与基础设施', subtitle: 'Industry, Innovation and Infrastructure', color: '#fd6925', description: 'Build resilient infrastructure to withstand disasters，促进包容和可持续的工业化，推动创新。' },
+    { id: 8, title: 'Decent Work & Economic Growth与经济增长', subtitle: 'Decent Work and Economic Growth', color: '#a21942', description: '促进持久、Inclusive and sustainable economic growth，Promote full and productive employment andDecent Work & Economic Growth。' },
+    { id: 9, title: '产业、创新与基础设施', subtitle: 'Industry, Innovation and Infrastructure', color: '#fd6925', description: 'Build resilient infrastructure to withstand disasters，Promote inclusive and sustainable industrialization，推动创新。' },
     { id: 10, title: 'Reduced Inequalities', subtitle: 'Reduced Inequalities', color: '#dd1367', description: 'Reduce inequality within and among countries。到2030年，根据各国国情，逐步实现并维持最底层40%Income growth rate of the bottom 40% population above the national average。' },
     { id: 11, title: 'Sustainable Cities & Communities', subtitle: 'Sustainable Cities and Communities', color: '#fd9d24', description: '建设包容、安全、Make cities and human settlements inclusive, safe, resilient and sustainable。到2030年，Make cities and human settlements inclusive、安全、韧性和可持续性。' },
-    { id: 12, title: 'Responsible Consumption & Production', subtitle: 'Responsible Consumption and Production', color: '#bf8b2e', description: '确保可持续消费和生产模式。到2030年，Achieve sustainable consumption and production patterns globally。' },
+    { id: 12, title: 'Responsible Consumption & Production', subtitle: 'Responsible Consumption and Production', color: '#bf8b2e', description: 'Ensure sustainable consumption and production patterns。到2030年，Achieve sustainable consumption and production patterns globally。' },
     { id: 13, title: 'Climate Action', subtitle: 'Climate Action', color: '#3f7e44', description: 'Take urgent action to combat climate change and its impacts。加强各国应对climate change影响的能力。' },
     { id: 14, title: 'Life Below Water', subtitle: 'Life Below Water', color: '#009444', description: 'Conserve and sustainably use the oceans, seas and marine resources for sustainable development。制止过度捕捞、非法、unreported and unregulated fishing。' },
     { id: 15, title: 'Life on Land', subtitle: 'Life on Land', color: '#00a651', description: '保护、Protect, restore and promote sustainable use of terrestrial ecosystems，可持续管理森林，防治荒漠化，制止和扭转土地退化，遏制生物多样性的丧失。' },
@@ -2497,7 +2497,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function getResultLevel(total) {
     if (total < 3000) return { level: '优秀', color: '#10b981', message: 'Your carbon footprint is well below the global average（约4.7吨/年），与巴黎协定2°C目标路径一致。请继续保持！' };
-    if (total < 5000) return { level: '良好', color: '#3b82f6', message: '您的碳足迹低于全球平均水平。距离2吨目标还有改善空间，继续努力！' };
+    if (total < 5000) return { level: '良好', color: '#3b82f6', message: 'Your carbon footprint is below the global average。距离2吨目标还有改善空间，继续努力！' };
     if (total < 8000) return { level: '一般', color: '#f59e0b', message: 'Your carbon footprint is near or slightly above the global average。建议采取更多减排措施。' };
     if (total < 12000) return { level: '较高', color: '#f97316', message: 'Your carbon footprint is significantly above the global average，需要采取积极的减排行动。' };
     return { level: '很高', color: '#ef4444', message: 'Your carbon footprint is far above the global average。请立即采取行动，大幅减少碳排放。' };
@@ -2513,8 +2513,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var greenEnergy = isChecked('greenEnergy');
 
     if (carDistance > 150) tips.push('🚗 尝试每周减少驾车里程，使用公共交通、骑行或步行替代');
-    if ((flightsShort + flightsLong) > 2) tips.push('✈️ 减少不必要的飞行，考虑视频会议替代商务出行');
-    if (dietType === 'highMeat' || dietType === 'mediumMeat') tips.push('🥬 减少红肉消费，增加植物性食物比例——素食餐的碳足迹仅为肉食餐的1/3');
+    if ((flightsShort + flightsLong) > 2) tips.push('✈️ 减少不必要的飞行，Consider video conferencing as an alternative to business travel');
+    if (dietType === 'highMeat' || dietType === 'mediumMeat') tips.push('🥬 减少红肉消费，增加植物性食物比例——The carbon footprint of a vegetarian meal is only1/3');
     if (!recycling) tips.push('♻️ 开始Waste Sorting和资源回收——This is one of the easiest emission reduction actions to implement');
     if (!greenEnergy) tips.push('⚡ Consider switching to a green electricity provider or installing home solar systems');
     if (tips.length === 0) tips.push('🌍 您做得非常好！您的生活方式已经相当环保，请继续保持并影响身边的人。');
