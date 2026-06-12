@@ -804,6 +804,8 @@ p { color: var(--text-muted); line-height: 1.75; }
   width: 64px; height: 64px;
   margin: 24px auto 16px;
   display: block;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .member-name {
@@ -1593,9 +1595,11 @@ p { color: var(--text-muted); line-height: 1.75; }
 .team-card-v2 .card-body { padding: 32px 24px 28px; }
 
 .team-card-v2 .avatar-icon {
-  width: 72px; height: 72px;
+  width: 120px; height: 120px;
   margin: 0 auto 16px;
   display: block;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .team-card-v2 .member-name {
@@ -2112,39 +2116,7 @@ p { color: var(--text-muted); line-height: 1.75; }
 <!--     改文字只需编辑这一块 HTML，下面的样式和脚本不要动       -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- ====== NAVBAR ====== -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="navbar-brand">
-        <svg viewBox="0 0 40 40" class="logo-icon">
-          <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2.5" opacity="0.9"/>
-          <circle cx="20" cy="20" r="13" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
-          <circle cx="20" cy="20" r="6" fill="currentColor" opacity="0.85"/>
-          <line x1="20" y1="3" x2="20" y2="37" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-          <line x1="3" y1="20" x2="37" y2="20" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-        </svg>
-        <span class="brand-text">SDG 可持续发展</span>
-      </a>
-      <div class="navbar-links">
-        <a href="index.html" class="nav-link active">首页</a>
-        <a href="about.html" class="nav-link">关于我们</a>
-        <a href="sdgs.html" class="nav-link">SDG目标</a>
-        <a href="team-sdgs.html" class="nav-link">团队SDG分工</a>
-        <a href="carbon-footprint.html" class="nav-link">碳足迹计算</a>
-        <a href="act-now.html" class="nav-link">行动倡议</a>
-        <a href="reference-list.html" class="nav-link">参考文献</a>
-      </div>
-      <button class="menu-toggle"><span class="bar"></span><span class="bar"></span></button>
-    </div>
-    <div class="mobile-menu">
-      <a href="index.html" class="mobile-link">首页</a>
-      <a href="about.html" class="mobile-link">关于我们</a>
-      <a href="sdgs.html" class="mobile-link">SDG目标</a>
-      <a href="team-sdgs.html" class="mobile-link">团队SDG分工</a>
-      <a href="carbon-footprint.html" class="mobile-link">碳足迹计算</a>
-      <a href="act-now.html" class="mobile-link">行动倡议</a>
-      <a href="reference-list.html" class="mobile-link">参考文献</a>
-    </div>
-  </nav>
+  <!-- navbar removed — use Google Sites navigation -->
 
   <main>
     <!-- ====== HERO ====== -->
@@ -2274,16 +2246,11 @@ p { color: var(--text-muted); line-height: 1.75; }
           <div class="team-card-v2">
             <div class="card-accent-bar"></div>
             <div class="card-body">
-              <svg viewBox="0 0 100 100" class="avatar-icon">
-                <defs><linearGradient id="tb1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#c48b5c"/><stop offset="100%" stop-color="#8b7355"/></linearGradient></defs>
-                <circle cx="50" cy="50" r="48" fill="url(#tb1)"/>
-                <text x="50" y="56" text-anchor="middle" fill="white" font-size="24" font-family="Georgia,serif" font-weight="700">李</text>
-              </svg>
+              <img src="../images/team/li-shuhang.jpg" alt="Li Shuhang" class="avatar-icon" />
               <h3 class="member-name">Li Shuhang</h3>
               <span class="member-role">项目负责人</span>
               <span class="member-student-id">学号: 8168667</span>
               <div class="member-divider"></div>
-              <div class="member-field"><span class="field-label">个人背景</span><span class="field-value">环境科学专业本科三年级学生，拥有两年环保志愿者经历，参与过多项校园可持续发展项目。对生态系统保护和环境政策有浓厚兴趣。</span></div>
               <div class="member-field"><span class="field-label">未来职业目标</span><span class="field-value">希望成为一名环境政策顾问，致力于为中国乃至全球的可持续发展政策制定提供科学依据，推动绿色低碳转型。</span></div>
             </div>
           </div>
@@ -2292,16 +2259,11 @@ p { color: var(--text-muted); line-height: 1.75; }
           <div class="team-card-v2">
             <div class="card-accent-bar"></div>
             <div class="card-body">
-              <svg viewBox="0 0 100 100" class="avatar-icon">
-                <defs><linearGradient id="tb2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#5c8d6d"/><stop offset="100%" stop-color="#2d4a3e"/></linearGradient></defs>
-                <circle cx="50" cy="50" r="48" fill="url(#tb2)"/>
-                <text x="50" y="56" text-anchor="middle" fill="white" font-size="24" font-family="Georgia,serif" font-weight="700">冯</text>
-              </svg>
+              <img src="../images/team/feng-jingyi.jpg" alt="Feng Jingyi" class="avatar-icon" />
               <h3 class="member-name">Feng Jingyi</h3>
               <span class="member-role">技术开发</span>
               <span class="member-student-id">学号: 8168308</span>
               <div class="member-divider"></div>
-              <div class="member-field"><span class="field-label">个人背景</span><span class="field-value">计算机科学与技术专业学生，擅长Web开发与数据分析。曾参与多个开源项目，对利用技术创新解决环境问题充满热情。</span></div>
               <div class="member-field"><span class="field-label">未来职业目标</span><span class="field-value">希望成为一名绿色科技创业者，开发数字化工具帮助个人和企业量化并减少碳排放，用技术的力量推动气候行动。</span></div>
             </div>
           </div>
@@ -2310,16 +2272,11 @@ p { color: var(--text-muted); line-height: 1.75; }
           <div class="team-card-v2">
             <div class="card-accent-bar"></div>
             <div class="card-body">
-              <svg viewBox="0 0 100 100" class="avatar-icon">
-                <defs><linearGradient id="tb3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2c5282"/><stop offset="100%" stop-color="#1a365d"/></linearGradient></defs>
-                <circle cx="50" cy="50" r="48" fill="url(#tb3)"/>
-                <text x="50" y="56" text-anchor="middle" fill="white" font-size="24" font-family="Georgia,serif" font-weight="700">王</text>
-              </svg>
+              <img src="../images/team/wang-luyang.jpg" alt="Wang Luyang" class="avatar-icon" />
               <h3 class="member-name">Wang Luyang</h3>
               <span class="member-role">政策研究</span>
               <span class="member-student-id">学号: 8168505</span>
               <div class="member-divider"></div>
-              <div class="member-field"><span class="field-label">个人背景</span><span class="field-value">国际关系专业学生，专注于国际环境治理和多边合作机制研究。曾在国际NGO组织实习，参与水资源保护项目的政策分析工作。</span></div>
               <div class="member-field"><span class="field-label">未来职业目标</span><span class="field-value">希望加入联合国环境规划署（UNEP）或相关国际组织，参与全球环境治理，推动跨国水资源管理与保护合作。</span></div>
             </div>
           </div>
@@ -2328,16 +2285,11 @@ p { color: var(--text-muted); line-height: 1.75; }
           <div class="team-card-v2">
             <div class="card-accent-bar"></div>
             <div class="card-body">
-              <svg viewBox="0 0 100 100" class="avatar-icon">
-                <defs><linearGradient id="tb4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#b8573e"/><stop offset="100%" stop-color="#6b3020"/></linearGradient></defs>
-                <circle cx="50" cy="50" r="48" fill="url(#tb4)"/>
-                <text x="50" y="56" text-anchor="middle" fill="white" font-size="24" font-family="Georgia,serif" font-weight="700">卢</text>
-              </svg>
+              <img src="../images/team/lu-jianning.jpg" alt="Lu Jianning" class="avatar-icon" />
               <h3 class="member-name">Lu Jianning</h3>
               <span class="member-role">数据分析师</span>
               <span class="member-student-id">学号: 8168379</span>
               <div class="member-divider"></div>
-              <div class="member-field"><span class="field-label">个人背景</span><span class="field-value">统计学与数据科学专业学生，擅长环境数据分析与可视化。参与过海洋塑料污染的研究项目，利用数据建模预测污染扩散趋势。</span></div>
               <div class="member-field"><span class="field-label">未来职业目标</span><span class="field-value">希望成为一名环境数据科学家，利用大数据和人工智能技术为海洋保护和生态系统管理提供数据驱动的决策支持。</span></div>
             </div>
           </div>

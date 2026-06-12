@@ -27,10 +27,10 @@ const allSDGs = [
 ]
 
 const teamMembers = [
-  { id: 1, name: 'Li Shuhang', background: '环境科学专业', careerGoal: '成为可持续发展领域专家', role: '项目负责人', studentId: '8168667', color: '#2c5f2d' },
-  { id: 2, name: 'Feng Jingyi', background: '计算机科学专业', careerGoal: '开发环保科技解决方案', role: '技术开发', studentId: '8168308', color: '#1a3a5c' },
-  { id: 3, name: 'Wang Luyang', background: '国际事务专业', careerGoal: '推动全球可持续发展合作', role: '政策研究', studentId: '8168505', color: '#5c2d6e' },
-  { id: 4, name: 'Lu Jianning', background: '统计学专业', careerGoal: '数据分析与可持续发展评估', role: '数据分析师', studentId: '8168379', color: '#b8573e' }
+  { id: 1, name: 'Li Shuhang', background: '环境科学专业', careerGoal: '成为可持续发展领域专家', role: '项目负责人', studentId: '8168667', color: '#2c5f2d', photo: '/images/team/li-shuhang.jpg' },
+  { id: 2, name: 'Feng Jingyi', background: '计算机科学专业', careerGoal: '开发环保科技解决方案', role: '技术开发', studentId: '8168308', color: '#1a3a5c', photo: '/images/team/feng-jingyi.jpg' },
+  { id: 3, name: 'Wang Luyang', background: '国际事务专业', careerGoal: '推动全球可持续发展合作', role: '政策研究', studentId: '8168505', color: '#5c2d6e', photo: '/images/team/wang-luyang.jpg' },
+  { id: 4, name: 'Lu Jianning', background: '统计学专业', careerGoal: '数据分析与可持续发展评估', role: '数据分析师', studentId: '8168379', color: '#b8573e', photo: '/images/team/lu-jianning.jpg' }
 ]
 
 const stats = [
@@ -199,8 +199,8 @@ onMounted(() => {
         <p class="section-subtitle">多元化的专业背景，共同的目标与使命</p>
         <div class="team-grid">
           <div v-for="m in teamMembers" :key="m.id" class="member-card" :style="{ '--mc': m.color }">
-            <div class="member-avatar">
-              <span>{{ m.name.charAt(0) }}</span>
+            <div class="member-avatar" :style="{ '--mc': m.color }">
+              <img :src="m.photo" :alt="m.name" class="member-photo" />
             </div>
             <h3 class="member-name">{{ m.name }}</h3>
             <span class="member-role">{{ m.role }}</span>
@@ -541,13 +541,19 @@ onMounted(() => {
   border-color: transparent;
 }
 .member-avatar {
-  width: 68px; height: 68px;
+  width: 120px; height: 120px;
   border-radius: 50%;
   background: var(--mc);
   display: flex; align-items: center; justify-content: center;
   margin: 0 auto 16px;
-  font-size: 1.8rem; color: #fff;
-  font-family: Georgia, serif;
+  overflow: hidden;
+  border: 3px solid var(--mc);
+  box-shadow: 0 8px 24px rgba(28,28,36,0.15);
+}
+.member-photo {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .member-name {
   font-family: Georgia, serif;

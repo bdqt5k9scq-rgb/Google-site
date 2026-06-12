@@ -794,6 +794,8 @@ p { color: var(--text-muted); line-height: 1.75; }
   width: 64px; height: 64px;
   margin: 24px auto 16px;
   display: block;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .member-name {
@@ -1583,9 +1585,11 @@ p { color: var(--text-muted); line-height: 1.75; }
 .team-card-v2 .card-body { padding: 32px 24px 28px; }
 
 .team-card-v2 .avatar-icon {
-  width: 72px; height: 72px;
+  width: 120px; height: 120px;
   margin: 0 auto 16px;
   display: block;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .team-card-v2 .member-name {
