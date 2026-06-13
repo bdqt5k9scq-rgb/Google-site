@@ -111,8 +111,8 @@ onMounted(() => {
               <img :src="m.member.portrait" :alt="m.member.name" class="ts-photo-img" :style="m.member.id === 2 ? 'object-fit:contain; height:auto;' : ''" />
             </div>
           </div>
-          <div v-if="(m.member.id === 3 || m.member.id === 4) && m.member.portrait" class="ts-photo-below" :style="{ '--pc': m.member.bg }">
-            <img :src="m.member.portrait" :alt="m.member.name" class="ts-photo-img-below" :style="m.member.id === 4 ? 'object-fit:cover; height:320px; object-position:top;' : ''" />
+          <div v-if="(m.member.id === 3 || m.member.id === 4) && m.member.portrait" class="ts-photo-below" :style="m.member.id === 4 ? { '--pc': m.member.bg, aspectRatio: '3/4' } : { '--pc': m.member.bg }">
+            <img :src="m.member.portrait" :alt="m.member.name" class="ts-photo-img-below" :style="m.member.id === 4 ? 'object-fit:cover; object-position:top; height:100%;' : ''" />
           </div>
         </div>
       </div>
