@@ -112,7 +112,7 @@ onMounted(() => {
             </div>
           </div>
           <div v-if="(m.member.id === 3 || m.member.id === 4) && m.member.portrait" class="ts-photo-below" :style="{ '--pc': m.member.bg }">
-            <img :src="m.member.portrait" :alt="m.member.name" class="ts-photo-img-below" :style="m.member.id === 4 ? 'object-fit:cover; object-position:top; height:320px;' : ''" />
+            <img :src="m.member.portrait" :alt="m.member.name" class="ts-photo-img-below" :style="m.member.id === 4 ? 'object-fit:cover; object-position:top; width:100%; height:280px;' : ''" />
           </div>
         </div>
       </div>
@@ -212,8 +212,7 @@ onMounted(() => {
 }
 .ts-photo-img-below {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
   border-radius: 12px;
 }
