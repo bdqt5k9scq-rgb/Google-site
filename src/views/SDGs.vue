@@ -4,23 +4,23 @@ import gsap from 'gsap'
 import { GSAP_EASE } from '@/lib/animations'
 
 const sdgs = [
-  { id: 1, title: '消除贫困', subtitle: 'No Poverty', color: '#e5243b', description: '在世界各地消除一切形式的贫困。确保所有男女，特别是赤贫人口，享有平等获得经济资源的权利，以及获得基本服务、所有权和对土地及其他形式财产的控制权。' },
-  { id: 2, title: '零饥饿', subtitle: 'Zero Hunger', color: '#dda63a', description: '消除饥饿，实现粮食安全，改善营养状况和促进可持续农业。到2030年，确保所有人全年都能获得安全、营养和充足的食物。' },
-  { id: 3, title: '良好健康与福祉', subtitle: 'Good Health and Well-being', color: '#4c9f38', description: '确保健康的生活方式，促进各年龄段人群的福祉。到2030年，将全球孕产妇死亡率降低到每10万活产140人以下。' },
-  { id: 4, title: '优质教育', subtitle: 'Quality Education', color: '#c5192d', description: '确保包容和公平的优质教育，促进全民终身学习。到2030年，确保所有男女儿童完成免费、公平和优质的初等和中等教育，并取得相关和有效的学习成果。' },
-  { id: 5, title: '性别平等', subtitle: 'Gender Equality', color: '#ff3a21', description: '实现性别平等，增强所有妇女和女童的权能。消除对妇女和女童的一切形式歧视。' },
-  { id: 6, title: '清洁饮水', subtitle: 'Clean Water and Sanitation', color: '#26bde2', description: '确保清洁饮水和卫生设施。到2030年，普遍和公平地获得安全和负担得起的饮用水。' },
-  { id: 7, title: '廉价清洁能源', subtitle: 'Affordable and Clean Energy', color: '#fcc30b', description: '确保获得负担得起的、可靠的、可持续的和现代的能源。到2030年，确保人人获得负担得起的、可靠的现代能源服务。' },
-  { id: 8, title: '体面工作与经济增长', subtitle: 'Decent Work and Economic Growth', color: '#a21942', description: '促进持久、包容和可持续的经济增长，促进充分的生产性就业和体面工作。' },
-  { id: 9, title: '产业、创新与基础设施', subtitle: 'Industry, Innovation and Infrastructure', color: '#fd6925', description: '建造具备抵御灾害能力的基础设施，促进包容和可持续的工业化，推动创新。' },
-  { id: 10, title: '减少不平等', subtitle: 'Reduced Inequalities', color: '#dd1367', description: '减少国家内部和国家之间的不平等。到2030年，根据各国国情，逐步实现并维持最底层40%人口的收入增长率高于全国平均水平。' },
-  { id: 11, title: '可持续城市和社区', subtitle: 'Sustainable Cities and Communities', color: '#fd9d24', description: '建设包容、安全、有抵御灾害能力和可持续的城市和人类住区。到2030年，使城市和人类住区具有包容性、安全、韧性和可持续性。' },
-  { id: 12, title: '负责任消费和生产', subtitle: 'Responsible Consumption and Production', color: '#bf8b2e', description: '确保可持续消费和生产模式。到2030年，实现全球可持续消费和生产模式。' },
-  { id: 13, title: '气候行动', subtitle: 'Climate Action', color: '#3f7e44', description: '采取紧急行动应对气候变化及其影响。加强各国应对气候变化影响的能力。' },
-  { id: 14, title: '水下生物', subtitle: 'Life Below Water', color: '#009444', description: '保护和可持续利用海洋和海洋资源以促进可持续发展。制止过度捕捞、非法、未报告和无管制的捕捞活动。' },
-  { id: 15, title: '陆地生物', subtitle: 'Life on Land', color: '#00a651', description: '保护、恢复和促进可持续利用陆地生态系统，可持续管理森林，防治荒漠化，制止和扭转土地退化，遏制生物多样性的丧失。' },
-  { id: 16, title: '和平、正义与强大机构', subtitle: 'Peace, Justice and Strong Institutions', color: '#19489d', description: '促进有利于可持续发展的和平和包容社会，为所有人提供诉诸司法的机会，在各级建立有效、负责和包容的机构。' },
-  { id: 17, title: '促进目标实现的伙伴关系', subtitle: 'Partnerships for the Goals', color: '#192841', description: '加强执行手段，重振可持续发展全球伙伴关系。加强多利益攸关方伙伴关系，调动和分享知识、专长、技术和财政资源，以实现可持续发展目标。' }
+  { id: 1, title: 'End Poverty', subtitle: 'No Poverty', color: '#e5243b', description: 'End poverty in all its forms everywhere. Ensure that all men and women, particularly the poor and vulnerable, have equal rights to economic resources, as well as access to basic services, ownership, and control over land and other forms of property.' },
+  { id: 2, title: 'Zero Hunger', subtitle: 'Zero Hunger', color: '#dda63a', description: 'End hunger, achieve food security, improve nutrition, and promote sustainable agriculture. By 2030, ensure that all people have access to safe, nutritious, and sufficient food year-round.' },
+  { id: 3, title: 'Good Health and Well-being', subtitle: 'Good Health and Well-being', color: '#4c9f38', description: 'Ensure healthy lives and promote well-being for all at all ages. By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000 live births.' },
+  { id: 4, title: 'Quality Education', subtitle: 'Quality Education', color: '#c5192d', description: 'Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. By 2030, ensure that all girls and boys complete free, equitable, and quality primary and secondary education leading to relevant and effective learning outcomes.' },
+  { id: 5, title: 'Gender Equality', subtitle: 'Gender Equality', color: '#ff3a21', description: 'Achieve gender equality and empower all women and girls. End all forms of discrimination against all women and girls everywhere.' },
+  { id: 6, title: 'Clean Water and Sanitation', subtitle: 'Clean Water and Sanitation', color: '#26bde2', description: 'Ensure availability and sustainable management of water and sanitation for all. By 2030, achieve universal and equitable access to safe and affordable drinking water for all.' },
+  { id: 7, title: 'Affordable and Clean Energy', subtitle: 'Affordable and Clean Energy', color: '#fcc30b', description: 'Ensure access to affordable, reliable, sustainable, and modern energy for all. By 2030, ensure universal access to affordable, reliable, and modern energy services.' },
+  { id: 8, title: 'Decent Work and Economic Growth', subtitle: 'Decent Work and Economic Growth', color: '#a21942', description: 'Promote sustained, inclusive, and sustainable economic growth, full and productive employment, and decent work for all.' },
+  { id: 9, title: 'Industry, Innovation and Infrastructure', subtitle: 'Industry, Innovation and Infrastructure', color: '#fd6925', description: 'Build resilient infrastructure, promote inclusive and sustainable industrialization, and foster innovation.' },
+  { id: 10, title: 'Reduced Inequalities', subtitle: 'Reduced Inequalities', color: '#dd1367', description: 'Reduce inequality within and among countries. By 2030, progressively achieve and sustain income growth of the bottom 40% of the population at a rate higher than the national average.' },
+  { id: 11, title: 'Sustainable Cities and Communities', subtitle: 'Sustainable Cities and Communities', color: '#fd9d24', description: 'Make cities and human settlements inclusive, safe, resilient, and sustainable. By 2030, ensure access for all to adequate, safe, and affordable housing and basic services.' },
+  { id: 12, title: 'Responsible Consumption and Production', subtitle: 'Responsible Consumption and Production', color: '#bf8b2e', description: 'Ensure sustainable consumption and production patterns. By 2030, achieve the sustainable management and efficient use of natural resources.' },
+  { id: 13, title: 'Climate Action', subtitle: 'Climate Action', color: '#3f7e44', description: 'Take urgent action to combat climate change and its impacts. Strengthen resilience and adaptive capacity to climate-related hazards and natural disasters in all countries.' },
+  { id: 14, title: 'Life Below Water', subtitle: 'Life Below Water', color: '#009444', description: 'Conserve and sustainably use the oceans, seas, and marine resources for sustainable development. End overfishing, illegal, unreported, and unregulated fishing.' },
+  { id: 15, title: 'Life on Land', subtitle: 'Life on Land', color: '#00a651', description: 'Protect, restore, and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, halt and reverse land degradation, and halt biodiversity loss.' },
+  { id: 16, title: 'Peace, Justice and Strong Institutions', subtitle: 'Peace, Justice and Strong Institutions', color: '#19489d', description: 'Promote peaceful and inclusive societies for sustainable development, provide access to justice for all, and build effective, accountable, and inclusive institutions at all levels.' },
+  { id: 17, title: 'Partnerships for the Goals', subtitle: 'Partnerships for the Goals', color: '#192841', description: 'Strengthen the means of implementation and revitalize the global partnership for sustainable development. Enhance multi-stakeholder partnerships to mobilize and share knowledge, expertise, technology, and financial resources to achieve the Sustainable Development Goals.' }
 ]
 
 const selectedSdg = ref<typeof sdgs[0] | null>(null)
@@ -102,9 +102,9 @@ onMounted(() => {
     <!-- ====== Header ====== -->
     <section class="sdgs-header">
       <div class="container container-narrow">
-        <p class="sdgs-eyebrow">联合国 &middot; 2015&ndash;2030</p>
-        <h1>17项可持续发展目标</h1>
-        <p>相互关联的全球目标，旨在到2030年解决我们共同面临的最紧迫挑战</p>
+        <p class="sdgs-eyebrow">United Nations &middot; 2015&ndash;2030</p>
+        <h1>The 17 Sustainable Development Goals</h1>
+        <p>Interconnected global goals designed to address our most pressing shared challenges by 2030</p>
       </div>
     </section>
 
@@ -130,9 +130,9 @@ onMounted(() => {
     <!-- ====== About ====== -->
     <section class="sdgs-intro">
       <div class="container container-narrow">
-        <h2>关于可持续发展目标</h2>
-        <p>联合国可持续发展目标（SDGs）是2015年由联合国193个成员国共同通过的17项全球目标，旨在应对全球面临的最紧迫挑战。</p>
-        <p>这些目标是相互关联的——解决一个问题往往有助于解决其他问题。改善教育可以帮助消除贫困，应对气候变化需要全球合作与创新。</p>
+        <h2>About the Sustainable Development Goals</h2>
+        <p>The UN Sustainable Development Goals (SDGs) are 17 global goals adopted by all 193 UN Member States in 2015, designed to address the most pressing challenges facing our world.</p>
+        <p>These goals are interconnected — solving one often helps solve others. Improving education can help end poverty, and addressing climate change requires global cooperation and innovation.</p>
       </div>
     </section>
 
@@ -146,7 +146,7 @@ onMounted(() => {
               <h2>{{ selectedSdg.title }}</h2>
               <p>{{ selectedSdg.subtitle }}</p>
             </div>
-            <button class="modal-close" @click="closeModal" aria-label="关闭">
+            <button class="modal-close" @click="closeModal" aria-label="Close">
               <svg width="20" height="20" viewBox="0 0 20 20"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
             </button>
           </div>

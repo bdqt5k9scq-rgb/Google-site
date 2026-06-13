@@ -4,21 +4,21 @@ import gsap from 'gsap'
 import { GSAP_EASE } from '@/lib/animations'
 
 const actions = [
-  { id: 1, title: '节约用电', description: '使用节能灯泡，关闭不必要的电器，使用太阳能设备', category: '能源', tips: ['使用LED灯泡替代传统照明', '关闭待机电器避免能耗', '考虑安装太阳能发电板'] },
-  { id: 2, title: '绿色出行', description: '选择公共交通、骑行或步行，减少私家车使用', category: '交通', tips: ['优先乘坐公共交通', '短距离骑行或步行', '与同事朋友拼车出行'] },
-  { id: 3, title: '减少浪费', description: '减少食物浪费，使用可重复使用的购物袋和水杯', category: '消费', tips: ['出门自带购物袋', '拒绝一次性餐具', '合理规划饮食避免浪费'] },
-  { id: 4, title: '健康饮食', description: '减少肉类消费，多吃本地和有机食品', category: '饮食', tips: ['每周尝试素食一天', '优先购买本地农产品', '在家中种植蔬菜香草'] },
-  { id: 5, title: '水资源保护', description: '节约用水，修复漏水设施，收集雨水', category: '资源', tips: ['缩短淋浴时间', '及时修复漏水龙头', '收集雨水浇灌植物'] },
-  { id: 6, title: '植树造林', description: '参与植树活动，支持森林保护项目', category: '环境', tips: ['参加社区植树活动', '支持林业保护项目', '种植适合本地的树种'] },
-  { id: 7, title: '垃圾分类', description: '正确分类垃圾，促进资源回收利用', category: '废物处理', tips: ['学习垃圾分类知识', '参与社区回收计划', '支持循环经济产品'] },
-  { id: 8, title: '宣传教育', description: '向他人宣传可持续发展理念，鼓励更多人参与', category: '教育', tips: ['分享环保知识给朋友', '组织社区环保活动', '参与环保公益组织'] }
+  { id: 1, title: 'Save Electricity', description: 'Use energy-efficient bulbs, turn off unnecessary appliances, use solar-powered devices', category: 'Energy', tips: ['Replace traditional lighting with LED bulbs', 'Turn off standby appliances to save energy', 'Consider installing solar panels'] },
+  { id: 2, title: 'Green Transportation', description: 'Choose public transport, cycling, or walking; reduce private car use', category: 'Transport', tips: ['Prioritize public transportation', 'Cycle or walk for short distances', 'Carpool with colleagues and friends'] },
+  { id: 3, title: 'Reduce Waste', description: 'Reduce food waste, use reusable shopping bags and water bottles', category: 'Consumption', tips: ['Bring your own shopping bags', 'Refuse disposable tableware', 'Plan meals wisely to avoid waste'] },
+  { id: 4, title: 'Healthy Eating', description: 'Reduce meat consumption, eat more local and organic food', category: 'Diet', tips: ['Try one meat-free day per week', 'Prioritize buying local produce', 'Grow vegetables and herbs at home'] },
+  { id: 5, title: 'Water Conservation', description: 'Save water, fix leaks, collect rainwater', category: 'Resources', tips: ['Shorten your shower time', 'Fix leaky faucets promptly', 'Collect rainwater for watering plants'] },
+  { id: 6, title: 'Tree Planting', description: 'Participate in tree planting, support forest conservation projects', category: 'Environment', tips: ['Join community tree planting events', 'Support forestry conservation projects', 'Plant native tree species'] },
+  { id: 7, title: 'Waste Sorting', description: 'Sort waste properly, promote resource recycling', category: 'Waste', tips: ['Learn about waste sorting', 'Participate in community recycling programs', 'Support circular economy products'] },
+  { id: 8, title: 'Education & Advocacy', description: 'Share sustainable development ideas with others, encourage more people to get involved', category: 'Education', tips: ['Share environmental knowledge with friends', 'Organize community environmental activities', 'Join environmental non-profit organizations'] }
 ]
 
-const categories = ['全部', '能源', '交通', '消费', '饮食', '资源', '环境', '废物处理', '教育']
-const selectedCategory = ref('全部')
+const categories = ['All', 'Energy', 'Transport', 'Consumption', 'Diet', 'Resources', 'Environment', 'Waste', 'Education']
+const selectedCategory = ref('All')
 
 const filteredActions = computed(() => {
-  if (selectedCategory.value === '全部') return actions
+  if (selectedCategory.value === 'All') return actions
   return actions.filter(action => action.category === selectedCategory.value)
 })
 
@@ -26,10 +26,10 @@ const currentYear = new Date().getFullYear()
 const yearsLeft = 2030 - currentYear
 
 const actStats = [
-  { value: '193', label: '成员国承诺' },
-  { value: '17', label: '可持续发展目标' },
-  { value: '78亿', label: '全球人口' },
-  { value: String(yearsLeft), label: '年时间窗口' }
+  { value: '193', label: 'Member States Committed' },
+  { value: '17', label: 'Sustainable Development Goals' },
+  { value: '7.8 Billion', label: 'Global Population' },
+  { value: String(yearsLeft), label: 'Years Remaining' }
 ]
 
 onMounted(() => {
@@ -92,26 +92,26 @@ onMounted(() => {
     <!-- ====== Header ====== -->
     <section class="act-header">
       <div class="container container-narrow">
-        <p class="act-eyebrow">现在就行动</p>
-        <h1>立即行动</h1>
-        <p>每个人的小小行动，都能为地球带来改变。加入我们，共同迈向可持续发展的未来</p>
+        <p class="act-eyebrow">Act Now</p>
+        <h1>Take Action Now</h1>
+        <p>Every small action can make a difference for our planet. Join us in moving toward a sustainable future.</p>
         <!-- Countdown -->
         <div class="countdown">
           <div class="countdown-item">
             <span class="countdown-num">{{ yearsLeft }}</span>
-            <span class="countdown-label">年</span>
+            <span class="countdown-label">Years</span>
           </div>
           <span class="countdown-sep">:</span>
           <div class="countdown-item">
             <span class="countdown-num">12</span>
-            <span class="countdown-label">月</span>
+            <span class="countdown-label">Months</span>
           </div>
           <span class="countdown-sep">:</span>
           <div class="countdown-item">
             <span class="countdown-num">31</span>
-            <span class="countdown-label">天</span>
+            <span class="countdown-label">Days</span>
           </div>
-          <p class="countdown-text">距离2030年目标期限</p>
+          <p class="countdown-text">Until the 2030 deadline</p>
         </div>
       </div>
     </section>
@@ -131,8 +131,8 @@ onMounted(() => {
     <!-- ====== Actions ====== -->
     <section class="actions-section">
       <div class="container">
-        <h2 class="section-title">您可以采取的行动</h2>
-        <p class="section-subtitle">选择适合您的领域，开始做出改变</p>
+        <h2 class="section-title">Actions You Can Take</h2>
+        <p class="section-subtitle">Choose an area that suits you and start making a difference</p>
 
         <div class="category-filter">
           <button
@@ -169,12 +169,12 @@ onMounted(() => {
     <!-- ====== CTA ====== -->
     <section class="call-to-action">
       <div class="container container-narrow">
-        <p class="cta-eyebrow">加入我们</p>
-        <h2>每一个行动都很重要</h2>
-        <p>从今天开始，做出改变，为可持续发展贡献您的力量。您的每一个选择，都在塑造未来。</p>
+        <p class="cta-eyebrow">Join Us</p>
+        <h2>Every Action Matters</h2>
+        <p>Start today, make a change, and contribute to sustainable development. Every choice you make is shaping the future.</p>
         <div class="cta-buttons">
-          <a href="/sdgs" class="btn btn-primary">了解更多SDG目标</a>
-          <a href="/carbon-footprint" class="btn btn-secondary">计算您的碳足迹</a>
+          <a href="/sdgs" class="btn btn-primary">Learn More About the SDGs</a>
+          <a href="/carbon-footprint" class="btn btn-secondary">Calculate Your Carbon Footprint</a>
         </div>
       </div>
     </section>

@@ -5,41 +5,41 @@ import { GSAP_EASE } from '@/lib/animations'
 
 const memberSDGs = [
   {
-    member: { id: 1, name: 'Li Shuhang', role: '项目负责人', background: 'Finance', photo: '/images/team/li-shuhang.jpg', bg: '#2c5f2d', studentId: '8168667' },
-    focus: '聚焦生态环境领域，探索气候变化与生物多样性保护的科学解决方案',
+    member: { id: 1, name: 'Li Shuhang', background: 'Finance', photo: '/images/team/li-shuhang.jpg', portrait: '/images/team/li-shuhang-portrait.jpg', bg: '#2c5f2d', studentId: '8168667' },
+    focus: 'Focusing on ecological and environmental fields, exploring scientific solutions for climate change and biodiversity conservation',
     sdgs: [
-      { id: 13, title: '气候行动', subtitle: 'Climate Action', color: '#3f7e44', description: '气候变化是21世纪最严峻的全球性挑战。Li Shuhang致力于通过环境科学研究，分析碳排放趋势，提出切实可行的减排方案，推动社会各界采取紧急行动应对气候变化及其影响。' },
-      { id: 15, title: '陆地生物', subtitle: 'Life on Land', color: '#00a651', description: '生物多样性丧失正在以前所未有的速度发生。Li Shuhang关注森林生态系统保护、荒漠化防治和土地退化修复，倡导可持续的土地管理和生态恢复实践。' },
-      { id: 6, title: '清洁饮水', subtitle: 'Clean Water and Sanitation', color: '#26bde2', description: '水资源安全是环境可持续发展的核心议题。Li Shuhang研究水资源管理与水生态系统保护，推动清洁饮水和卫生设施的普及，确保所有人获得安全、可负担的饮用水。' }
+      { id: 13, title: 'Climate Action', subtitle: 'Climate Action', color: '#3f7e44', description: 'Climate change is the most severe global challenge of the 21st century. Li Shuhang is dedicated to analyzing carbon emission trends through environmental science research, proposing practical emission reduction solutions, and driving urgent action across all sectors of society to combat climate change and its impacts.' },
+      { id: 15, title: 'Life on Land', subtitle: 'Life on Land', color: '#00a651', description: 'Biodiversity loss is occurring at an unprecedented rate. Li Shuhang focuses on forest ecosystem protection, desertification prevention, and land degradation restoration, advocating for sustainable land management and ecological restoration practices.' },
+      { id: 6, title: 'Clean Water and Sanitation', subtitle: 'Clean Water and Sanitation', color: '#26bde2', description: 'Water security is a core issue in environmental sustainability. Li Shuhang researches water resource management and aquatic ecosystem protection, promoting universal access to clean water and sanitation, ensuring safe and affordable drinking water for all.' }
     ]
   },
   {
-    member: { id: 2, name: 'Feng Jingyi', role: '技术开发', background: 'Accounting', photo: '/images/team/feng-jingyi.jpg', bg: '#1a3a5c', studentId: '8168308' },
-    focus: '用技术创新驱动可持续发展，开发环保科技解决方案应对全球挑战',
+    member: { id: 2, name: 'Feng Jingyi', background: 'Accounting', photo: '/images/team/feng-jingyi.jpg', portrait: '/images/team/feng-jingyi-portrait.jpg', bg: '#1a3a5c', studentId: '8168308' },
+    focus: 'Driving sustainable development through technological innovation, developing environmental tech solutions to address global challenges',
     sdgs: [
-      { id: 9, title: '产业、创新与基础设施', subtitle: 'Industry, Innovation and Infrastructure', color: '#fd6925', description: '技术创新是实现可持续发展目标的关键驱动力。Feng Jingyi专注于运用计算机科学技术，构建智慧环保平台，推动包容性工业化和可持续基础设施建设。' },
-      { id: 7, title: '廉价清洁能源', subtitle: 'Affordable and Clean Energy', color: '#fcc30b', description: '能源转型是应对气候危机的核心路径。Feng Jingyi研发能源监测与优化系统，通过智能算法提升能源使用效率，推动可再生能源的普及应用。' },
-      { id: 12, title: '负责任消费和生产', subtitle: 'Responsible Consumption and Production', color: '#bf8b2e', description: '技术可以改变消费模式。Feng Jingyi开发碳足迹追踪与可持续消费引导系统，帮助企业和个人实现更负责任的资源使用和生产决策。' }
+      { id: 9, title: 'Industry, Innovation and Infrastructure', subtitle: 'Industry, Innovation and Infrastructure', color: '#fd6925', description: 'Technological innovation is a key driver for achieving the Sustainable Development Goals. Feng Jingyi focuses on applying computer science and technology to build intelligent environmental platforms, promoting inclusive industrialization and sustainable infrastructure development.' },
+      { id: 7, title: 'Affordable and Clean Energy', subtitle: 'Affordable and Clean Energy', color: '#fcc30b', description: 'The energy transition is the core pathway to addressing the climate crisis. Feng Jingyi develops energy monitoring and optimization systems, using intelligent algorithms to improve energy efficiency and promote the widespread adoption of renewable energy.' },
+      { id: 12, title: 'Responsible Consumption and Production', subtitle: 'Responsible Consumption and Production', color: '#bf8b2e', description: 'Technology can transform consumption patterns. Feng Jingyi develops carbon footprint tracking and sustainable consumption guidance systems, helping businesses and individuals make more responsible resource use and production decisions.' }
     ]
   },
   {
-    member: { id: 3, name: 'Wang Luyang', role: '政策研究', background: 'Accounting', photo: '/images/team/wang-luyang.jpg', bg: '#5c2d6e', studentId: '8168505' },
-    focus: '推动全球可持续发展合作，促进公平正义与伙伴关系建设',
+    member: { id: 3, name: 'Wang Luyang', background: 'Accounting', photo: '/images/team/wang-luyang.jpg', portrait: '/images/team/wang-luyang-portrait.jpg', bg: '#5c2d6e', studentId: '8168505' },
+    focus: 'Advancing global sustainable development cooperation, promoting equity, justice, and partnership building',
     sdgs: [
-      { id: 16, title: '和平、正义与强大机构', subtitle: 'Peace, Justice and Strong Institutions', color: '#19489d', description: '和平与正义是可持续发展的基石。Wang Luyang研究国际法治与治理机制，推动建立有效、负责和包容的机构，为所有人提供诉诸司法的机会。' },
-      { id: 17, title: '促进目标实现的伙伴关系', subtitle: 'Partnerships for the Goals', color: '#192841', description: '全球伙伴关系是实现所有SDGs的前提。Wang Luyang致力于加强多利益攸关方合作，促进知识、技术和财政资源的跨境流动与共享。' },
-      { id: 5, title: '性别平等', subtitle: 'Gender Equality', color: '#ff3a21', description: '性别平等不仅是基本人权，更是可持续发展的必要条件。Wang Luyang倡导消除对妇女和女童的一切形式歧视，推动女性在决策过程中的平等参与。' },
-      { id: 10, title: '减少不平等', subtitle: 'Reduced Inequalities', color: '#dd1367', description: '全球不平等问题日益严峻。Wang Luyang研究包容性政策设计，推动各国在收入分配、社会保护和机会平等方面实现实质性改善。' }
+      { id: 16, title: 'Peace, Justice and Strong Institutions', subtitle: 'Peace, Justice and Strong Institutions', color: '#19489d', description: 'Peace and justice are the foundations of sustainable development. Wang Luyang researches international rule of law and governance mechanisms, promoting effective, accountable, and inclusive institutions that provide access to justice for all.' },
+      { id: 17, title: 'Partnerships for the Goals', subtitle: 'Partnerships for the Goals', color: '#192841', description: 'Global partnerships are the prerequisite for achieving all SDGs. Wang Luyang is dedicated to strengthening multi-stakeholder cooperation and promoting the cross-border flow and sharing of knowledge, technology, and financial resources.' },
+      { id: 5, title: 'Gender Equality', subtitle: 'Gender Equality', color: '#ff3a21', description: 'Gender equality is not only a fundamental human right but also a necessary condition for sustainable development. Wang Luyang advocates for ending all forms of discrimination against women and girls and promoting equal participation of women in decision-making processes.' },
+      { id: 10, title: 'Reduced Inequalities', subtitle: 'Reduced Inequalities', color: '#dd1367', description: 'Global inequality is becoming increasingly severe. Wang Luyang researches inclusive policy design, promoting substantial improvements in income distribution, social protection, and equality of opportunity across countries.' }
     ]
   },
   {
-    member: { id: 4, name: 'Lu Jianning', role: '数据分析师', background: 'Finance', photo: '/images/team/lu-jianning.jpg', bg: '#2c4a3e', studentId: '8168379' },
-    focus: '以数据驱动可持续发展评估，用量化分析揭示问题、验证成效',
+    member: { id: 4, name: 'Lu Jianning', background: 'Finance', photo: '/images/team/lu-jianning.jpg', portrait: '/images/team/lu-jianning-portrait.jpg', bg: '#2c4a3e', studentId: '8168379' },
+    focus: 'Driving sustainable development assessment with data, using quantitative analysis to reveal problems and verify outcomes',
     sdgs: [
-      { id: 4, title: '优质教育', subtitle: 'Quality Education', color: '#c5192d', description: '教育是打破贫困循环最有力的工具。Lu Jianning通过数据分析评估教育资源分配的公平性，为政策制定者提供数据驱动的决策支持，推动包容和公平的优质教育。' },
-      { id: 3, title: '良好健康与福祉', subtitle: 'Good Health and Well-being', color: '#4c9f38', description: '数据在公共卫生领域具有不可替代的价值。Lu Jianning运用统计模型分析健康趋势、疾病分布和医疗资源配置，为全民健康覆盖提供量化依据。' },
-      { id: 1, title: '消除贫困', subtitle: 'No Poverty', color: '#e5243b', description: '贫困是多维度的复杂问题。Lu Jianning构建贫困评估指标体系和监测框架，追踪减贫进展，识别贫困根源，助力精准脱贫政策的制定与实施。' },
-      { id: 2, title: '零饥饿', subtitle: 'Zero Hunger', color: '#dda63a', description: '粮食安全是可持续发展的基础保障。Lu Jianning分析农业生产数据、粮食供应链效率和营养状况指标，为实现零饥饿目标提供科学评估和方法支持。' }
+      { id: 4, title: 'Quality Education', subtitle: 'Quality Education', color: '#c5192d', description: 'Education is the most powerful tool for breaking the cycle of poverty. Lu Jianning uses data analysis to assess the equity of educational resource distribution, providing data-driven decision support for policymakers and promoting inclusive and equitable quality education.' },
+      { id: 3, title: 'Good Health and Well-being', subtitle: 'Good Health and Well-being', color: '#4c9f38', description: 'Data has irreplaceable value in the field of public health. Lu Jianning applies statistical models to analyze health trends, disease distribution, and healthcare resource allocation, providing quantitative evidence for universal health coverage.' },
+      { id: 1, title: 'End Poverty', subtitle: 'No Poverty', color: '#e5243b', description: 'Poverty is a complex, multidimensional issue. Lu Jianning builds poverty assessment indicator systems and monitoring frameworks, tracking poverty reduction progress, identifying root causes of poverty, and supporting the formulation and implementation of targeted poverty alleviation policies.' },
+      { id: 2, title: 'Zero Hunger', subtitle: 'Zero Hunger', color: '#dda63a', description: 'Food security is the fundamental guarantee of sustainable development. Lu Jianning analyzes agricultural production data, food supply chain efficiency, and nutritional status indicators, providing scientific assessment and methodological support for achieving the Zero Hunger goal.' }
     ]
   }
 ]
@@ -65,8 +65,8 @@ onMounted(() => {
     <section class="ts-header">
       <div class="container">
         <p class="ts-eyebrow">Team & SDGs</p>
-        <h1>每个人都有自己的使命</h1>
-        <p>四位团队成员将各自专长与可持续发展目标紧密结合</p>
+        <h1>Everyone Has Their Own Mission</h1>
+        <p>Four team members integrating their expertise with the Sustainable Development Goals</p>
       </div>
     </section>
 
@@ -82,15 +82,20 @@ onMounted(() => {
             <div class="mh-info">
               <h2>{{ m.member.name }}</h2>
               <div class="mh-tags">
-                <span class="tag-role">{{ m.member.role }}</span>
                 <span class="tag-bg">{{ m.member.background }}</span>
-                <span class="tag-id">学号: {{ m.member.studentId }}</span>
+                <span class="tag-id">Student ID: {{ m.member.studentId }}</span>
               </div>
             </div>
           </div>
           <p class="mh-focus">"{{ m.focus }}"</p>
 
-          <!-- SDG cards -->
+          <!-- TEST: direct image -->
+          <div class="ts-test-photo" :style="{ borderColor: m.member.bg }" style="border: 3px solid; padding: 4px; margin-bottom: 12px; width: 200px;">
+            <img :src="m.member.photo" style="width:100%; display:block;" />
+            <p style="text-align:center; margin:4px 0;">TEST {{ m.member.name }}</p>
+          </div>
+
+          <!-- SDG cards + portrait photo -->
           <div class="ts-grid">
             <div v-for="sdg in m.sdgs" :key="sdg.id" class="ts-sdg-card" :style="{ '--c': sdg.color, '--cl': sdg.color + '10' }">
               <div class="ts-sdg-head">
@@ -102,6 +107,12 @@ onMounted(() => {
               </div>
               <p class="ts-sdg-desc">{{ sdg.description }}</p>
             </div>
+            <div v-if="(m.member.id === 1 || m.member.id === 2) && m.member.portrait" class="ts-photo-card" :style="{ '--pc': m.member.bg }">
+              <img :src="m.member.portrait" :alt="m.member.name" class="ts-photo-img" :style="m.member.id === 2 ? 'object-fit:contain; height:auto;' : ''" />
+            </div>
+          </div>
+          <div v-if="(m.member.id === 3 || m.member.id === 4) && m.member.portrait" class="ts-photo-below" :style="{ '--pc': m.member.bg }">
+            <img :src="m.member.portrait" :alt="m.member.name" class="ts-photo-img-below" :style="m.member.id === 4 ? 'object-fit:cover; height:320px; object-position:top;' : ''" />
           </div>
         </div>
       </div>
@@ -111,10 +122,10 @@ onMounted(() => {
     <section class="ts-cta">
       <div class="container">
         <div class="ts-cta-inner">
-          <h2>一起行动，改变世界</h2>
-          <p>每位成员的目标只是起点。17项可持续发展目标相互关联，需要每个人的参与</p>
+          <h2>Act Together, Change the World</h2>
+          <p>Each member's goals are just the beginning. The 17 Sustainable Development Goals are interconnected and require everyone's participation.</p>
           <router-link to="/sdgs" class="btn btn-primary">
-            了解全部17项目标
+            Explore All 17 Goals
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </router-link>
         </div>
@@ -159,7 +170,7 @@ onMounted(() => {
 .member-block:last-child { margin-bottom: 0; }
 
 /* Member header */
-.mh { display: flex; align-items: center; gap: 24px; margin-bottom: 20px; }
+.mh { display: flex; align-items: center; gap: 24px; margin-bottom: 20px; flex-wrap: wrap; }
 .mh-avatar {
   width: 72px; height: 72px; min-width: 72px;
   border-radius: 50%;
@@ -173,17 +184,45 @@ onMounted(() => {
   object-fit: cover;
   border-radius: 50%;
 }
+/* Portrait photo card inside SDG grid (Li Shuhang) */
+.ts-photo-card {
+  width: 100%;
+  border-radius: 14px;
+  border: 2px solid var(--pc, #f0ebe4);
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(28,28,36,0.10);
+  max-width: 240px;
+  justify-self: start;
+}
+.ts-photo-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Portrait photo below grid (Wang Luyang) */
+.ts-photo-below {
+  margin-top: 14px;
+  max-width: 280px;
+  border-radius: 14px;
+  border: 2px solid var(--pc, #f0ebe4);
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(28,28,36,0.10);
+}
+.ts-photo-img-below {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
 .mh-info h2 {
   font-family: Georgia, serif;
   font-size: 1.6rem; color: #1c1c24; margin-bottom: 8px;
 }
 .mh-tags { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-.tag-role {
-  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em;
-  text-transform: uppercase; color: #c48b5c;
-  background: rgba(196,139,92,0.1);
-  padding: 4px 12px; border-radius: 100px;
-}
 .tag-bg {
   font-size: 0.75rem; color: #6b6560;
   background: rgba(28,28,36,0.04);
@@ -243,6 +282,7 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .mh { flex-direction: column; text-align: center; }
+  .mh-photo-card { width: 100px; height: 125px; min-width: 100px; }
   .mh-focus { padding-left: 0; text-align: center; }
   .member-block { padding: 32px 20px; }
   .ts-grid { grid-template-columns: 1fr; }

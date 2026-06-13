@@ -14,12 +14,12 @@ onMounted(() => {
 })
 
 const navItems = [
-  { name: '首页', path: '/' },
-  { name: '关于我们', path: '/about' },
-  { name: 'SDG目标', path: '/sdgs' },
-  { name: '团队SDG', path: '/team-sdgs' },
-  { name: '碳足迹计算', path: '/carbon-footprint' },
-  { name: '行动倡议', path: '/act-now' }
+  { name: 'Home', path: '/' },
+  { name: 'About Us', path: '/about' },
+  { name: 'SDG Goals', path: '/sdgs' },
+  { name: 'Team SDGs', path: '/team-sdgs' },
+  { name: 'Carbon Footprint', path: '/carbon-footprint' },
+  { name: 'Act Now', path: '/act-now' }
 ]
 
 const toggleMenu = () => {
@@ -44,7 +44,7 @@ const closeMenu = () => {
             <line x1="4" y1="20" x2="36" y2="20" stroke="currentColor" stroke-width="1" opacity="0.3"/>
           </svg>
         </div>
-        <span class="brand-text">SDG <span class="brand-text-light">可持续发展</span></span>
+        <span class="brand-text">SDG <span class="brand-text-light">Sustainable Development</span></span>
       </div>
 
       <div class="navbar-links">
@@ -60,7 +60,7 @@ const closeMenu = () => {
         </a>
       </div>
 
-      <button class="menu-toggle" @click="toggleMenu" :aria-label="isMenuOpen ? '关闭菜单' : '打开菜单'">
+      <button class="menu-toggle" @click="toggleMenu" :aria-label="isMenuOpen ? 'Close menu' : 'Open menu'">
         <span class="bar"></span>
         <span class="bar"></span>
       </button>

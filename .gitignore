@@ -9,3 +9,10 @@ _small_*
 _readpdf.*
 _preview.*
 public/_design*
+.superpowers/
+__pycache__/
+scripts/output/
+screenshots/
+*.ps1
+build-merged.js
+google-sites-merged.html

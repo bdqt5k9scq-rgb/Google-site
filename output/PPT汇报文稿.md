@@ -1,325 +1,382 @@
-# UN SDGs Presentation — 汇报文稿
+﻿UN SDGs Presentation — Presentation Script
 
-> 22页PPT · 预计汇报时长：25–30分钟 · 团队：李书航、冯竞逸、王露阳、卢建宁
-
----
-
-## 第一部分：开场（Slide 1–2）
-
-### Slide 1 — 封面
-
-**汇报人：** 李书航（项目负责人）
-
-> 大家好！我们今天汇报的主题是联合国可持续发展目标，也就是SDGs。这是我们的课程项目，我们四个人来自不同的专业背景，一起完成了这个项目。
->
-> 接下来的20多分钟，我会带大家了解：SDGs是什么、为什么重要、我们做了什么网站、以及这个过程中学到的东西。
-
-**耗时：** 约1分钟
+> 22 Slides · Estimated Duration: 25-30 min · Team: Li Shuhang, Feng Jingyi, Wang Luyang, Lu Jianning
 
 ---
 
-### Slide 2 — 汇报大纲
+Part 1: Opening (Slides 1-2)
 
-> 今天的内容分六块：
-> 1. 先简单介绍SDGs的背景——它们从哪里来、怎么来的
-> 2. 然后快速浏览17项目标，挑两个重点讲
-> 3. 分析为什么需要SDGs这个框架
-> 4. 介绍我们团队和这个项目
-> 5. 展示我们做的网站——碳足迹计算器、行动指南
-> 6. 最后总结收获和下一步
+Slide 1 — Title Slide
 
-**耗时：** 约30秒
+Presenter: Li Shuhang
+
+> Hello everyone! Today we are presenting on the United Nations Sustainable Development Goals — the SDGs. This is our course project. The four of us come from different academic backgrounds and worked together to complete this project.
+>
+> Over the next 20-plus minutes, I will walk you through: what the SDGs are, why they matter, the website we built at sdg-website.org, and what we learned along the way.
+>
+> On the cover you can see our names — Li Shuhang, Feng Jingyi, Wang Luyang, and Lu Jianning — and the course presentation date, June 2026.
+
+Duration: ~1 min
 
 ---
 
-## 第二部分：背景介绍（Slide 3–5）
+Slide 2 — Presentation Outline
 
-### Slide 3 — 什么是SDGs
+> Today's content is divided into six parts:
+> 1. Introduction to the SDGs — where they come from, what they cover, and how they're structured
+> 2. The 17 Goals at a Glance — a walk through all 17 goals, how they group together, and two deep dives
+> 3. Why the SDGs Exist — the problems they're trying to solve and how they approach them differently
+> 4. Our Team & This Project — four people, four backgrounds, one website about the SDGs
+> 5. What We Built — the carbon footprint calculator, action guides, and how the site works under the hood
+> 6. What We Learned & What's Next — key takeaways from this project and how to get involved
 
-> 2015年9月，193个联合国成员国一致通过了《2030年可持续发展议程》，核心就是这17项可持续发展目标。SDGs涵盖了经济、社会、环境三个维度，是一份"和平与繁荣的共享蓝图"。
->
-> 时间线大家看PPT：2015年通过 → 2023年中期评估发现只有15%的目标进展正常 → 2030年是截止年份，现在只剩下4年了。时间非常紧迫。
-
-**关键数字：** 193个国家、2015年通过、2030年截止、仅15%达标
-
-**耗时：** 约1.5分钟
-
----
-
-### Slide 4 — 关键数据
-
-> 几个关键数字：
-> - 17项目标，相互关联
-> - 193个国家共同承诺
-> - 2030年是目标年份
-> - 169项具体目标，232项指标来衡量进展
->
-> 这不是一个空洞的口号，它有非常具体的考核体系。
-
-**耗时：** 约45秒
+Duration: ~30 sec
 
 ---
 
-### Slide 5 — 为什么需要SDGs
+Part 2: Background (Slides 3-5)
 
-> 三个核心原因：
->
-> **第一，问题不分国界。** 气候变化、极端贫困、物种灭绝——这些问题不会停在边境线上。全球气温已经上升了约1.1°C，超过7亿人每天生活费不足2.15美元。
->
-> **第二，需要系统性思维。** 以前的全球发展目标往往是割裂的——管健康的不关心环境，搞经济的不考虑社会公平。SDGs第一次把经济、社会、环境这三个维度系统地连接在一起。
->
-> **第三，可衡量、可追责。** 169项具体目标加232项指标，让每个国家都能被追踪进度。"不落下任何人"的原则确保最脆弱的群体不能被忽视。
+Slide 3 — What Are the SDGs?
 
-**耗时：** 约2分钟
+> In September 2015, all 193 UN member states unanimously adopted the 2030 Agenda for Sustainable Development, centered on these 17 Sustainable Development Goals. The SDGs balance three dimensions — economic, social, and environmental — forming a shared blueprint for peace and prosperity for people and the planet.
+>
+> Look at the timeline on the slide: 2015 — SDGs adopted, 193 countries signed at the UN General Assembly. 2023 — midpoint review, and the results were sobering: only 15% of targets are on track, with most goals off-course. 2030 — the target deadline, now only four years away. Urgent acceleration is needed.
+>
+> This is not just another UN document. It is the most comprehensive global development framework ever created.
+
+Key Numbers: 193 countries, adopted 2015, deadline 2030, only 15% on track
+
+Duration: ~1.5 min
 
 ---
 
-## 第三部分：17项目标概览（Slide 6–10）
+Slide 4 — Key Statistics
 
-### Slide 6 — 17项目标一览
-
-> 这是全部17项目标的彩色卡片。大家可以快速扫一眼——从消除贫困（SDG 1）到促进全球伙伴关系（SDG 17），涵盖了人类面临的主要挑战。
+> Let me put the scale of the SDGs into perspective with four numbers:
 >
-> 接下来我们用5P框架来给它们分组，这样更容易理解和记忆。
+> 17 Global Goals — interconnected objectives covering every major challenge facing humanity. 193 Member States — unanimously adopted, meaning every country on Earth signed on. 2030 Target Year — originally 15 years, now only 4 years remaining. 169 Specific Targets — measured by 232 indicators, which means this is not just rhetoric; there is a concrete accountability system with actual metrics.
+>
+> When someone says "the SDGs are just nice words," these numbers are the answer.
 
-**耗时：** 约30秒
+Duration: ~45 sec
 
 ---
 
-### Slide 7–8 — 5P框架
+Slide 5 — Why the SDGs Exist
 
-**Slide 7 汇报人：冯竞逸**
-
-> 联合国把17项目标分成五个大类，每个都以字母P开头：
+> Three reasons the old approach wasn't working:
 >
-> - **People（人类）：** 消除贫困和饥饿，确保人人有尊严，平等发展——对应SDG 1–5
-> - **Planet（地球）：** 保护自然资源和气候，为子孙后代留下可生存的环境——对应SDG 6, 12, 13, 14, 15
-> - **Prosperity（繁荣）：** 让每个人都能享受繁荣和充实的生活——对应SDG 7, 8, 9, 10, 11
-> - **Peace（和平）：** 建设和平、公正和包容的社会——对应SDG 16
-> - **Partnership（伙伴关系）：** 通过全球团结来推动所有目标的实现——对应SDG 17
+> First: The Problems Don't Stop at Borders. Temperatures are up about 1.1°C since the Industrial Revolution. Over 700 million people still live on less than $2.15 a day. Species are going extinct at rates not seen in millions of years. These aren't separate issues — they feed into each other, and no country can fix them by acting alone.
+>
+> Second: A Framework That Connects the Dots. Before the SDGs, development goals tended to be siloed — health over here, environment over there. The 2030 Agenda explicitly links economic, social, and environmental dimensions. The idea is simple: you can't lift people out of poverty while destroying the ecosystems they depend on.
+>
+> Third: Measurable, Not Just Nice Words. Unlike many international agreements, the SDGs come with teeth — 169 specific targets and 232 indicators that can be tracked. The "Leave No One Behind" principle means looking past national averages to see who's being excluded: women, children, people with disabilities, and the extreme poor.
 
-**耗时：** 约2分钟（两页一起讲）
+Duration: ~2 min
 
 ---
 
-### Slide 9 — 重点目标：SDG 13 气候行动
+Part 3: The 17 Goals (Slides 6-10)
 
-> 为什么气候行动特别关键？
->
-> - 全球平均气温比工业革命前上升了约1.1°C
-> - 过去十年是有记录以来最热的十年
-> - 气候相关灾害在过去十年增加了超过80%
-> - 要想把升温控制在1.5°C，全球排放必须在2025年前达峰，到2030年下降43%
->
-> 1.5°C和2°C的差别意味着额外1000万人面临沿海洪水风险。这不仅仅是"温度高一点"的问题，是真切的生命和生计问题。
+Slide 6 — Overview of All 17 Goals
 
-**耗时：** 约1.5分钟
+> Here they are — all 17 SDGs displayed as a color-coded grid. From SDG 1 No Poverty in red, to SDG 17 Partnerships for the Goals in dark navy. Each goal has its own official color, making them visually distinct and easy to reference.
+>
+> Take a quick mental scan: the first five cover basic human needs — poverty, hunger, health, education, gender equality. The middle goals cover infrastructure, economy, and environment. The final goals address justice and global cooperation.
+>
+> Next, we'll use the UN's own 5P framework to group these into five memorable clusters.
+
+Duration: ~30 sec
 
 ---
 
-### Slide 10 — 重点目标：SDG 4 优质教育
+Slides 7-8 — The 5P Framework
 
-> 教育是所有SDGs的基础。
->
-> 几个触目惊心的数字：
-> - 疫情前就有2.58亿儿童和青少年失学
-> - 全球只有58%的学生达到最基本的阅读和数学水平
-> - 冲突地区的女孩失学率是男孩的2.5倍
-> - 超过13亿学龄儿童家中没有互联网
->
-> 但好消息是：每多上一年学，个人收入就增加约10%。教育是消除贫困最有效的途径，也是实现其他所有目标的基础。
+Slide 7 Presenter: Feng Jingyi
 
-**耗时：** 约1.5分钟
+> The UN organizes the 17 goals into five categories, each starting with the letter P — this is called the 5P framework:
+>
+> Slide 7 covers People and Planet:
+> People (SDGs 1-5): End poverty and hunger in all forms, and ensure dignity and equality for every human being. These are the most fundamental human needs — food, health, education, and equal rights.
+> Planet (SDGs 6, 12, 13, 14, 15): Protect Earth's natural resources and climate to sustain future generations. Clean water, responsible consumption, climate action, and protecting life both below water and on land.
+>
+> Slide 8 covers Prosperity, Peace, and Partnership:
+> Prosperity (SDGs 7, 8, 9, 10, 11): Ensure all human beings can enjoy prosperous and fulfilling lives in harmony with nature. Clean energy, decent work, innovation, reduced inequality, and sustainable cities.
+> Peace (SDG 16): Foster peaceful, just, and inclusive societies free from fear and violence.
+> Partnership (SDG 17): Mobilize the means required to implement this agenda through global solidarity — because none of the other 16 goals can be achieved without cooperation.
+>
+> Notice the structure: People and Planet are the "what" — the outcomes we want. Prosperity is the "how" — the economic engine. Peace and Partnership are the "enablers" — the conditions that make everything else possible.
+
+Duration: ~2 min (two slides together)
 
 ---
 
-## 第四部分：团队与项目（Slide 11–14）
+Slide 9 — Spotlight: SDG 13 Climate Action
 
-### Slide 11 — 团队介绍
+Presenter: Wang Luyang
 
-**汇报人：李书航**
-
-> 这是我们四个人的团队。各人背景不同，正好覆盖了理解SDGs所需的多个角度：
+> Let's zoom in on two goals that deserve special attention. First, SDG 13 — Climate Action.
 >
-> - 我是项目负责人，环境科学专业——主要负责SDGs的环境类目标研究
-> - 冯竞逸，计算机科学专业——负责网站技术开发，写代码、搭架构
-> - 王露阳，国际事务专业——做政策研究，负责SDG的国际合作框架分析
-> - 卢建宁，统计学专业——数据分析师，负责碳计算器的数据验证
+> The science is clear, and the solutions exist. Here are five facts that explain why this goal matters most:
 >
-> 这个组合不是凑的——要理解SDGs，单靠一个学科视角真的不够。
+> Rising Temperatures: Global average temperature has risen about 1.1°C above pre-industrial levels. The past decade, 2014 to 2024, was the warmest on record. Every fraction of a degree matters.
+>
+> Extreme Weather: Climate-related disasters have increased over 80% in the last decade, affecting millions and costing billions in damages globally. This is not a future scenario — it is happening now.
+>
+> Emissions Gap: To limit warming to 1.5°C, global greenhouse gas emissions must peak before 2025 and decline 43% by 2030 from 2019 levels. We are not on track.
+>
+> Sea Level Rise: The difference between 1.5°C and 2°C of warming means 10 million more people at risk from coastal flooding and saltwater intrusion. Coastal cities, island nations, and river deltas face existential threats.
+>
+> Ecosystem Impact: Coral reefs could decline 70 to 90% at 1.5°C warming, and over 99% at 2°C — threatening marine biodiversity and the livelihoods of hundreds of millions of people who depend on healthy oceans.
+>
+> Climate action is not one issue among many — it is the issue that determines whether the other 16 goals are even achievable.
 
-**耗时：** 约1分钟
+Duration: ~1.5 min
 
 ---
 
-### Slide 12 — 团队SDG分工
+Slide 10 — Spotlight: SDG 4 Quality Education
 
-> 这张表具体展示了我们每个人负责哪些SDG和为什么这样分工：
+> Now let's look at SDG 4 — Quality Education, which is the foundation for every other SDG.
 >
-> - 我（李书航）负责SDG 6, 7, 13, 14, 15——环境和资源相关，正好是我的专业方向
-> - 冯竞逸负责SDG 8, 9, 11, 12——这些涉及技术创新和可持续产业，与计算机科学直接相关
-> - 王露阳负责SDG 1, 2, 5, 10, 16——贫困、饥饿、性别平等这些是国际事务的核心议题
-> - 卢建宁负责SDG 3, 4, 17——健康和教育数据需要统计学分析，全球伙伴关系也需要数据支撑
+> The Learning Crisis: Before COVID-19, 258 million children and youth were out of school. Only 58% of students worldwide achieve minimum proficiency in reading and math. We are facing a global learning catastrophe.
 >
-> 每个人的分工都和他的专业背景直接对应。
+> Gender Disparity: Girls in conflict-affected areas are 2.5 times more likely to be out of school. Education reduces child marriage and improves health outcomes — it is one of the most powerful tools for gender equality.
+>
+> Economic Multiplier: Each additional year of schooling raises individual earnings by about 10%. Education is the single most powerful driver of economic mobility — more impactful than any other social program.
+>
+> Digital Divide: Over 1.3 billion school-age children lack home internet access, creating a homework gap that widens inequality in the digital era. The pandemic exposed and deepened this divide.
+>
+> Foundational Goal: Quality education underpins every other SDG — from poverty reduction (SDG 1) to innovation (SDG 9) and climate awareness (SDG 13). Without education, none of the other goals are sustainable across generations.
 
-**耗时：** 约1分钟
+Duration: ~1.5 min
 
 ---
 
-### Slide 13 — 项目目标
+Part 4: Team & Project (Slides 11-14)
 
-**汇报人：冯竞逸**
+Slide 11 — Meet the Team
 
-> 我们做这个项目有四个目标：
+Presenter: Li Shuhang
+
+> This is our four-person team. Four students, four different majors, one project. Each member's photo is shown with their name, academic background, and student ID:
 >
-> 1. **让SDGs更容易理解。** 大部分人都听说过SDGs，但很少有人能说出超过两个。我们想做一个让大家能轻松浏览所有17项目标的网站。
-> 2. **不只提供信息，还提供工具。** 光是"低碳生活"太抽象了。碳足迹计算器让你看到自己的实际数字，然后告诉你从哪里改进。
-> 3. **跨学科合作。** SDGs本身就是跨领域的，我们的团队组合也体现了这一点。
-> 4. **让SDGs和日常生活关联起来。** 全球目标听起来很远，但实际上每天的选择——吃什么、怎么出行、买什么东西——都和这些目标有关。
+> Li Shuhang — Finance background. Built the website's environmental content and carbon calculator methodology. Focuses on climate action (SDG 13), biodiversity and life on land (SDG 15), and clean water (SDG 6) — bringing environmental research and financial analysis perspective to every feature.
+>
+> Feng Jingyi — Accounting background. Developed the entire frontend — Vue 3 with Composition API, TypeScript strict mode, GSAP animations, and the carbon calculator logic. Focuses on tech-driven solutions for clean energy (SDG 7), industry and innovation (SDG 9), and responsible consumption (SDG 12).
+>
+> Wang Luyang — Accounting background. Researched international policy frameworks and how the SDGs fit into real-world governance. Covers SDGs 5, 10, 16, and 17 — gender equality, reduced inequalities, peace and justice, and global partnerships for the goals.
+>
+> Lu Jianning — Finance background. Handles data analysis — validated emission factors, checked SDG progress indicators against official UN databases. Focuses on data-driven approaches to poverty (SDG 1), hunger (SDG 2), health (SDG 3), and education (SDG 4).
+>
+> This combination is not coincidental — understanding the SDGs genuinely requires multiple disciplinary perspectives, and our team reflects that.
 
-**耗时：** 约1分钟
+Duration: ~1 min
 
 ---
 
-### Slide 14 — 网站展示
+Slide 12 — Team SDG Assignments
 
-> 这是网站的主要页面截图。包括：
-> - 首页 —— SDGs总览和团队介绍
-> - SDGs探索页 —— 17项目标详情
-> - 碳足迹计算器 —— 交互式计算工具
-> - 行动倡议页 —— 具体可操作的环保建议
+> This table shows exactly who worked on which goals and why. Four columns: Team Member, Assigned SDGs, Rationale for Assignment, and Academic Background.
 >
-> 技术方面，前端用Vue 3加TypeScript，动画用GSAP，构建工具用Vite 6。整个项目代码在GitHub上开源。
+> Li Shuhang covers SDGs 6, 13, and 15 — finance and environmental research background aligns with climate action, biodiversity conservation, and clean water — planet-focused goals requiring both analytical rigor and ecosystem understanding.
+>
+> Feng Jingyi covers SDGs 7, 9, and 12 — technology and innovation expertise drives solutions for clean energy, sustainable industry, and responsible consumption — using intelligent platforms to make sustainability measurable and actionable.
+>
+> Wang Luyang covers SDGs 5, 10, 16, and 17 — policy research and governance analysis underpins gender equality, reduced inequalities, peace and justice, and global partnerships — the equity and institutional goals.
+>
+> Lu Jianning covers SDGs 1, 2, 3, and 4 — data analysis and quantitative methods enable rigorous assessment of poverty, hunger, health, and education outcomes — using statistical models to reveal where interventions are most needed.
+>
+> Each person's assignment maps directly to their academic background. There are no arbitrary allocations — every assignment has a clear rationale.
 
-**耗时：** 约1分钟
+Duration: ~1 min
 
 ---
 
-## 第五部分：互动功能（Slide 15–17）
+Slide 13 — What We're Trying to Do
 
-### Slide 15 — 碳足迹计算器
+Presenter: Feng Jingyi
 
-**汇报人：卢建宁**
-
-> 这是我们的碳足迹计算器，从四个方面估算你每年的CO₂排放：
+> This slide captures the core of our project. Two big-picture statements, plus four specific objectives:
 >
-> - **交通：** 私家车每公里0.2kg CO₂，公共交通只有0.05kg，一次飞行约250kg。少飞一次能省下很多。
-> - **能源：** 电力每度0.5kg，天然气每立方米2.3kg。如果切换到可再生能源，减排效果立竿见影。
-> - **食物：** 肉食为主的饮食碳足迹更高，多吃植物性食物可以获得"碳积分"。食物生产占全球排放的约26%。
-> - **废弃物：** 不回收加100kg CO₂，不堆肥加50kg。这些是最容易改进的生活习惯。
+> What We Set Out to Do: Build a complete website at sdg-website.org that covers all 17 SDGs, includes an interactive carbon footprint calculator, provides actionable guides, and features team member profiles. Built with Vue 3, TypeScript, and GSAP animations — a production-grade SPA with 6 route views and responsive design.
 >
-> 根据总排放量分为四个等级：优秀（低于3000kg/年）、良好、平均、高（超过10000kg/年）。全球人均约4000kg，可持续目标是不超过2000kg。作为对比，中国人均约7400kg，美国人均约14700kg。
+> What We'd Like to See: More people engaging with the SDGs beyond just hearing about them. Our carbon calculator turns abstract emissions data into personal feedback. The action guides connect daily choices to global outcomes. Small changes at scale — switching to LED bulbs, eating less meat, taking public transit — add up to real impact.
+>
+> The four numbered objectives below:
+> 1. Make the SDGs Understandable — most people have heard of them but can't name more than two. We built something that makes all 17 easy to explore.
+> 2. Give People Tools, Not Just Information — reading about carbon footprints is one thing. Actually calculating yours and getting personalized tips is far more useful.
+> 3. Work Across Disciplines — you can't understand the SDGs from just one angle. Our team covers finance, accounting, and data analysis.
+> 4. Make It Relevant to Daily Life — global goals feel abstract. We tried to connect each SDG to choices people actually make: what they eat, how they travel, what they buy.
 
-**耗时：** 约2分钟
+Duration: ~1 min
 
 ---
 
-### Slide 16 — 行动倡议
+Slide 14 — Website Walkthrough
 
-> 我们发现光是告诉别人"你的碳排放很高"不够，需要给出具体的改进建议：
+> This is a tour of all 6 main pages we built, each with a distinct purpose:
 >
-> **交通方面：** 每周少开一天车，少坐一次飞机一年能减1.6吨CO₂。
-> **家庭用电：** LED灯比白炽灯省75%电，待机功耗可能占你电费的5-10%。
-> **饮食方面：** 把肉类摄入减半，食物碳足迹就减40%。当季本地食材不需要跨大陆运输。
-> **垃圾方面：** 分类回收、厨余堆肥、自带购物袋和水杯——简单但长期坚持效果明显。
+> Home — Landing page with hero section, statistics, SDG grid, team bios, and dual call-to-action buttons. The first impression that draws visitors in.
+> About — Mission and vision cards, our four objectives, and a team introduction CTA. Explains who we are and what drives us.
+> SDGs — Interactive grid of all 17 goals with modal detail views. Click any goal to see its full description — designed for exploration.
+> Team SDGs — Member profiles with assigned SDGs, focus areas, and rationale. Shows who works on which goals and why.
+> Carbon — Interactive calculator with 4 input categories (transportation, energy, food, waste), personalized tips, and rating levels. The most technically complex page.
+> Act Now — Action categories with filters, a 2030 countdown timer, and detailed member action reports. Turns knowledge into concrete steps.
 >
-> 每个小改动单独看不值一提，但乘以几百万几亿人就完全不同。
+> Built with Vue 3, TypeScript, Vue Router 4, GSAP ScrollTrigger, and Vite 6. Live at sdg-website.org. The entire project is a fully functional single-page application with smooth page transitions and scroll-driven animations.
 
-**耗时：** 约1.5分钟
+Duration: ~1 min
 
 ---
 
-### Slide 17 — 技术架构
+Part 5: Interactive Features (Slides 15-17)
 
-> 简单说一下技术栈，有兴趣的同学可以之后交流：
->
-> - **Vue 3 + Composition API** —— 组件化开发，TypeScript保证类型安全
-> - **Vue Router 4** —— 前端路由，6个页面，页面切换无刷新
-> - **GSAP + ScrollTrigger** —— 滚动动画，行业标准
-> - **Vite 6** —— 极快的开发服务器和构建速度
-> - **Scoped CSS** —— 每个组件的样式互不干扰
->
-> 整体架构：浏览器 → Vue Router → 六个视图组件 → 核心功能层（动画、样式、类型系统）
+Slide 15 — Carbon Footprint Calculator
 
-**耗时：** 约45秒
+Presenter: Lu Jianning
+
+> This is our carbon footprint calculator — the centerpiece of the website's interactive functionality. It estimates your annual CO₂ emissions across four categories, each with specific emission factors:
+>
+> Transportation: Private car — 0.2 kg CO₂ per kilometer. Public transport — only 0.05 kg per km, about a quarter of driving. Air travel — 250 kg CO₂ per flight, and short-haul flights are worse per kilometer than long-haul. This is usually the largest category for people who drive daily.
+>
+> Energy: Electricity — 0.5 kg CO₂ per kilowatt-hour. Natural gas — 2.3 kg per cubic meter. Heating — 1.8 kg per unit. Switching to renewables cuts this entire category most dramatically.
+>
+> Food: A meat-heavy diet produces a higher footprint. Eating more plant-based meals earns carbon credits. Locally sourced food provides a 0.1 kg CO₂ benefit per unit. Food production accounts for about 26% of global emissions — what we eat matters enormously.
+>
+> Waste: Not recycling adds a 100 kg CO₂ penalty. Not composting adds another 50 kg. Methane from landfills is 25 times worse than CO₂ as a greenhouse gas. Better waste habits are the easiest win — they require no technology, just behavior change.
+>
+> The results are classified into four rating levels: Excellent — below 3,000 kg per year, well below average, keep it up. Good — 3,000 to 6,000 kg, moderate with clear room for improvement. Average — 6,000 to 10,000 kg, above sustainable levels, consider targeted reductions. High — above 10,000 kg, urgent action needed.
+>
+> For context: global average is about 4,000 kg per person per year. A sustainable target is below 2,000 kg. China's average is about 7,400 kg. The United States averages about 14,700 kg. These numbers make the abstract concept of "carbon emissions" tangible and personal.
+
+Duration: ~2 min
 
 ---
 
-## 第六部分：总结与收尾（Slide 18–20）
+Slide 16 — What You Can Actually Do
 
-### Slide 18 — 我们的收获
-
-**汇报人：李书航**
-
-> 这个项目让我们学到了五件事：
+> Once someone knows their carbon footprint number, the natural question is: what now? That's what this slide answers — simple changes that make a real difference, no heroics required:
 >
-> 1. **万物相连。** 你不能在解决贫困的同时忽视教育、健康和性别平等。SDGs是一个系统，不是一个清单。
-> 2. **每个人都在其中。** 国际目标不只是政府和联合国的事。企业、社区、个人选择——这些才是SDGs真正落地的层面。
-> 3. **技术是工具，不是答案。** 碳计算器让抽象的概念变得具体，但最难的不是写代码，而是让人在乎并付诸行动。
-> 4. **小变化积累起来很可观。** 一个人改乘公交没什么影响。几百万人都这样做，排放曲线就变了。
-> 5. **2030年已经很近了，我们落后太多。** 联合国自己的评估显示只有15%的目标进度正常。这不是"未来的问题"，是正在发生的事。
-
-**耗时：** 约2分钟
-
----
-
-### Slide 19 — 你能做什么
-
-> 学完SDGs最重要的一件事：做点什么。
+> Transportation: Take the bus or subway instead of driving — even once a week adds up over a year. One fewer round-trip flight per year saves about 1.6 tonnes of CO₂. If you need a car, carpool or look into electric options.
 >
-> 可以去我们的网站看看17项目标的具体内容，试试碳足迹计算器看看自己的数字，然后挑一件事改变——哪怕是少用一个塑料袋、多走一站路。
+> Energy at Home: LED bulbs use 75% less energy than incandescent and last years longer. Standby power from plugged-in devices can be 5 to 10% of your electricity bill — simply unplug things when not in use. If your area offers green power plans, they're often not much more expensive than standard rates.
 >
-> SDGs不只是在联合国讨论的议题，它们和每个人有关。
-
-**耗时：** 约30秒
-
----
-
-### Slide 20 — 致谢
-
-> 谢谢大家的时间。这是我们的主要参考文献，包括联合国2030议程、IPCC气候报告、联合国SDGs进展报告等。
+> Food Choices: Cutting meat consumption in half roughly cuts your food carbon footprint by 40%. Seasonal local produce doesn't need to be flown or trucked across continents — it's fresher and lower-carbon. A third of all food globally gets wasted — meal planning helps far more than most people realize.
 >
-> 如果有什么问题、评论、不同意见——都非常欢迎。我们可以现在讨论，也可以之后交流。
+> Waste: Separate your trash — recyclables, kitchen scraps for compost, and actual landfill. Composting turns food waste into soil instead of methane in a landfill. Bring a reusable bag and water bottle — simple but cumulatively effective over time.
+>
+> Each of these actions seems small in isolation, but the point is: when millions of people adopt them, the aggregate impact is transformative. The challenge is not that solutions don't exist — it's getting enough people to use them.
 
-**耗时：** 约30秒
-
----
-
-## 附录（Slide 21–22）
-
-- **Slide 21：** 全部17项SDGs及其官方描述，供深入查阅参考
-- **Slide 22：** 碳计算器的完整计算逻辑、排放因子来源和评级阈值说明
+Duration: ~1.5 min
 
 ---
 
-## 团队分工建议
+Slide 17 — How We Built It
 
-| 幻灯片 | 汇报人 | 负责内容 |
-|--------|--------|----------|
-| Slide 1–5 | 李书航 | 开场 + 背景介绍 |
-| Slide 6–8 | 冯竞逸 | 17项目标概览 + 5P框架 |
-| Slide 9–10 | 王露阳 | 两个重点目标深度分析 |
-| Slide 11–14 | 李书航 / 冯竞逸 | 团队 + 项目目标 + 网站展示 |
-| Slide 15–17 | 卢建宁 / 冯竞逸 | 碳计算器 + 行动倡议 + 技术架构 |
-| Slide 18–20 | 李书航 | 总结收获 + 致谢 |
+> A quick overview of our technical architecture, for anyone interested in the implementation details:
+>
+> The architecture flows from left to right: Browser → Vue Router 4 with 6 route views → View Layer with Home, About, SDGs, Team, Carbon, and Act Now pages → Core Features including GSAP animations, Scoped CSS modules, and TypeScript types.
+>
+> The technology stack, layer by layer:
+> Frontend Framework — Vue 3 with Composition API. Component-based, easy to refactor, and excellent TypeScript support.
+> Type System — TypeScript in strict mode. Catches mistakes before runtime and makes the code self-documenting.
+> Routing — Vue Router 4. Client-side routing with clean URLs and no page reloads.
+> Animations — GSAP plus ScrollTrigger. The industry standard for scroll-linked animation, works reliably across all major browsers.
+> Build Tooling — Vite 6. Fast dev server with instant hot module replacement and straightforward production builds.
+> Styling — Scoped CSS. Styles are tied to components so they don't leak or conflict with each other.
+>
+> The entire architecture is a modern, production-grade single-page application. All code is open-source and available for review.
+
+Duration: ~45 sec
 
 ---
 
-## 时间分配参考
+Part 6: Closing (Slides 18-20)
 
-| 部分 | 幻灯片 | 建议时长 |
+Slide 18 — What We Learned
+
+Presenter: Li Shuhang
+
+> This project taught us five things, and I want to share them honestly:
+>
+> 1. Everything Is Connected. You can't fix poverty without also addressing education, health, and gender equality. The SDGs work as a system, not a checklist. That's both the core challenge and the entire point — they force you to think holistically.
+>
+> 2. Everyone Is in This. It's easy to think international goals are for governments and the UN. But businesses, local communities, and individual choices are how these goals actually get implemented — or don't. The SDGs only work if they cascade down to the level of daily decisions.
+>
+> 3. Tech Helps, But It's Just a Tool. Our carbon calculator makes an abstract concept feel personal — you type in numbers and see your own impact. But the hard part isn't the technology. It's getting people to care enough to use it and, more importantly, to act on the results.
+>
+> 4. Small Changes Compound. One person switching to public transit doesn't matter statistically. Millions doing it changes emissions trajectories. The scale problem cuts both ways — individual actions feel tiny, but they are the only lever we actually have. There is no other mechanism for change.
+>
+> 5. 2030 Is Close and We're Behind. The UN's own midpoint review found only 15% of SDG targets are on track. Four years isn't much time. This isn't a future problem we're passively preparing for — it's happening now, and the window for meaningful action is closing fast.
+
+Duration: ~2 min
+
+---
+
+Slide 19 — So, What Can You Do?
+
+> The entire point of learning about the SDGs is doing something with that knowledge. Here's my ask:
+>
+> Visit our website at sdg-website.org. Explore all 17 goals — each one has a detailed description. Calculate your carbon footprint — it takes about two minutes and you will genuinely learn something about yourself. Get personalized action tips based on your results. Pick one thing to change and see if it sticks.
+>
+> Try the carbon calculator during the Q&A if you're curious — I can pull it up live. Enter a few numbers and you'll see your result instantly. The interactive effect is much stronger than just hearing about it.
+>
+> The SDGs aren't just topics discussed at UN headquarters. They're about how we live, what we consume, and what kind of world we want to leave behind. They're for everyone — starting with each of us in this room.
+
+Duration: ~30 sec
+
+---
+
+Slide 20 — Thank You
+
+> Thank you for your time and attention. This slide shows our main references:
+>
+> United Nations 2030 Agenda — the foundational document. IPCC Sixth Assessment Report — the authoritative climate science. UN DESA SDG Report 2024 — the latest progress data. UN Stats SDG Indicators Database — the official tracking system.
+>
+> On the right, our team details: Li Shuhang — Finance, student ID 8168667. Feng Jingyi — Accounting, 8168308. Wang Luyang — Accounting, 8168505. Lu Jianning — Finance, 8168379.
+>
+> Questions, comments, arguments — all welcome. We're happy to discuss anything from the technical implementation to the policy implications. Thank you.
+
+Duration: ~30 sec
+
+---
+
+Appendix (Slides 21-22)
+
+> Slide 21 — Appendix A: Complete SDG Reference. All 17 Sustainable Development Goals with their official short descriptions in a single reference table. Useful for anyone who wants to look up a specific goal during Q&A.
+>
+> Slide 22 — Appendix B: Carbon Calculator Methodology. The left column shows all 10 calculation formulas (car, public transport, flights, electricity, gas, heating, meat offset, local food, recycling penalty, composting penalty) plus global context benchmarks. The right column shows the four rating thresholds with interpretations, and the data sources we used: IPCC reports, EPA calculator, World Bank data, and UNEP reports.
+
+---
+
+Suggested Team Assignments
+
+| Slide Range | Presenter | Content |
+|-------------|-----------|---------|
+| Slides 1-5 | Li Shuhang | Opening + SDG Background + Key Statistics + Why SDGs |
+| Slides 6-8 | Feng Jingyi | 17 Goals Grid + 5P Framework (both slides) |
+| Slides 9-10 | Wang Luyang | Spotlight: SDG 13 Climate Action + SDG 4 Quality Education |
+| Slides 11-14 | Li Shuhang (11-12) / Feng Jingyi (13-14) | Team + Assignments + Project Goals + Website Tour |
+| Slides 15-17 | Lu Jianning (15) / Feng Jingyi (16-17) | Carbon Calculator + Action Guide + Tech Architecture |
+| Slides 18-20 | Li Shuhang | Key Takeaways + Call to Action + Thank You |
+
+---
+
+Time Allocation Reference
+
+| Part | Slides | Duration |
 |------|--------|----------|
-| 开场 | 1–2 | 2分钟 |
-| 背景 | 3–5 | 4分钟 |
-| 目标概览 | 6–10 | 6分钟 |
-| 团队与项目 | 11–14 | 3分钟 |
-| 互动功能 | 15–17 | 5分钟 |
-| 总结 | 18–20 | 3分钟 |
-| 自由问答 | — | 5–7分钟 |
+| Opening | 1-2 | ~2 min |
+| SDG Background | 3-5 | ~4 min |
+| 17 Goals Overview | 6-10 | ~5.5 min |
+| Team & Project | 11-14 | ~3 min |
+| Interactive Features | 15-17 | ~4.5 min |
+| Summary & Closing | 18-20 | ~3 min |
+| Q&A | — | 5-7 min |
 
-**总计：约28–30分钟**
+Total: ~27-29 min
 
 ---
 
-> 💡 **提示：** 建议提前打开PPT和网站各页面，演示时切换更流畅。碳计算器可以现场演示让大家输入几个数字看看结果，互动效果会更好。
+> Tip: Open the PPT and the website (sdg-website.org) ahead of time so you can switch between them smoothly during the presentation. The carbon calculator can be demoed live — invite audience members to suggest numbers and show their results in real time. The interactive effect is much stronger than static slides alone.

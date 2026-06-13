@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-UN SDGs (可持续发展目标) promotional website — a Vue 3 SPA. Chinese-language site covering the 17 Sustainable Development Goals, carbon footprint calculator, and action guides.
+UN SDGs (Sustainable Development Goals) promotional website — a Vue 3 SPA. English-language site covering the 17 Sustainable Development Goals, carbon footprint calculator, and action guides.
 
 ## Commands
 

@@ -7,43 +7,43 @@ import { GSAP_EASE } from '@/lib/animations'
 const router = useRouter()
 
 const allSDGs = [
-  { id: 1, title: '消除贫困', subtitle: 'No Poverty', color: '#e5243b' },
-  { id: 2, title: '零饥饿', subtitle: 'Zero Hunger', color: '#dda63a' },
-  { id: 3, title: '良好健康', subtitle: 'Good Health', color: '#4c9f38' },
-  { id: 4, title: '优质教育', subtitle: 'Quality Education', color: '#c5192d' },
-  { id: 5, title: '性别平等', subtitle: 'Gender Equality', color: '#ff3a21' },
-  { id: 6, title: '清洁饮水', subtitle: 'Clean Water', color: '#26bde2' },
-  { id: 7, title: '清洁能源', subtitle: 'Clean Energy', color: '#fcc30b' },
-  { id: 8, title: '体面工作', subtitle: 'Decent Work', color: '#a21942' },
-  { id: 9, title: '产业创新', subtitle: 'Industry & Innovation', color: '#fd6925' },
-  { id: 10, title: '减少不平等', subtitle: 'Reduced Inequalities', color: '#dd1367' },
-  { id: 11, title: '可持续城市', subtitle: 'Sustainable Cities', color: '#fd9d24' },
-  { id: 12, title: '负责任消费', subtitle: 'Responsible Consumption', color: '#bf8b2e' },
-  { id: 13, title: '气候行动', subtitle: 'Climate Action', color: '#3f7e44' },
-  { id: 14, title: '水下生物', subtitle: 'Life Below Water', color: '#009444' },
-  { id: 15, title: '陆地生物', subtitle: 'Life on Land', color: '#00a651' },
-  { id: 16, title: '和平正义', subtitle: 'Peace & Justice', color: '#19489d' },
-  { id: 17, title: '伙伴关系', subtitle: 'Partnerships', color: '#192841' }
+  { id: 1, title: 'End Poverty', subtitle: 'No Poverty', color: '#e5243b' },
+  { id: 2, title: 'Zero Hunger', subtitle: 'Zero Hunger', color: '#dda63a' },
+  { id: 3, title: 'Good Health', subtitle: 'Good Health', color: '#4c9f38' },
+  { id: 4, title: 'Quality Education', subtitle: 'Quality Education', color: '#c5192d' },
+  { id: 5, title: 'Gender Equality', subtitle: 'Gender Equality', color: '#ff3a21' },
+  { id: 6, title: 'Clean Water', subtitle: 'Clean Water', color: '#26bde2' },
+  { id: 7, title: 'Clean Energy', subtitle: 'Clean Energy', color: '#fcc30b' },
+  { id: 8, title: 'Decent Work', subtitle: 'Decent Work', color: '#a21942' },
+  { id: 9, title: 'Industry & Innovation', subtitle: 'Industry & Innovation', color: '#fd6925' },
+  { id: 10, title: 'Reduced Inequalities', subtitle: 'Reduced Inequalities', color: '#dd1367' },
+  { id: 11, title: 'Sustainable Cities', subtitle: 'Sustainable Cities', color: '#fd9d24' },
+  { id: 12, title: 'Responsible Consumption', subtitle: 'Responsible Consumption', color: '#bf8b2e' },
+  { id: 13, title: 'Climate Action', subtitle: 'Climate Action', color: '#3f7e44' },
+  { id: 14, title: 'Life Below Water', subtitle: 'Life Below Water', color: '#009444' },
+  { id: 15, title: 'Life on Land', subtitle: 'Life on Land', color: '#00a651' },
+  { id: 16, title: 'Peace & Justice', subtitle: 'Peace & Justice', color: '#19489d' },
+  { id: 17, title: 'Partnerships', subtitle: 'Partnerships', color: '#192841' }
 ]
 
 const teamMembers = [
-  { id: 1, name: 'Li Shuhang', background: 'Finance', careerGoal: '成为可持续发展领域专家', role: '项目负责人', studentId: '8168667', color: '#2c5f2d', photo: '/images/team/li-shuhang.jpg' },
-  { id: 2, name: 'Feng Jingyi', background: 'Accounting', careerGoal: '开发环保科技解决方案', role: '技术开发', studentId: '8168308', color: '#1a3a5c', photo: '/images/team/feng-jingyi.jpg' },
-  { id: 3, name: 'Wang Luyang', background: 'Accounting', careerGoal: '推动全球可持续发展合作', role: '政策研究', studentId: '8168505', color: '#5c2d6e', photo: '/images/team/wang-luyang.jpg' },
-  { id: 4, name: 'Lu Jianning', background: 'Finance', careerGoal: '数据分析与可持续发展评估', role: '数据分析师', studentId: '8168379', color: '#b8573e', photo: '/images/team/lu-jianning.jpg' }
+  { id: 1, name: 'Li Shuhang', background: 'Finance', careerGoal: 'Become an expert in sustainable development', studentId: '8168667', color: '#2c5f2d', photo: '/images/team/li-shuhang.jpg' },
+  { id: 2, name: 'Feng Jingyi', background: 'Accounting', careerGoal: 'Develop environmental technology solutions', studentId: '8168308', color: '#1a3a5c', photo: '/images/team/feng-jingyi.jpg' },
+  { id: 3, name: 'Wang Luyang', background: 'Accounting', careerGoal: 'Advance global sustainable development cooperation', studentId: '8168505', color: '#5c2d6e', photo: '/images/team/wang-luyang.jpg' },
+  { id: 4, name: 'Lu Jianning', background: 'Finance', careerGoal: 'Data analysis and sustainability assessment', studentId: '8168379', color: '#b8573e', photo: '/images/team/lu-jianning.jpg' }
 ]
 
 const stats = [
-  { number: '17', label: '可持续发展目标' },
-  { number: '193', label: '成员国共同承诺' },
-  { number: '2030', label: '目标实现年份' },
-  { number: '169', label: '具体行动指标' }
+  { number: '17', label: 'Sustainable Development Goals' },
+  { number: '193', label: 'Member States Committed' },
+  { number: '2030', label: 'Target Year' },
+  { number: '169', label: 'Specific Targets' }
 ]
 
 const whySDGs = [
-  { title: '前所未有的全球性挑战', text: '当今世界面临着前所未有的全球性挑战。气候变化导致极端天气事件频发，全球平均气温已比工业革命前上升约1.1°C。与此同时，全球仍有超过7亿人生活在极端贫困中。这些挑战不是单一国家能够独立解决的。' },
-  { title: '统一的行动框架', text: '联合国可持续发展目标（SDGs）为全球社会提供了统一的行动框架。SDGs认识到经济发展、社会包容和环境保护是不可分割的整体，这种系统性思维确保解决一个问题时不会加剧另一个问题。' },
-  { title: '不落下任何人', text: 'SDGs提供了明确的指标和时间表——169项具体目标和232项指标——让各国政府、企业、民间组织和个人能够协调行动，衡量进展。"不落下任何人"（Leave No One Behind）确保发展成果惠及最脆弱群体。' }
+  { title: 'Unprecedented Global Challenges', text: 'The world today faces unprecedented global challenges. Climate change is causing more frequent extreme weather events, with global average temperatures having risen approximately 1.1°C above pre-industrial levels. Meanwhile, over 700 million people still live in extreme poverty. These challenges cannot be solved by any single country alone.' },
+  { title: 'A Unified Action Framework', text: 'The UN Sustainable Development Goals (SDGs) provide a unified action framework for the global community. The SDGs recognize that economic development, social inclusion, and environmental protection are inseparable — this systems-thinking ensures that solving one problem does not exacerbate another.' },
+  { title: 'Leave No One Behind', text: 'The SDGs provide clear targets and timelines — 169 specific targets and 232 indicators — enabling governments, businesses, civil society, and individuals to coordinate action and measure progress. "Leave No One Behind" ensures that the benefits of development reach the most vulnerable populations.' }
 ]
 
 onMounted(() => {
@@ -87,14 +87,14 @@ onMounted(() => {
       <div class="container hero-grid">
         <div class="hero-text">
           <p class="hero-eyebrow">United Nations &middot; 2015–2030</p>
-          <h1>为我们共同的<br>未来而行动</h1>
-          <p class="hero-subtitle">17项全球目标，应对人类最紧迫的挑战<br>为所有人创造更美好、更可持续的明天</p>
+          <h1>Act for Our<br>Shared Future</h1>
+          <p class="hero-subtitle">17 Global Goals to tackle humanity's most pressing challenges<br>Creating a better, more sustainable tomorrow for all</p>
           <div class="hero-buttons">
             <button class="btn btn-primary" @click="router.push('/sdgs')">
-              探索17项目标
+              Explore the 17 Goals
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <button class="btn btn-outline-light" @click="router.push('/act-now')">立即行动</button>
+            <button class="btn btn-outline-light" @click="router.push('/act-now')">Act Now</button>
           </div>
         </div>
         <div class="hero-visual">
@@ -146,8 +146,8 @@ onMounted(() => {
     <!-- ====== WHY SDGs ====== -->
     <section class="why-section">
       <div class="container">
-        <h2 class="section-title">为什么世界需要 SDGs？</h2>
-        <p class="section-subtitle">面对前所未有的挑战，我们需要共同的行动框架</p>
+        <h2 class="section-title">Why Does the World Need the SDGs?</h2>
+        <p class="section-subtitle">Facing unprecedented challenges, we need a shared action framework</p>
         <div class="why-grid">
           <div v-for="(item, i) in whySDGs" :key="i" class="why-card">
             <div class="why-num">{{ String(i + 1).padStart(2, '0') }}</div>
@@ -161,8 +161,8 @@ onMounted(() => {
     <!-- ====== ALL 17 SDGs ====== -->
     <section class="sdgs-section">
       <div class="container">
-        <h2 class="section-title">17项可持续发展目标</h2>
-        <p class="section-subtitle">每一项挑战都需要全球协作与行动</p>
+        <h2 class="section-title">The 17 Sustainable Development Goals</h2>
+        <p class="section-subtitle">Every challenge requires global collaboration and action</p>
         <div class="sdgs-full-grid">
           <div
             v-for="sdg in allSDGs"
@@ -177,7 +177,7 @@ onMounted(() => {
             <p class="sdg-en">{{ sdg.subtitle }}</p>
             <div class="sdg-bar" :style="{ background: sdg.color }"></div>
           </div>
-          <!-- 查看更多 -->
+          <!-- View all -->
           <div class="sdg-item sdg-more" @click="router.push('/sdgs')">
             <div class="sdg-more-icon">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -185,7 +185,7 @@ onMounted(() => {
                 <path d="M13 10l4 4-4 4" stroke="#c48b5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            <h3>查看全部</h3>
+            <h3>View All</h3>
             <p class="sdg-en">View All 17 Goals</p>
           </div>
         </div>
@@ -195,22 +195,21 @@ onMounted(() => {
     <!-- ====== TEAM ====== -->
     <section class="team-section">
       <div class="container">
-        <h2 class="section-title">团队成员</h2>
-        <p class="section-subtitle">多元化的专业背景，共同的目标与使命</p>
+        <h2 class="section-title">Team Members</h2>
+        <p class="section-subtitle">Diverse expertise, united by a shared mission</p>
         <div class="team-grid">
           <div v-for="m in teamMembers" :key="m.id" class="member-card" :style="{ '--mc': m.color }">
             <div class="member-avatar" :style="{ '--mc': m.color }">
               <img :src="m.photo" :alt="m.name" class="member-photo" />
             </div>
             <h3 class="member-name">{{ m.name }}</h3>
-            <span class="member-role">{{ m.role }}</span>
             <span class="member-bg">{{ m.background }}</span>
-            <span class="member-id">学号: {{ m.studentId }}</span>
+            <span class="member-id">Student ID: {{ m.studentId }}</span>
           </div>
         </div>
         <div class="text-center mt-xl">
           <button class="btn btn-primary" @click="router.push('/team-sdgs')">
-            查看团队SDG分工
+            View Team SDG Assignments
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
@@ -222,17 +221,17 @@ onMounted(() => {
       <div class="container">
         <div class="cta-grid">
           <div class="cta-block cta-about">
-            <p class="cta-eyebrow">我们的使命</p>
-            <h2>关于可持续发展目标</h2>
-            <p>了解17项相互关联的全球目标如何改变世界</p>
-            <button class="btn btn-secondary" @click="router.push('/about')">了解更多</button>
+            <p class="cta-eyebrow">Our Mission</p>
+            <h2>About the Sustainable Development Goals</h2>
+            <p>Learn how 17 interconnected global goals are transforming the world</p>
+            <button class="btn btn-secondary" @click="router.push('/about')">Learn More</button>
           </div>
           <div class="cta-block cta-carbon">
-            <p class="cta-eyebrow">从自己做起</p>
-            <h2>计算您的碳足迹</h2>
-            <p>了解日常活动对环境的影响，获取减排建议</p>
+            <p class="cta-eyebrow">Start With Yourself</p>
+            <h2>Calculate Your Carbon Footprint</h2>
+            <p>Understand your daily impact on the environment and get tips to reduce emissions</p>
             <button class="btn btn-primary" @click="router.push('/carbon-footprint')">
-              开始计算
+              Calculate Now
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
           </div>
@@ -559,14 +558,6 @@ onMounted(() => {
   font-family: Georgia, serif;
   font-size: 1.15rem;
   color: #1c1c24;
-  margin-bottom: 6px;
-}
-.member-role {
-  display: block;
-  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em;
-  text-transform: uppercase; color: #c48b5c;
-  background: rgba(196,139,92,0.08);
-  padding: 3px 12px; border-radius: 100px;
   margin-bottom: 6px;
 }
 .member-bg {

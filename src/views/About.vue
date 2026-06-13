@@ -4,10 +4,10 @@ import gsap from 'gsap'
 import { GSAP_EASE } from '@/lib/animations'
 
 const objectives = [
-  { title: '提高公众认识', desc: '提高公众对可持续发展目标的认识和理解' },
-  { title: '教育资源支持', desc: '提供教育资源和工具，赋能个人与组织' },
-  { title: '跨学科合作', desc: '促进跨学科合作与知识共享' },
-  { title: '本地化行动', desc: '推动本地化的可持续发展行动与实践' }
+  { title: 'Raise Public Awareness', desc: 'Increase public awareness and understanding of the Sustainable Development Goals' },
+  { title: 'Educational Resources', desc: 'Provide educational resources and tools to empower individuals and organizations' },
+  { title: 'Interdisciplinary Collaboration', desc: 'Foster interdisciplinary collaboration and knowledge sharing' },
+  { title: 'Localized Action', desc: 'Promote localized sustainable development actions and practices' }
 ]
 
 onMounted(() => {
@@ -27,8 +27,8 @@ onMounted(() => {
     <section class="about-header">
       <div class="container">
         <p class="about-eyebrow">About Us</p>
-        <h1>关于我们</h1>
-        <p>来自不同领域的专业人才，共同推动可持续发展事业</p>
+        <h1>About Us</h1>
+        <p>Professionals from diverse fields, united in advancing sustainable development</p>
       </div>
     </section>
 
@@ -38,21 +38,21 @@ onMounted(() => {
         <div class="mission-card">
           <div class="mission-grid">
             <div class="mission-block">
-              <span class="block-label">使命 Mission</span>
-              <h2>我们的使命</h2>
-              <p>我们致力于促进联合国可持续发展目标的普及与实践，通过教育、宣传和行动，推动个人和组织参与到可持续发展的全球进程中。</p>
+              <span class="block-label">Mission</span>
+              <h2>Our Mission</h2>
+              <p>We are dedicated to promoting the awareness and practice of the UN Sustainable Development Goals. Through education, advocacy, and action, we empower individuals and organizations to participate in the global process of sustainable development.</p>
             </div>
             <div class="mission-block">
-              <span class="block-label">愿景 Vision</span>
-              <h2>我们的愿景</h2>
-              <p>构建一个人人参与、共同发展的可持续未来，让地球成为人类和自然和谐共处的美好家园。</p>
+              <span class="block-label">Vision</span>
+              <h2>Our Vision</h2>
+              <p>To build a sustainable future where everyone participates and develops together, making our planet a beautiful home where humanity and nature coexist in harmony.</p>
             </div>
           </div>
         </div>
 
         <!-- Objectives -->
         <div class="objectives-section">
-          <h2 class="section-title">我们的目标</h2>
+          <h2 class="section-title">Our Objectives</h2>
           <div class="objectives-grid">
             <div v-for="(obj, i) in objectives" :key="i" class="obj-card">
               <span class="obj-num">{{ String(i + 1).padStart(2, '0') }}</span>
@@ -68,10 +68,10 @@ onMounted(() => {
     <section class="about-cta">
       <div class="container">
         <div class="cta-inner">
-          <h2>认识我们的团队</h2>
-          <p>四位来自不同专业领域的团队成员，将各自的专长与可持续发展目标紧密结合</p>
+          <h2>Meet Our Team</h2>
+          <p>Four team members from diverse academic backgrounds, each bringing their expertise to the Sustainable Development Goals</p>
           <router-link to="/team-sdgs" class="btn btn-primary">
-            查看团队SDG目标分工
+            View Team SDG Assignments
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </router-link>
         </div>

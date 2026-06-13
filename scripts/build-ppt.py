@@ -331,17 +331,17 @@ WHY_DATA = [
 ]
 
 TEAM_DATA = [
-    {"name": "Li Shuhang",   "role": "Project Lead",     "bg": "Finance",            "id": "8168667", "color": RGBColor(0x2C, 0x5F, 0x2D), "photo": "public/images/team/li-shuhang.jpg", "bio": "Handles the big picture — keeps the project on track and brings financial analysis expertise to the SDG research."},
-    {"name": "Feng Jingyi",  "role": "Tech Development", "bg": "Accounting",         "id": "8168308", "color": RGBColor(0x1A, 0x3A, 0x5C), "photo": "public/images/team/feng-jingyi.jpg", "bio": "Built the website from scratch using Vue and TypeScript. Wrote the carbon calculator logic and made sure everything actually works."},
-    {"name": "Wang Luyang",  "role": "Policy Research",  "bg": "Accounting",         "id": "8168505", "color": RGBColor(0x5C, 0x2D, 0x6E), "photo": "public/images/team/wang-luyang.jpg", "bio": "Reads a lot of UN reports so we don't have to. Focused on how the SDGs fit into real international policy frameworks."},
-    {"name": "Lu Jianning",  "role": "Data Analyst",     "bg": "Finance",            "id": "8168379", "color": RGBColor(0xB8, 0x57, 0x3E), "photo": "public/images/team/lu-jianning.jpg", "bio": "Crunching numbers — validated our carbon calculator's emission factors and checked SDG progress data against official sources."},
+    {"name": "Li Shuhang",   "role": "Project Lead",     "bg": "Finance",            "id": "8168667", "color": RGBColor(0x2C, 0x5F, 0x2D), "photo": "../public/images/team/li-shuhang.jpg", "bio": "Handles the big picture — keeps the project on track and brings financial analysis expertise to the SDG research."},
+    {"name": "Feng Jingyi",  "role": "Tech Development", "bg": "Accounting",         "id": "8168308", "color": RGBColor(0x1A, 0x3A, 0x5C), "photo": "../public/images/team/feng-jingyi.jpg", "bio": "Built the website from scratch using Vue and TypeScript. Wrote the carbon calculator logic and made sure everything actually works."},
+    {"name": "Wang Luyang",  "role": "Policy Research",  "bg": "Accounting",         "id": "8168505", "color": RGBColor(0x5C, 0x2D, 0x6E), "photo": "../public/images/team/wang-luyang.jpg", "bio": "Reads a lot of UN reports so we don't have to. Focused on how the SDGs fit into real international policy frameworks."},
+    {"name": "Lu Jianning",  "role": "Data Analyst",     "bg": "Finance",            "id": "8168379", "color": RGBColor(0xB8, 0x57, 0x3E), "photo": "../public/images/team/lu-jianning.jpg", "bio": "Crunching numbers — validated our carbon calculator's emission factors and checked SDG progress data against official sources."},
 ]
 
 TEAM_SDG_MAP = [
-    {"name": "Li Shuhang",   "sdgs": "SDG 6, 7, 13, 14, 15", "rationale": "Environmental science expertise aligns directly with planet-focused goals covering water, energy, climate, and ecosystems"},
-    {"name": "Feng Jingyi",  "sdgs": "SDG 8, 9, 11, 12",     "rationale": "Computer science background drives technology-enabled solutions for sustainable industry, smart cities, and responsible consumption"},
-    {"name": "Wang Luyang",  "sdgs": "SDG 1, 2, 5, 10, 16",  "rationale": "International affairs knowledge underpins equity, justice, and human dignity goals across poverty, hunger, and gender equality"},
-    {"name": "Lu Jianning",  "sdgs": "SDG 3, 4, 17",         "rationale": "Statistical analysis skills enable rigorous data-driven approaches to health, education outcomes, and partnership metrics"},
+    {"name": "Li Shuhang",   "sdgs": "SDG 6, 13, 15",        "rationale": "Finance and environmental research background aligns with climate action, biodiversity conservation, and clean water — planet-focused goals requiring both analytical rigor and ecosystem understanding"},
+    {"name": "Feng Jingyi",  "sdgs": "SDG 7, 9, 12",         "rationale": "Technology and innovation expertise drives solutions for clean energy transition, sustainable industry, and responsible consumption — using intelligent platforms to make sustainability measurable and actionable"},
+    {"name": "Wang Luyang",  "sdgs": "SDG 5, 10, 16, 17",    "rationale": "Policy research and governance analysis underpins equity, justice, and partnership goals — focusing on inclusive institutions, gender equality, and multi-stakeholder cooperation frameworks"},
+    {"name": "Lu Jianning",  "sdgs": "SDG 1, 2, 3, 4",       "rationale": "Data analysis and quantitative methods enable rigorous assessment of poverty, hunger, health, and education outcomes — using statistical models to reveal where interventions are most needed"},
 ]
 
 AGENDA_ITEMS = [

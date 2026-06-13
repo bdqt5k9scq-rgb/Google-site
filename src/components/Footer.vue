@@ -30,25 +30,25 @@ onMounted(() => {
               <circle cx="20" cy="20" r="4" fill="currentColor" opacity="0.8"/>
             </svg>
           </div>
-          <h3>联合国可持续发展目标</h3>
-          <p>为实现更美好、更可持续的未来<br>而共同努力</p>
+          <h3>UN Sustainable Development Goals</h3>
+          <p>Working together for a better,<br>more sustainable future</p>
         </div>
 
         <!-- Links -->
         <div class="footer-col">
-          <h4>浏览页面</h4>
+          <h4>Browse Pages</h4>
           <ul>
-            <li><a href="/">首页</a></li>
-            <li><a href="/about">关于我们</a></li>
-            <li><a href="/sdgs">SDG目标</a></li>
-            <li><a href="/carbon-footprint">碳足迹计算</a></li>
-            <li><a href="/act-now">行动倡议</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/sdgs">SDG Goals</a></li>
+            <li><a href="/carbon-footprint">Carbon Footprint</a></li>
+            <li><a href="/act-now">Act Now</a></li>
           </ul>
         </div>
 
         <!-- Contact -->
         <div class="footer-col">
-          <h4>联系方式</h4>
+          <h4>Contact</h4>
           <ul class="footer-contact">
             <li>
               <span class="contact-icon">✉</span>
@@ -64,8 +64,8 @@ onMounted(() => {
 
       <div class="footer-bottom">
         <div class="footer-bottom-line"></div>
-        <p>&copy; {{ currentYear }} SDG Website &mdash; 保留所有权利</p>
-        <p class="footer-bottom-sub">本网站致力于宣传联合国可持续发展目标</p>
+        <p>&copy; {{ currentYear }} SDG Website &mdash; All Rights Reserved</p>
+        <p class="footer-bottom-sub">This website is dedicated to promoting the UN Sustainable Development Goals</p>
       </div>
     </div>
   </footer>

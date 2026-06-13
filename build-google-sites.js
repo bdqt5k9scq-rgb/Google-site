@@ -70,6 +70,9 @@ for (const page of pages) {
   const contentStart = bodyOpenIdx + '<body>'.length;
   let content = html.slice(contentStart, firstScriptIdx).trim();
 
+  // Strip <nav> — Google Sites provides its own navigation
+  content = content.replace(/<nav\b[^>]*>[\s\S]*?<\/nav>/gi, '<!-- navbar removed — use Google Sites navigation -->');
+
   // Scripts region: from first <script> to </body>
   const bodyCloseIdx = html.lastIndexOf('</body>');
   const scriptsRegion = html.slice(firstScriptIdx, bodyCloseIdx);

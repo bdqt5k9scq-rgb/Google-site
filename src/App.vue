@@ -7,12 +7,12 @@ import Footer from './components/Footer.vue'
 
 const router = useRouter()
 
-// SPA 路由切换后刷新所有 ScrollTrigger 位置
+// Refresh all ScrollTrigger positions after SPA route change
 router.afterEach(() => {
   ScrollTrigger.refresh()
 })
 
-// ====== 页面过渡钩子 ======
+// ====== Page transition hooks ======
 function onBeforeEnter(el: Element) {
   const target = el as HTMLElement
   gsap.set(target, { opacity: 0, y: 24 })

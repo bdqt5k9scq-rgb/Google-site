@@ -1,6 +1,6 @@
 /* ============================================================
    Earth Editorial Design System
-   可持续发展目标 — SDG Website
+   Sustainable Development Goals — SDG Website
    Aesthetic: warm, literary, organic — like a fine publication
    ============================================================ */
 
@@ -35,8 +35,8 @@
   --color-accent-hover: #b0784a;
 
   /* Typography */
-  --font-display: 'Georgia', 'STSong', 'Songti SC', 'Noto Serif SC', '华文宋体', serif;
-  --font-body: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', 'Microsoft JhengHei', sans-serif;
+  --font-display: 'Georgia', serif;
+  --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
 
   /* Spacing scale */

@@ -1,17 +1,17 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-// 全局注册 ScrollTrigger — 仅需一次
+// Register ScrollTrigger globally — only once
 gsap.registerPlugin(ScrollTrigger)
 
-// 全局 GSAP 默认值 — 统一缓动和时长
+// Global GSAP defaults — unified easing and duration
 gsap.defaults({
   ease: 'power2.out',
   duration: 0.6,
   overwrite: 'auto',
 })
 
-// ======= GSAP 缓动预设 =======
+// ======= GSAP easing presets =======
 export const GSAP_EASE = {
   out: 'power3.out',
   inOut: 'power2.inOut',
@@ -21,11 +21,11 @@ export const GSAP_EASE = {
   in: 'power2.in',
 } as const
 
-// ======= 滚动触发工具函数 =======
+// ======= Scroll trigger utility functions =======
 
 /**
- * 元素从下方淡入 + 上移 — 滚动到视口时触发
- * 返回 ScrollTrigger 实例，用于手动 kill
+ * Fade in + move up from below — triggers on scroll into viewport
+ * Returns ScrollTrigger instance for manual kill
  */
 export function createScrollFade(
   target: gsap.DOMTarget,
@@ -42,7 +42,7 @@ export function createScrollFade(
 }
 
 /**
- * 容器内子元素交错淡入 — 滚动到视口时触发
+ * Staggered fade-in for child elements within a container — triggers on scroll into viewport
  */
 export function createStaggerFade(
   target: gsap.DOMTarget,
@@ -61,7 +61,7 @@ export function createStaggerFade(
 }
 
 /**
- * 元素从左侧滑入 — 滚动到视口时触发
+ * Slide in from left — triggers on scroll into viewport
  */
 export function createSlideLeft(
   target: gsap.DOMTarget,

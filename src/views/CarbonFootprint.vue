@@ -30,21 +30,21 @@ const calculateCarbonFootprint = () => {
 const result = computed(() => calculateCarbonFootprint())
 
 const resultLevel = computed(() => {
-  if (result.value < 3000) return { level: '优秀', color: '#5c8d6d', message: '您的碳足迹非常低，继续保持！' }
-  if (result.value < 6000) return { level: '良好', color: '#2c5282', message: '您的碳足迹处于中等水平，可以进一步改善。' }
-  if (result.value < 10000) return { level: '一般', color: '#c48b5c', message: '您的碳足迹较高，建议采取更多环保措施。' }
-  return { level: '较高', color: '#b8573e', message: '您的碳足迹很高，请采取行动减少碳排放。' }
+  if (result.value < 3000) return { level: 'Excellent', color: '#5c8d6d', message: 'Your carbon footprint is very low, keep it up!' }
+  if (result.value < 6000) return { level: 'Good', color: '#2c5282', message: 'Your carbon footprint is moderate and can be further improved.' }
+  if (result.value < 10000) return { level: 'Average', color: '#c48b5c', message: 'Your carbon footprint is relatively high. We recommend taking more eco-friendly measures.' }
+  return { level: 'High', color: '#b8573e', message: 'Your carbon footprint is very high. Please take action to reduce your carbon emissions.' }
 })
 
 const tips = computed(() => {
   const tipsList = []
-  if (formData.value.transportation.carDistance > 100) tipsList.push('考虑使用公共交通工具或骑行代替开车')
-  if (formData.value.transportation.flights > 2) tipsList.push('减少长途飞行，考虑视频会议替代方案')
-  if (formData.value.energy.electricity > 500) tipsList.push('使用节能电器，养成随手关灯的习惯')
-  if (formData.value.food.meatDays > 14) tipsList.push('尝试减少肉类消费，多吃植物性食物')
-  if (!formData.value.waste.recycling) tipsList.push('开始垃圾分类和回收')
-  if (!formData.value.waste.composting) tipsList.push('尝试堆肥处理厨余垃圾')
-  return tipsList.length > 0 ? tipsList : ['您做得很好！继续保持环保习惯。']
+  if (formData.value.transportation.carDistance > 100) tipsList.push('Consider using public transport or cycling instead of driving')
+  if (formData.value.transportation.flights > 2) tipsList.push('Reduce long-haul flights and consider video conferencing alternatives')
+  if (formData.value.energy.electricity > 500) tipsList.push('Use energy-efficient appliances and develop the habit of turning off lights')
+  if (formData.value.food.meatDays > 14) tipsList.push('Try reducing meat consumption and eating more plant-based foods')
+  if (!formData.value.waste.recycling) tipsList.push('Start sorting and recycling your waste')
+  if (!formData.value.waste.composting) tipsList.push('Try composting your kitchen waste')
+  return tipsList.length > 0 ? tipsList : ['You\'re doing great! Keep up your eco-friendly habits.']
 })
 
 const handleCalculate = () => {
@@ -108,9 +108,9 @@ onMounted(() => {
     <!-- ====== Header ====== -->
     <section class="cf-header">
       <div class="container container-narrow">
-        <p class="cf-eyebrow">环境足迹</p>
-        <h1>碳足迹计算器</h1>
-        <p>了解您的日常活动对环境的影响，计算您的个人碳排放量</p>
+        <p class="cf-eyebrow">Environmental Footprint</p>
+        <h1>Carbon Footprint Calculator</h1>
+        <p>Understand how your daily activities impact the environment and calculate your personal carbon emissions</p>
       </div>
     </section>
 
@@ -121,20 +121,20 @@ onMounted(() => {
           <div class="form-section">
             <div class="form-section-header">
               <span class="form-section-icon">🚗</span>
-              <h3>交通出行</h3>
+              <h3>Transportation</h3>
             </div>
             <div class="form-group">
-              <label>每周驾车里程（公里）</label>
+              <label>Weekly driving distance (km)</label>
               <input type="number" v-model.number="formData.transportation.carDistance"
                 placeholder="0" min="0" />
             </div>
             <div class="form-group">
-              <label>每周公共交通次数</label>
+              <label>Weekly public transport trips</label>
               <input type="number" v-model.number="formData.transportation.publicTransport"
                 placeholder="0" min="0" />
             </div>
             <div class="form-group">
-              <label>每年长途飞行次数</label>
+              <label>Annual long-haul flights</label>
               <input type="number" v-model.number="formData.transportation.flights"
                 placeholder="0" min="0" />
             </div>
@@ -143,20 +143,20 @@ onMounted(() => {
           <div class="form-section">
             <div class="form-section-header">
               <span class="form-section-icon">⚡</span>
-              <h3>能源使用</h3>
+              <h3>Energy Use</h3>
             </div>
             <div class="form-group">
-              <label>每月用电量（千瓦时）</label>
+              <label>Monthly electricity usage (kWh)</label>
               <input type="number" v-model.number="formData.energy.electricity"
                 placeholder="0" min="0" />
             </div>
             <div class="form-group">
-              <label>每月用气量（立方米）</label>
+              <label>Monthly gas usage (m³)</label>
               <input type="number" v-model.number="formData.energy.gas"
                 placeholder="0" min="0" />
             </div>
             <div class="form-group">
-              <label>每月供暖能耗（单位）</label>
+              <label>Monthly heating energy (units)</label>
               <input type="number" v-model.number="formData.energy.heating"
                 placeholder="0" min="0" />
             </div>
@@ -165,15 +165,15 @@ onMounted(() => {
           <div class="form-section">
             <div class="form-section-header">
               <span class="form-section-icon">🥗</span>
-              <h3>饮食习惯</h3>
+              <h3>Dietary Habits</h3>
             </div>
             <div class="form-group">
-              <label>每周吃肉天数</label>
+              <label>Days eating meat per week</label>
               <input type="number" v-model.number="formData.food.meatDays"
                 placeholder="0" min="0" max="7" />
             </div>
             <div class="form-group">
-              <label>每周本地食品消费比例（%）</label>
+              <label>Weekly local food consumption (%)</label>
               <input type="number" v-model.number="formData.food.localFood"
                 placeholder="0" min="0" max="100" />
             </div>
@@ -182,36 +182,36 @@ onMounted(() => {
           <div class="form-section">
             <div class="form-section-header">
               <span class="form-section-icon">♻️</span>
-              <h3>废物处理</h3>
+              <h3>Waste Management</h3>
             </div>
             <div class="form-group">
               <label class="checkbox-label">
                 <input type="checkbox" v-model="formData.waste.recycling" />
                 <span class="checkbox-custom"></span>
-                进行垃圾分类回收
+                I recycle and sort my waste
               </label>
             </div>
             <div class="form-group">
               <label class="checkbox-label">
                 <input type="checkbox" v-model="formData.waste.composting" />
                 <span class="checkbox-custom"></span>
-                进行厨余堆肥
+                I compost kitchen waste
               </label>
             </div>
           </div>
 
           <button class="btn btn-primary btn-calculate" @click="handleCalculate">
-            计算碳足迹
+            Calculate Carbon Footprint
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
 
         <div v-else class="result-section">
           <div class="result-card">
-            <h2>您的碳足迹计算结果</h2>
+            <h2>Your Carbon Footprint Results</h2>
             <div class="result-value" :style="{ color: resultLevel.color }">
               {{ result.toLocaleString() }}
-              <span class="unit">kg CO₂/年</span>
+              <span class="unit">kg CO₂/year</span>
             </div>
             <div class="result-level" :style="{ backgroundColor: resultLevel.color }">
               {{ resultLevel.level }}
@@ -220,7 +220,7 @@ onMounted(() => {
           </div>
 
           <div class="tips-section">
-            <h3>🌱 环保建议</h3>
+            <h3>🌱 Eco Tips</h3>
             <ul>
               <li v-for="(tip, index) in tips" :key="index">
                 <span class="tip-dot"></span>
@@ -230,7 +230,7 @@ onMounted(() => {
           </div>
 
           <button class="btn btn-secondary" @click="handleReset">
-            重新计算
+            Recalculate
           </button>
         </div>
       </div>
