@@ -111,8 +111,8 @@ onMounted(() => {
               <img :src="m.member.portrait" :alt="m.member.name" class="ts-photo-img" :style="m.member.id === 2 ? 'object-fit:contain; height:auto;' : ''" />
             </div>
           </div>
-          <div v-if="(m.member.id === 3 || m.member.id === 4) && m.member.portrait" class="ts-photo-below" :style="m.member.id === 4 ? { '--pc': m.member.bg, aspectRatio: '3/4' } : { '--pc': m.member.bg }">
-            <img :src="m.member.portrait" :alt="m.member.name" class="ts-photo-img-below" :style="m.member.id === 4 ? 'object-fit:cover; object-position:top; height:100%;' : ''" />
+          <div v-if="(m.member.id === 3 || m.member.id === 4) && m.member.portrait" class="ts-photo-below" :style="{ '--pc': m.member.bg }">
+            <img :src="m.member.portrait" :alt="m.member.name" class="ts-photo-img-below" :style="m.member.id === 4 ? 'object-fit:cover; object-position:top; height:320px;' : ''" />
           </div>
         </div>
       </div>
@@ -212,7 +212,8 @@ onMounted(() => {
 }
 .ts-photo-img-below {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 12px;
 }

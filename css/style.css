@@ -1761,7 +1761,8 @@ p { color: var(--text-muted); line-height: 1.75; }
 }
 .member-photo-img-below {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
