@@ -184,28 +184,27 @@ onMounted(() => {
   object-fit: cover;
   border-radius: 50%;
 }
-/* Portrait photo card inside SDG grid (Li Shuhang) */
+/* Portrait photo card inside SDG grid */
 .ts-photo-card {
-  width: 100%;
+  width: 200px;
+  aspect-ratio: 3 / 4;
   border-radius: 14px;
   border: 2px solid var(--pc, #f0ebe4);
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(28,28,36,0.10);
-  max-width: 240px;
-  justify-self: start;
 }
 .ts-photo-img {
   width: 100%;
-  height: 280px;
+  height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 12px;
 }
 
-/* Portrait photo below grid (Wang Luyang) */
+/* Portrait photo below grid */
 .ts-photo-below {
   margin-top: 14px;
-  max-width: 280px;
+  max-width: 240px;
   border-radius: 14px;
   border: 2px solid var(--pc, #f0ebe4);
   overflow: hidden;
@@ -215,7 +214,6 @@ onMounted(() => {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
   border-radius: 12px;
 }
 .mh-info h2 {
